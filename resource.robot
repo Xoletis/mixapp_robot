@@ -10,10 +10,10 @@ Library    String
 
 *** Variables ***
 
-${WELCOMEPAGE_URL}    https://petstore.octoperf.com/
+${WELCOMEPAGE_URL}    https://mixap-dev.surge.sh/
 ${BROWSER}        Chrome
 ${DELAY}          0
-
+${TITLE}        MIXAP
 *** Keywords ***
 
 Open Browser To Welcome Page
@@ -22,3 +22,5 @@ Open Browser To Welcome Page
     Set Selenium Speed    ${DELAY}
     Welcome Page Should Be Open
 
+Welcome Page Should Be Open
+    Title Should Be   ${TITLE}
