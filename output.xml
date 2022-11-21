@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0 (Python 3.10.7 on win32)" generated="20221121 14:34:50.575" rpa="false" schemaversion="3">
+<suite id="s1" name="scenarioAcheteur" source="C:\Users\Admin\Desktop\Scrum\mixapp_robot\scenarioAcheteur.robot">
+<test id="s1-t1" name="ScenarioAcheteur" line="9">
+<kw name="Open Browser To Welcome Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${WELCOMEPAGE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221121 14:34:50.970" level="INFO">Opening browser 'Chrome' to base url 'https://petstore.octoperf.com/'.</msg>
+<status status="PASS" starttime="20221121 14:34:50.969" endtime="20221121 14:35:01.800"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221121 14:35:01.800" endtime="20221121 14:35:02.018"/>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221121 14:35:02.019" endtime="20221121 14:35:02.019"/>
+</kw>
+<kw name="Welcome Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="Selenium2Library">
+<arg>JPetStore Demo</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20221121 14:35:02.218" level="INFO">Page title is 'JPetStore Demo'.</msg>
+<status status="PASS" starttime="20221121 14:35:02.020" endtime="20221121 14:35:02.218"/>
+</kw>
+<status status="PASS" starttime="20221121 14:35:02.020" endtime="20221121 14:35:02.218"/>
+</kw>
+<status status="PASS" starttime="20221121 14:34:50.969" endtime="20221121 14:35:02.218"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221121 14:35:04.224" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221121 14:35:02.219" endtime="20221121 14:35:04.224"/>
+</kw>
+<kw name="Enter Store" library="resource">
+<kw name="Click Link" library="Selenium2Library">
+<arg>actions/Catalog.action</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221121 14:35:04.226" level="INFO">Clicking link 'actions/Catalog.action'.</msg>
+<status status="PASS" starttime="20221121 14:35:04.226" endtime="20221121 14:35:06.130"/>
+</kw>
+<status status="PASS" starttime="20221121 14:35:04.225" endtime="20221121 14:35:06.130"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221121 14:35:08.131" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221121 14:35:06.131" endtime="20221121 14:35:08.131"/>
+</kw>
+<kw name="Sign In" library="resource">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${SIGNIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221121 14:35:08.133" level="INFO">Clicking element '//*[@id="MenuContent"]/a[2]'.</msg>
+<status status="PASS" starttime="20221121 14:35:08.132" endtime="20221121 14:35:08.384"/>
+</kw>
+<status status="PASS" starttime="20221121 14:35:08.131" endtime="20221121 14:35:08.384"/>
+</kw>
+<kw name="Log In" library="resource">
+<arg>j2ee</arg>
+<arg>j2ee</arg>
+<kw name="Input Text" library="Selenium2Library">
+<arg>name:username</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221121 14:35:08.394" level="INFO">Typing text 'j2ee' into text field 'name:username'.</msg>
+<status status="PASS" starttime="20221121 14:35:08.393" endtime="20221121 14:35:08.489"/>
+</kw>
+<kw name="Clear Element Text" library="Selenium2Library">
+<arg>name:password</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20221121 14:35:08.489" endtime="20221121 14:35:08.539"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221121 14:35:10.550" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221121 14:35:08.539" endtime="20221121 14:35:10.550"/>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<arg>name:password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221121 14:35:10.551" level="INFO">Typing password into text field 'name:password'.</msg>
+<msg timestamp="20221121 14:35:10.580" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221121 14:35:10.632" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221121 14:35:10.550" endtime="20221121 14:35:10.632"/>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<arg>name:signon</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221121 14:35:10.633" level="INFO">Clicking button 'name:signon'.</msg>
+<status status="PASS" starttime="20221121 14:35:10.632" endtime="20221121 14:35:10.882"/>
+</kw>
+<status status="PASS" starttime="20221121 14:35:08.392" endtime="20221121 14:35:10.882"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221121 14:35:12.897" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221121 14:35:10.883" endtime="20221121 14:35:12.897"/>
+</kw>
+<kw name="Welcome Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="Selenium2Library">
+<arg>JPetStore Demo</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20221121 14:35:12.903" level="INFO">Page title is 'JPetStore Demo'.</msg>
+<status status="PASS" starttime="20221121 14:35:12.898" endtime="20221121 14:35:12.903"/>
+</kw>
+<status status="PASS" starttime="20221121 14:35:12.898" endtime="20221121 14:35:12.903"/>
+</kw>
+<kw name="Select Category" library="resource">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${PETCATEGORY}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221121 14:35:12.905" level="INFO">Clicking element 'xpath://*[@id="QuickLinks"]/a[5]'.</msg>
+<status status="PASS" starttime="20221121 14:35:12.904" endtime="20221121 14:35:13.083"/>
+</kw>
+<status status="PASS" starttime="20221121 14:35:12.904" endtime="20221121 14:35:13.083"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221121 14:35:15.095" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221121 14:35:13.085" endtime="20221121 14:35:15.095"/>
+</kw>
+<kw name="Select Product" library="resource">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${PRODUCT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221121 14:35:15.097" level="INFO">Clicking element '//*[@id="Catalog"]/table/tbody/tr[2]/td[1]/a'.</msg>
+<status status="PASS" starttime="20221121 14:35:15.096" endtime="20221121 14:35:15.368"/>
+</kw>
+<status status="PASS" starttime="20221121 14:35:15.096" endtime="20221121 14:35:15.368"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221121 14:35:17.381" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221121 14:35:15.369" endtime="20221121 14:35:17.381"/>
+</kw>
+<kw name="Add To Cart" library="resource">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${ADDTOCARTBUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221121 14:35:17.382" level="INFO">Clicking element '//*[@id="Catalog"]/table/tbody/tr[2]/td[5]/a'.</msg>
+<status status="PASS" starttime="20221121 14:35:17.382" endtime="20221121 14:35:17.555"/>
+</kw>
+<status status="PASS" starttime="20221121 14:35:17.381" endtime="20221121 14:35:17.555"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221121 14:35:19.570" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221121 14:35:17.568" endtime="20221121 14:35:19.570"/>
+</kw>
+<kw name="Update Number Of Purchased Items" library="resource">
+<arg>2</arg>
+<kw name="Clear Element Text" library="Selenium2Library">
+<arg>${NUMBEROFITEMS}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20221121 14:35:19.571" endtime="20221121 14:35:19.628"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${NUMBEROFITEMS}</arg>
+<arg>${NUMBEROFARTICLE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221121 14:35:19.629" level="INFO">Typing text '2' into text field '//*[@id="Cart"]/form/table/tbody/tr[2]/td[5]/input'.</msg>
+<status status="PASS" starttime="20221121 14:35:19.628" endtime="20221121 14:35:19.740"/>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<arg>name:updateCartQuantities</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221121 14:35:19.741" level="INFO">Clicking button 'name:updateCartQuantities'.</msg>
+<status status="PASS" starttime="20221121 14:35:19.740" endtime="20221121 14:35:19.925"/>
+</kw>
+<status status="PASS" starttime="20221121 14:35:19.570" endtime="20221121 14:35:19.926"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221121 14:35:21.944" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221121 14:35:19.934" endtime="20221121 14:35:21.944"/>
+</kw>
+<kw name="Proceed To Checkout" library="resource">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${CHECKOUTBUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221121 14:35:21.945" level="INFO">Clicking element '//*[@id="Cart"]/a'.</msg>
+<status status="PASS" starttime="20221121 14:35:21.944" endtime="20221121 14:35:22.108"/>
+</kw>
+<status status="PASS" starttime="20221121 14:35:21.944" endtime="20221121 14:35:22.108"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221121 14:35:24.125" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221121 14:35:22.110" endtime="20221121 14:35:24.126"/>
+</kw>
+<kw name="Confirm Billing Informations" library="resource">
+<kw name="Click Button" library="Selenium2Library">
+<arg>name:newOrder</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221121 14:35:24.127" level="INFO">Clicking button 'name:newOrder'.</msg>
+<status status="PASS" starttime="20221121 14:35:24.127" endtime="20221121 14:35:24.962"/>
+</kw>
+<status status="PASS" starttime="20221121 14:35:24.126" endtime="20221121 14:35:24.963"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221121 14:35:26.992" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221121 14:35:24.975" endtime="20221121 14:35:26.992"/>
+</kw>
+<kw name="Confirm Purchase" library="resource">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${CONFIRMPURCHASEBUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221121 14:35:26.993" level="INFO">Clicking element '//*[@id="Catalog"]/a'.</msg>
+<status status="PASS" starttime="20221121 14:35:26.993" endtime="20221121 14:35:27.133"/>
+</kw>
+<status status="PASS" starttime="20221121 14:35:26.992" endtime="20221121 14:35:27.133"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221121 14:35:29.146" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221121 14:35:27.134" endtime="20221121 14:35:29.146"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221121 14:35:29.146" endtime="20221121 14:35:32.258"/>
+</kw>
+<status status="PASS" starttime="20221121 14:34:50.968" endtime="20221121 14:35:32.259"/>
+</test>
+<doc>A test suite with a single test to purchase an item.
+
+This test has a workflow that is created using keywords in
+the imported resource file.</doc>
+<status status="PASS" starttime="20221121 14:34:50.577" endtime="20221121 14:35:32.260"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="scenarioAcheteur">scenarioAcheteur</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
