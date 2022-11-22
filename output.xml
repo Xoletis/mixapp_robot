@@ -1,61 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0 (Python 3.10.7 on win32)" generated="20221121 14:43:34.671" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0 (Python 3.10.7 on win32)" generated="20221122 11:01:47.256" rpa="false" schemaversion="3">
 <suite id="s1" name="Scenario" source="C:\Users\Admin\Desktop\Scrum\mixapp_robot\scenario.robot">
-<test id="s1-t1" name="ScenarioAcheteur" line="9">
-<kw name="Open Browser To Welcome Page" library="resource">
+<test id="s1-t1" name="ScenarioMainMenu" line="6">
+<kw name="OpenWebSite" library="CasDeTest">
+<kw name="Open Browser To Welcome Page" library="resource_ivan">
+<kw name="Create File" library="OperatingSystem">
+<arg>${PATH}</arg>
+<arg>Log\n</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<msg timestamp="20221122 11:01:47.925" level="INFO" html="true">Created file '&lt;a href="file://C:\Users\Admin\Desktop\Scrum\mixapp_robot\result.txt"&gt;C:\Users\Admin\Desktop\Scrum\mixapp_robot\result.txt&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20221122 11:01:47.923" endtime="20221122 11:01:47.925"/>
+</kw>
 <kw name="Open Browser" library="Selenium2Library">
 <arg>${WELCOMEPAGE_URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221121 14:43:35.044" level="INFO">Opening browser 'Chrome' to base url 'https://mixap-dev.surge.sh/'.</msg>
-<status status="PASS" starttime="20221121 14:43:35.043" endtime="20221121 14:43:39.249"/>
+<msg timestamp="20221122 11:01:47.927" level="INFO">Opening browser 'Chrome' to base url 'https://mixap-dev.surge.sh/'.</msg>
+<status status="PASS" starttime="20221122 11:01:47.925" endtime="20221122 11:02:15.125"/>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221121 14:43:39.249" endtime="20221121 14:43:39.382"/>
+<status status="PASS" starttime="20221122 11:02:15.125" endtime="20221122 11:02:15.311"/>
 </kw>
 <kw name="Set Selenium Speed" library="Selenium2Library">
 <arg>${DELAY}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20221121 14:43:39.383" endtime="20221121 14:43:39.383"/>
+<status status="PASS" starttime="20221122 11:02:15.311" endtime="20221122 11:02:15.311"/>
 </kw>
-<kw name="Welcome Page Should Be Open" library="resource">
+<kw name="Welcome Page Should Be Open" library="resource_ivan">
 <kw name="Title Should Be" library="Selenium2Library">
 <arg>${TITLE}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221121 14:43:39.393" level="INFO">Page title is 'MIXAP'.</msg>
-<status status="PASS" starttime="20221121 14:43:39.384" endtime="20221121 14:43:39.394"/>
+<msg timestamp="20221122 11:02:15.330" level="INFO">Page title is 'MIXAP'.</msg>
+<status status="PASS" starttime="20221122 11:02:15.312" endtime="20221122 11:02:15.330"/>
 </kw>
-<status status="PASS" starttime="20221121 14:43:39.383" endtime="20221121 14:43:39.395"/>
+<status status="PASS" starttime="20221122 11:02:15.312" endtime="20221122 11:02:15.330"/>
 </kw>
-<status status="PASS" starttime="20221121 14:43:35.043" endtime="20221121 14:43:39.395"/>
+<status status="PASS" starttime="20221122 11:01:47.901" endtime="20221122 11:02:15.330"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221121 14:43:41.411" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221121 14:43:39.395" endtime="20221121 14:43:41.411"/>
+<msg timestamp="20221122 11:02:17.332" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221122 11:02:15.331" endtime="20221122 11:02:17.332"/>
+</kw>
+<status status="PASS" starttime="20221122 11:01:47.900" endtime="20221122 11:02:17.333"/>
+</kw>
+<kw name="OpenImportWindow" library="CasDeTest">
+<kw name="Click Window" library="resource_ivan">
+<arg>${IMPORT_DATA}</arg>
+<kw name="Click Button" library="Selenium2Library">
+<arg>${Button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221122 11:02:17.339" level="INFO">Clicking button 'xpath://*[@id="root"]/div/div[1]/div/div[1]/span/div/div[1]/button'.</msg>
+<status status="PASS" starttime="20221122 11:02:17.337" endtime="20221122 11:02:17.664"/>
+</kw>
+<status status="PASS" starttime="20221122 11:02:17.336" endtime="20221122 11:02:17.664"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${IMPORT_DATA_INPUT_TEXT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221122 11:02:18.053" level="INFO">Element 'xpath:/html/body/div[2]/div/div/div/div[2]/div[2]/div/div[1]/input' is displayed.</msg>
+<status status="PASS" starttime="20221122 11:02:17.665" endtime="20221122 11:02:18.053"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221122 11:02:20.055" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221122 11:02:18.053" endtime="20221122 11:02:20.055"/>
+</kw>
+<status status="PASS" starttime="20221122 11:02:17.335" endtime="20221122 11:02:20.055"/>
+</kw>
+<kw name="CloseImportWindowNoText" library="CasDeTest">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${LOGO_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221122 11:02:20.058" level="INFO">Clicking element 'xpath://*[@id="root"]/div/div[1]/div/div[1]/div/span/span/img'.</msg>
+<status status="PASS" starttime="20221122 11:02:20.057" endtime="20221122 11:02:20.145"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221122 11:02:22.150" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221122 11:02:20.145" endtime="20221122 11:02:22.150"/>
+</kw>
+<status status="PASS" starttime="20221122 11:02:20.056" endtime="20221122 11:02:22.150"/>
+</kw>
+<kw name="OpenImportWindow" library="CasDeTest">
+<kw name="Click Window" library="resource_ivan">
+<arg>${IMPORT_DATA}</arg>
+<kw name="Click Button" library="Selenium2Library">
+<arg>${Button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221122 11:02:22.154" level="INFO">Clicking button 'xpath://*[@id="root"]/div/div[1]/div/div[1]/span/div/div[1]/button'.</msg>
+<status status="PASS" starttime="20221122 11:02:22.153" endtime="20221122 11:02:22.223"/>
+</kw>
+<status status="PASS" starttime="20221122 11:02:22.153" endtime="20221122 11:02:22.223"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${IMPORT_DATA_INPUT_TEXT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221122 11:02:22.637" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221122 11:02:22.637" level="FAIL">The element 'xpath:/html/body/div[2]/div/div/div/div[2]/div[2]/div/div[1]/input' should be visible, but it is not.</msg>
+<status status="FAIL" starttime="20221122 11:02:22.223" endtime="20221122 11:02:22.641"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20221122 11:02:22.641" endtime="20221122 11:02:22.641"/>
+</kw>
+<status status="FAIL" starttime="20221122 11:02:22.152" endtime="20221122 11:02:22.642"/>
+</kw>
+<kw name="CloseImportWindowWithText" library="CasDeTest">
+<status status="NOT RUN" starttime="20221122 11:02:22.738" endtime="20221122 11:02:22.738"/>
 </kw>
 <kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221121 14:43:41.424" endtime="20221121 14:43:44.261"/>
+<status status="PASS" starttime="20221122 11:02:22.821" endtime="20221122 11:02:46.255"/>
 </kw>
-<status status="PASS" starttime="20221121 14:43:35.042" endtime="20221121 14:43:44.262"/>
+<status status="FAIL" starttime="20221122 11:01:47.887" endtime="20221122 11:02:46.273">The element 'xpath:/html/body/div[2]/div/div/div/div[2]/div[2]/div/div[1]/input' should be visible, but it is not.</status>
 </test>
-<doc>A test suite with a single test to purchase an item.
-
-This test has a workflow that is created using keywords in
-the imported resource file.</doc>
-<status status="PASS" starttime="20221121 14:43:34.674" endtime="20221121 14:43:44.263"/>
+<status status="FAIL" starttime="20221122 11:01:47.259" endtime="20221122 11:02:46.316"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Scenario">Scenario</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Scenario">Scenario</stat>
 </suite>
 </statistics>
 <errors>
