@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e38704a-c188-4a89-ac5c-43c52908ec69" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CasDeTest.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CasDeTest.robot" beforeDir="false" afterPath="$PROJECT_DIR$/CasDeTest.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geckodriver-1.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/log.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/output.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource.robot" beforeDir="false" afterPath="$PROJECT_DIR$/resource_ivan.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource_ivan.robot" beforeDir="false" afterPath="$PROJECT_DIR$/resource_ivan.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/result.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scenario.robot" beforeDir="false" afterPath="$PROJECT_DIR$/scenario.robot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +84,12 @@
       <option name="presentableId" value="Default" />
       <updated>1669022061564</updated>
       <workItem from="1669022062670" duration="9688000" />
-      <workItem from="1669103308094" duration="7810000" />
+      <workItem from="1669103308094" duration="12606000" />
+      <workItem from="1669120404948" duration="935000" />
+      <workItem from="1669121504293" duration="1201000" />
+      <workItem from="1669122880389" duration="986000" />
+      <workItem from="1669123921546" duration="324000" />
+      <workItem from="1669124275592" duration="1837000" />
     </task>
     <servers />
   </component>

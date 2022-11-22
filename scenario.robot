@@ -4,8 +4,10 @@ Resource          CasDeTest.robot
 Test Teardown    Close Browser
 *** Test Cases ***
 ScenarioMainMenu
-    OpenWebSite
+    OpenMixap
     OpenImportWindow
-    CloseImportWindowNoText
+    CloseImportWindow
     OpenImportWindow
     CloseImportWindowWithText
+    EnterCodeLessSevenCharacter
+    EnterCodeMoreSevenCharacter

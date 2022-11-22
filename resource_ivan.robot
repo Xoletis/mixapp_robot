@@ -21,24 +21,26 @@ ${IMPORT_DATA}              xpath://*[@id="root"]/div/div[1]/div/div[1]/span/div
 ${LOGO_XPATH}               xpath://*[@id="root"]/div/div[1]/div/div[1]/div/span/span/img
 ${IMPORT_DATA_INPUT_TEXT}   xpath:/html/body/div[2]/div/div/div/div[2]/div[2]/div/div[1]/input
 ${IMPORT_DATA_WINDOW}       xpath:/html/body/div[2]/div/div/div/div[2]/div[2]
+${IMPORT_DATA_BUTTON}       xpath:/html/body/div[2]/div/div/div/div[2]/div[2]/div/div[2]/button
 
 *** Keywords ***
 
-Open Browser To Welcome Page
-    Create File                 ${PATH}              Log\n
-    Open Browser                ${WELCOMEPAGE_URL}   ${BROWSER}
+OpenMixap
+    Create File                     ${PATH}              Log\n
+    OpenBrowser                     ${WELCOMEPAGE_URL}   ${BROWSER}
     Maximize Browser Window
-    Set Selenium Speed          ${DELAY}
-    Welcome Page Should Be Open
+    Set Selenium Speed              ${DELAY}
+    Wait Until Element Is Visible   ${LOGO_XPATH}
+    WelcomePageShouldBeOpen
 
-Welcome Page Should Be Open
+WelcomePageShouldBeOpen
     Title Should Be   ${TITLE}
 
-Click Window
+ClickWindow
     [Arguments]     ${Button}
     Click Button    ${Button}
 
-Enter Text
+EnterText
     [Arguments]  ${Input}   ${Text}
     Input Text  ${Input}    ${Text}
 
@@ -47,7 +49,7 @@ GetInputValue
     ${INPUT_RETURN}     get element attribute   ${Input}    value
     [return]            ${INPUT_RETURN}
 
-Modifi File
+ModifiFile
     [Arguments]         ${Text}
     ${file}=            Get File            ${PATH}
     ${date}=            Get Current Date    UTC                             exclude_millis=yes
