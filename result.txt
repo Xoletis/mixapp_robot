@@ -1,4 +1,1 @@
 Log
-2022-11-22 15:55:19 : La fermeture de la fenêtre d'import des données avec du texte fonctionne (qzj = qzj)
-2022-11-22 15:55:24 : Le bouton reste verouiller avec moins de 7 characters
-2022-11-22 15:55:28 : Le bouton se déverouil avec plus de 7 characters
