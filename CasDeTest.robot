@@ -32,14 +32,16 @@ CloseImportWindowWithText
     Click
 
 EnterCodeLessSevenCharacter
+    ReturnMainPage
     OpenImportWindow
-    ${txt} =                        String.generate random string   1
+    ${txt} =                        String.generate random string   3
     EnterText                       ${IMPORT_DATA_INPUT_TEXT}       ${txt}
     Element Should Be Disabled      ${IMPORT_DATA_BUTTON}
     Clear Element Text              ${IMPORT_DATA_INPUT_TEXT}
     Click
 
 EnterCodeMoreSevenCharacter
+    ReturnMainPage
     OpenImportWindow
     ${txt} =                            String.generate random string   7
     EnterText                           ${IMPORT_DATA_INPUT_TEXT}       ${txt}
@@ -48,14 +50,21 @@ EnterCodeMoreSevenCharacter
     Click
 
 EnterFakeCode
+    ReturnMainPage
     OpenImportWindow
     ${txt} =            String.generate random string   7
     EnterText           ${IMPORT_DATA_INPUT_TEXT}       ${txt}
     Sleep               2
     ClickElement        ${IMPORT_DATA_BUTTON}
+    Sleep               5
+
+EnterRealCode
+    ReturnMainPage
+    OpenImportWindow
+    EnterText           ${IMPORT_DATA_INPUT_TEXT}       ${CODE_IMPORT}
     Sleep               2
-
-
+    ClickElement        ${IMPORT_DATA_BUTTON}
+    Sleep               5
 
 
 
@@ -116,6 +125,16 @@ EditeOneActivity
     Sleep           2
     ReturnMainPage
     Sleep           2
+
+PlayOneActivity
+    ${nbCard}=  GetChild    ${CARDS}
+    ${number}=    Evaluate    random.sample(range(2, ${nbCard+1}), 1)    random
+    ClickElement    //*[@id="root"]/div/div[2]/div/div[${number[0]}]/div[1]/div/div[2]/button/span
+    Sleep           2
+    ReturnMainPage
+    Sleep           2
+#    //*[@id="root"]/div/div[2]/div/div[2]/div[1]/button/span
+
 
 
 OpenMoreOptionWindow

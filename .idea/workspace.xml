@@ -11,7 +11,6 @@
       <change beforePath="$PROJECT_DIR$/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/output.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resource_ivan.robot" beforeDir="false" afterPath="$PROJECT_DIR$/resource_ivan.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/scenario.robot" beforeDir="false" afterPath="$PROJECT_DIR$/scenario.robot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +92,7 @@
       <workItem from="1669276353234" duration="3880000" />
       <workItem from="1669280644145" duration="1646000" />
       <workItem from="1669282338095" duration="64000" />
-      <workItem from="1669282430824" duration="5215000" />
+      <workItem from="1669282430824" duration="7814000" />
     </task>
     <servers />
   </component>

@@ -39,6 +39,8 @@ ${MON_CONTENU}              xpath://*[@id="rc-tabs-0-panel-1"]
 ${CARDS}                    xpath://*[@id="root"]/div/div[2]/div
 ${CODE_UTILISATEUR}         xpath:/html/body/div[7]/div/div/ul/li[2]/span/span[2]/strong
 
+#Autre
+${CODE_IMPORT}              5eda26
 *** Keywords ***
 
 OpenMixap
