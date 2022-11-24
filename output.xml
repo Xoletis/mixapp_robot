@@ -1,89 +1,297 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0 (Python 3.10.7 on win32)" generated="20221123 14:46:12.749" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0 (Python 3.10.7 on win32)" generated="20221124 12:31:56.017" rpa="false" schemaversion="3">
 <suite id="s1" name="Scenario" source="C:\Users\Admin\Desktop\Scrum\mixapp_robot\scenario.robot">
 <test id="s1-t1" name="ScenarioMainMenu" line="6">
 <kw name="OpenMixap" library="resource_ivan">
-<kw name="Create File" library="OperatingSystem">
-<arg>${PATH}</arg>
-<arg>Log\n</arg>
-<doc>Creates a file with the given content and encoding.</doc>
-<msg timestamp="20221123 14:46:13.207" level="INFO" html="true">Created file '&lt;a href="file://C:\Users\Admin\Desktop\Scrum\mixapp_robot\result.txt"&gt;C:\Users\Admin\Desktop\Scrum\mixapp_robot\result.txt&lt;/a&gt;'.</msg>
-<status status="PASS" starttime="20221123 14:46:13.206" endtime="20221123 14:46:13.207"/>
-</kw>
 <kw name="Open Browser" library="Selenium2Library">
 <arg>${WELCOMEPAGE_URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221123 14:46:13.208" level="INFO">Opening browser 'Chrome' to base url 'https://mixap-dev.surge.sh/'.</msg>
-<status status="PASS" starttime="20221123 14:46:13.207" endtime="20221123 14:46:19.736"/>
+<msg timestamp="20221124 12:31:56.331" level="INFO">Opening browser 'Chrome' to base url 'https://mixap-dev.surge.sh/'.</msg>
+<status status="PASS" starttime="20221124 12:31:56.330" endtime="20221124 12:31:59.941"/>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221123 14:46:19.737" endtime="20221123 14:46:19.883"/>
+<status status="PASS" starttime="20221124 12:31:59.941" endtime="20221124 12:32:00.075"/>
 </kw>
 <kw name="Set Selenium Speed" library="Selenium2Library">
 <arg>${DELAY}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20221123 14:46:19.883" endtime="20221123 14:46:19.885"/>
+<status status="PASS" starttime="20221124 12:32:00.076" endtime="20221124 12:32:00.077"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${LOGO_XPATH}</arg>
 <arg>100000</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221123 14:46:19.885" endtime="20221123 14:46:20.302"/>
+<status status="PASS" starttime="20221124 12:32:00.077" endtime="20221124 12:32:00.779"/>
 </kw>
 <kw name="WelcomePageShouldBeOpen" library="resource_ivan">
 <kw name="Title Should Be" library="Selenium2Library">
 <arg>${TITLE}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221123 14:46:20.312" level="INFO">Page title is 'MIXAP'.</msg>
-<status status="PASS" starttime="20221123 14:46:20.303" endtime="20221123 14:46:20.312"/>
+<msg timestamp="20221124 12:32:00.785" level="INFO">Page title is 'MIXAP'.</msg>
+<status status="PASS" starttime="20221124 12:32:00.780" endtime="20221124 12:32:00.786"/>
 </kw>
-<status status="PASS" starttime="20221123 14:46:20.303" endtime="20221123 14:46:20.313"/>
+<status status="PASS" starttime="20221124 12:32:00.779" endtime="20221124 12:32:00.786"/>
 </kw>
-<status status="PASS" starttime="20221123 14:46:13.205" endtime="20221123 14:46:20.313"/>
+<status status="PASS" starttime="20221124 12:31:56.330" endtime="20221124 12:32:00.786"/>
 </kw>
+<kw name="CreateAugmenterUneImageActivity" library="CasDeTest">
 <kw name="OpenAddActivityWindow" library="CasDeTest">
 <kw name="ClickWindow" library="resource_ivan">
 <arg>${ADD_ACTIVITY}</arg>
 <kw name="Click Button" library="Selenium2Library">
 <arg>${Button}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221123 14:46:20.316" level="INFO">Clicking button 'xpath://*[@id="root"]/div/div[2]/div/div[1]/div/div/button'.</msg>
-<status status="PASS" starttime="20221123 14:46:20.315" endtime="20221123 14:46:20.547"/>
+<msg timestamp="20221124 12:32:00.789" level="INFO">Clicking button 'xpath://*[@id="root"]/div/div[2]/div/div[1]/div/div/button'.</msg>
+<status status="PASS" starttime="20221124 12:32:00.788" endtime="20221124 12:32:00.950"/>
 </kw>
-<status status="PASS" starttime="20221123 14:46:20.315" endtime="20221123 14:46:20.547"/>
+<status status="PASS" starttime="20221124 12:32:00.788" endtime="20221124 12:32:00.950"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221123 14:46:22.556" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221123 14:46:20.548" endtime="20221123 14:46:22.556"/>
+<msg timestamp="20221124 12:32:02.962" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 12:32:00.950" endtime="20221124 12:32:02.962"/>
 </kw>
-<status status="PASS" starttime="20221123 14:46:20.314" endtime="20221123 14:46:22.556"/>
+<status status="PASS" starttime="20221124 12:32:00.787" endtime="20221124 12:32:02.962"/>
 </kw>
-<kw name="CloseAddActivityWindow" library="CasDeTest">
 <kw name="Click Element" library="Selenium2Library">
-<arg>${CLOSE_ADD_ACTIVITY_WINDOW}</arg>
+<arg>${AUGMENTER_UNE_IMAGE}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221123 14:46:22.558" level="INFO">Clicking element 'xpath:/html/body/div[2]/div/div[2]/div/div[2]/button'.</msg>
-<status status="PASS" starttime="20221123 14:46:22.558" endtime="20221123 14:46:22.612"/>
+<msg timestamp="20221124 12:32:02.963" level="INFO">Clicking element 'xpath:/html/body/div[2]/div/div[2]/div/div[2]/div[2]/div/div[1]/div[1]'.</msg>
+<status status="PASS" starttime="20221124 12:32:02.962" endtime="20221124 12:32:03.043"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221123 14:46:24.617" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221123 14:46:22.612" endtime="20221123 14:46:24.617"/>
+<msg timestamp="20221124 12:32:05.056" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 12:32:03.043" endtime="20221124 12:32:05.056"/>
 </kw>
-<status status="PASS" starttime="20221123 14:46:22.557" endtime="20221123 14:46:24.617"/>
+<status status="PASS" starttime="20221124 12:32:00.786" endtime="20221124 12:32:05.056"/>
+</kw>
+<kw name="ReturnMainPage" library="resource_ivan">
+<kw name="Go To" library="Selenium2Library">
+<arg>${WELCOMEPAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221124 12:32:05.057" level="INFO">Opening url 'https://mixap-dev.surge.sh/'</msg>
+<status status="PASS" starttime="20221124 12:32:05.057" endtime="20221124 12:32:06.280"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221124 12:32:08.287" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 12:32:06.280" endtime="20221124 12:32:08.287"/>
+</kw>
+<status status="PASS" starttime="20221124 12:32:05.057" endtime="20221124 12:32:08.287"/>
+</kw>
+<kw name="LookActivityCreate" library="CasDeTest">
+<kw name="GetChild" library="resource_ivan">
+<var>${nbCard}</var>
+<arg>${CARDS}</arg>
+<kw name="Get WebElement" library="Selenium2Library">
+<var>${element}</var>
+<arg>${locator}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20221124 12:32:08.302" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="b7ae85195c0bdcf0f1404af855fdac3c", element="ead770a0-1ac6-4893-b297-6fc8306a5985")&gt;</msg>
+<status status="PASS" starttime="20221124 12:32:08.288" endtime="20221124 12:32:08.302"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<var>${children}</var>
+<arg>${element}</arg>
+<arg>find_elements</arg>
+<arg>by=xpath</arg>
+<arg>value=child::*</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<msg timestamp="20221124 12:32:08.315" level="INFO">${children} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="b7ae85195c0bdcf0f1404af855fdac3c", element="417719d9-613e-4bc5-8800-d8c044781201")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20221124 12:32:08.303" endtime="20221124 12:32:08.315"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${return}</var>
+<arg>${children}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20221124 12:32:08.316" level="INFO">Length is 2</msg>
+<msg timestamp="20221124 12:32:08.316" level="INFO">${return} = 2</msg>
+<status status="PASS" starttime="20221124 12:32:08.315" endtime="20221124 12:32:08.316"/>
+</kw>
+<msg timestamp="20221124 12:32:08.316" level="INFO">${nbCard} = 2</msg>
+<status status="PASS" starttime="20221124 12:32:08.288" endtime="20221124 12:32:08.316"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>${nbCard}</value>
+<iter>
+<var name="${i}">0</var>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>//*[@id="root"]/div/div[2]/div/div[${i+1}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221124 12:32:08.344" level="INFO">Element '//*[@id="root"]/div/div[2]/div/div[1]' is displayed.</msg>
+<status status="PASS" starttime="20221124 12:32:08.316" endtime="20221124 12:32:08.345"/>
+</kw>
+<status status="PASS" starttime="20221124 12:32:08.316" endtime="20221124 12:32:08.345"/>
+</iter>
+<iter>
+<var name="${i}">1</var>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>//*[@id="root"]/div/div[2]/div/div[${i+1}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221124 12:32:08.369" level="INFO">Element '//*[@id="root"]/div/div[2]/div/div[2]' is displayed.</msg>
+<status status="PASS" starttime="20221124 12:32:08.345" endtime="20221124 12:32:08.369"/>
+</kw>
+<status status="PASS" starttime="20221124 12:32:08.345" endtime="20221124 12:32:08.369"/>
+</iter>
+<status status="PASS" starttime="20221124 12:32:08.316" endtime="20221124 12:32:08.369"/>
+</for>
+<status status="PASS" starttime="20221124 12:32:08.288" endtime="20221124 12:32:08.369"/>
+</kw>
+<kw name="EditeOneActivity" library="CasDeTest">
+<kw name="GetChild" library="resource_ivan">
+<var>${nbCard}</var>
+<arg>${CARDS}</arg>
+<kw name="Get WebElement" library="Selenium2Library">
+<var>${element}</var>
+<arg>${locator}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20221124 12:32:08.379" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="b7ae85195c0bdcf0f1404af855fdac3c", element="ead770a0-1ac6-4893-b297-6fc8306a5985")&gt;</msg>
+<status status="PASS" starttime="20221124 12:32:08.371" endtime="20221124 12:32:08.380"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<var>${children}</var>
+<arg>${element}</arg>
+<arg>find_elements</arg>
+<arg>by=xpath</arg>
+<arg>value=child::*</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<msg timestamp="20221124 12:32:08.388" level="INFO">${children} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="b7ae85195c0bdcf0f1404af855fdac3c", element="417719d9-613e-4bc5-8800-d8c044781201")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20221124 12:32:08.380" endtime="20221124 12:32:08.388"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${return}</var>
+<arg>${children}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20221124 12:32:08.389" level="INFO">Length is 2</msg>
+<msg timestamp="20221124 12:32:08.389" level="INFO">${return} = 2</msg>
+<status status="PASS" starttime="20221124 12:32:08.389" endtime="20221124 12:32:08.389"/>
+</kw>
+<msg timestamp="20221124 12:32:08.389" level="INFO">${nbCard} = 2</msg>
+<status status="PASS" starttime="20221124 12:32:08.370" endtime="20221124 12:32:08.389"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${number}</var>
+<arg>random.sample(range(2, ${nbCard+1}), 1)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20221124 12:32:08.390" level="INFO">${number} = [2]</msg>
+<status status="PASS" starttime="20221124 12:32:08.389" endtime="20221124 12:32:08.390"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>//*[@id="root"]/div/div[2]/div/div[${number[0]}]/ul/li[3]/span/button/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221124 12:32:08.392" level="INFO">Clicking element '//*[@id="root"]/div/div[2]/div/div[2]/ul/li[3]/span/button/span'.</msg>
+<status status="PASS" starttime="20221124 12:32:08.391" endtime="20221124 12:32:08.485"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221124 12:32:10.490" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 12:32:08.485" endtime="20221124 12:32:10.490"/>
+</kw>
+<kw name="ReturnMainPage" library="resource_ivan">
+<kw name="Go To" library="Selenium2Library">
+<arg>${WELCOMEPAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221124 12:32:10.491" level="INFO">Opening url 'https://mixap-dev.surge.sh/'</msg>
+<status status="PASS" starttime="20221124 12:32:10.490" endtime="20221124 12:32:11.146"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221124 12:32:13.148" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 12:32:11.146" endtime="20221124 12:32:13.148"/>
+</kw>
+<status status="PASS" starttime="20221124 12:32:10.490" endtime="20221124 12:32:13.148"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221124 12:32:15.160" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 12:32:13.148" endtime="20221124 12:32:15.160"/>
+</kw>
+<status status="PASS" starttime="20221124 12:32:08.370" endtime="20221124 12:32:15.160"/>
+</kw>
+<kw name="DeleteOneActivity" library="CasDeTest">
+<kw name="GetChild" library="resource_ivan">
+<var>${nbCard}</var>
+<arg>${CARDS}</arg>
+<kw name="Get WebElement" library="Selenium2Library">
+<var>${element}</var>
+<arg>${locator}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20221124 12:32:15.169" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="b7ae85195c0bdcf0f1404af855fdac3c", element="0c35b4a7-5fa6-4af1-ac46-5a2b47f2b2ec")&gt;</msg>
+<status status="PASS" starttime="20221124 12:32:15.161" endtime="20221124 12:32:15.169"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<var>${children}</var>
+<arg>${element}</arg>
+<arg>find_elements</arg>
+<arg>by=xpath</arg>
+<arg>value=child::*</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<msg timestamp="20221124 12:32:15.186" level="INFO">${children} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="b7ae85195c0bdcf0f1404af855fdac3c", element="f74de30c-8531-411b-b388-eb0bf9ab885c")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20221124 12:32:15.170" endtime="20221124 12:32:15.186"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${return}</var>
+<arg>${children}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20221124 12:32:15.186" level="INFO">Length is 2</msg>
+<msg timestamp="20221124 12:32:15.186" level="INFO">${return} = 2</msg>
+<status status="PASS" starttime="20221124 12:32:15.186" endtime="20221124 12:32:15.186"/>
+</kw>
+<msg timestamp="20221124 12:32:15.187" level="INFO">${nbCard} = 2</msg>
+<status status="PASS" starttime="20221124 12:32:15.161" endtime="20221124 12:32:15.187"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${number}</var>
+<arg>random.sample(range(2, ${nbCard+1}), 1)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20221124 12:32:15.188" level="INFO">${number} = [2]</msg>
+<status status="PASS" starttime="20221124 12:32:15.187" endtime="20221124 12:32:15.188"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>//*[@id="root"]/div/div[2]/div/div[${number[0]}]/ul/li[4]/span/button/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221124 12:32:15.189" level="INFO">Clicking element '//*[@id="root"]/div/div[2]/div/div[2]/ul/li[4]/span/button/span'.</msg>
+<status status="PASS" starttime="20221124 12:32:15.188" endtime="20221124 12:32:15.240"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221124 12:32:17.254" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 12:32:15.240" endtime="20221124 12:32:17.254"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>xpath:/html/body/div[2]/div/div/ul/li/span/button/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221124 12:32:17.254" level="INFO">Clicking element 'xpath:/html/body/div[2]/div/div/ul/li/span/button/span'.</msg>
+<status status="PASS" starttime="20221124 12:32:17.254" endtime="20221124 12:32:17.320"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221124 12:32:19.325" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 12:32:17.320" endtime="20221124 12:32:19.326"/>
+</kw>
+<status status="PASS" starttime="20221124 12:32:15.160" endtime="20221124 12:32:19.326"/>
 </kw>
 <kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221123 14:46:24.618" endtime="20221123 14:46:28.557"/>
+<status status="PASS" starttime="20221124 12:32:19.327" endtime="20221124 12:32:22.710"/>
 </kw>
-<status status="PASS" starttime="20221123 14:46:13.204" endtime="20221123 14:46:28.557"/>
+<status status="PASS" starttime="20221124 12:31:56.329" endtime="20221124 12:32:22.711"/>
 </test>
-<status status="PASS" starttime="20221123 14:46:12.752" endtime="20221123 14:46:28.559"/>
+<status status="PASS" starttime="20221124 12:31:56.019" endtime="20221124 12:32:22.712"/>
 </suite>
 <statistics>
 <total>
