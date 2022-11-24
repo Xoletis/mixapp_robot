@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e38704a-c188-4a89-ac5c-43c52908ec69" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/resources.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CasDeTest.robot" beforeDir="false" afterPath="$PROJECT_DIR$/CasDeTest.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/output.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scenario.robot" beforeDir="false" afterPath="$PROJECT_DIR$/scenario.robot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +88,7 @@
       <workItem from="1669276353234" duration="3880000" />
       <workItem from="1669280644145" duration="1646000" />
       <workItem from="1669282338095" duration="64000" />
-      <workItem from="1669282430824" duration="12304000" />
+      <workItem from="1669282430824" duration="12397000" />
     </task>
     <servers />
   </component>

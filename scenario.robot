@@ -3,7 +3,7 @@ Resource          resources.robot
 Resource          CasDeTest.robot
 Test Teardown    Close Browser
 *** Test Cases ***
-ScenarioMainMenu
+ScenarioMainMenPart1
     OpenMixap
 
     OpenImportWindow
@@ -14,7 +14,13 @@ ScenarioMainMenu
     EnterCodeLessSevenCharacter
     ReturnMainPage
     EnterCodeMoreSevenCharacter
+    ReturnMainPage
+    EnterFakeCode
+    ReturnMainPage
+    EnterRealCode
+    ReturnMainPage
 
+ScenarioMainMenPart2
     OpenDashboard
     GoToSuiviDapprenants
     GoToMonContenu
@@ -33,12 +39,6 @@ ScenarioMainMenu
 
     OpenMoreOptionWindow
     Click
-
-    ReturnMainPage
-    EnterFakeCode
-    ReturnMainPage
-    EnterRealCode
-    ReturnMainPage
 
 ScenarioActiviteAugmenterUneImage
     OpenMixap
