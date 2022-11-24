@@ -4,7 +4,7 @@ Documentation       La liste des Différents pas de test
 Library             Selenium2Library
 Library             String
 
-Resource            resource_ivan.robot
+Resource            resources.robot
 
 *** Variables ***
 
@@ -38,16 +38,15 @@ EnterCodeLessSevenCharacter
     EnterText                       ${IMPORT_DATA_INPUT_TEXT}       ${txt}
     Element Should Be Disabled      ${IMPORT_DATA_BUTTON}
     Clear Element Text              ${IMPORT_DATA_INPUT_TEXT}
-    Click
+    ReturnMainPage
 
 EnterCodeMoreSevenCharacter
-    ReturnMainPage
     OpenImportWindow
     ${txt} =                            String.generate random string   7
     EnterText                           ${IMPORT_DATA_INPUT_TEXT}       ${txt}
     Element Should Be Enabled            ${IMPORT_DATA_BUTTON}
     Clear Element Text                  ${IMPORT_DATA_INPUT_TEXT}
-    Click
+    ReturnMainPage
 
 EnterFakeCode
     ReturnMainPage
@@ -123,20 +122,56 @@ EditeOneActivity
     ${number}=    Evaluate    random.sample(range(2, ${nbCard+1}), 1)    random
     ClickElement    //*[@id="root"]/div/div[2]/div/div[${number[0]}]/ul/li[3]/span/button/span
     Sleep           2
-    ReturnMainPage
-    Sleep           2
 
 PlayOneActivity
     ${nbCard}=  GetChild    ${CARDS}
     ${number}=    Evaluate    random.sample(range(2, ${nbCard+1}), 1)    random
     ClickElement    //*[@id="root"]/div/div[2]/div/div[${number[0]}]/div[1]/div/div[2]/button/span
     Sleep           2
-    ReturnMainPage
-    Sleep           2
-#    //*[@id="root"]/div/div[2]/div/div[2]/div[1]/button/span
 
 
 
 OpenMoreOptionWindow
     ClickWindow                    ${MORE_OPTION_BUTTON}
     Sleep                          2
+
+
+AfficherCreationStage
+    CreateAugmenterUneImageActivity
+    Sleep                           2
+    Element Should Be Visible       ${ETAPE_NOMMAGE}
+    Element Should Be Visible       ${ETAPE_MARQUEUR}
+    Element Should Be Visible       ${ETAPE_AUGMENTATION}
+    Element Should Be Visible       ${ETAPE_ESSAI}
+
+ModifyTitle
+    Click Element               ${BOUTON_TITRE_MODIFIER}
+    Press Keys                  none                        CONTROL+A
+    Sleep                       2
+    Press Keys                  none                        ${TITRE}
+    Sleep                       2
+    Element Should Contain      ${EMPLACEMENT_TITRE}        ${TITRE}
+
+ModifyDesc
+    Click Element               ${BOUTON_DESCRIPTION_MODIFIER}
+    Press Keys                  none                            CONTROL+A
+    Sleep                       2
+    Press Keys                  none                            ${DESCRIPTION}
+    Sleep                       2
+    Element Should Contain      ${EMPLACEMENT_DESCRIPTION}      ${DESCRIPTION}
+
+GoBackToMainPageWithArrow
+    Click Element               ${RETOUR}
+    Sleep                       2
+    Element Should Be Visible   ${ADD_ACTIVITY}
+
+GoBackToMainPageWithBrowserBack
+    Go Back
+    Sleep                       2
+    Element Should Be Visible   ${ADD_ACTIVITY}
+
+PasserEtapeSuivante
+    Click Element               ${SUIVANT}
+    Sleep                       2
+    Element Should Be Visible   ${PRENDRE_PHOTO}
+    Sleep                       2

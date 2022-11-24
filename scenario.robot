@@ -1,33 +1,24 @@
 *** Settings ***
-Resource          resource_ivan.robot
+Resource          resources.robot
 Resource          CasDeTest.robot
 Test Teardown    Close Browser
 *** Test Cases ***
 ScenarioMainMenu
     OpenMixap
 
-#############################################################################################################
-######################################## Fênetre d'import de donnée #########################################
-#############################################################################################################
     OpenImportWindow
     Click
     OpenImportWindow
     CloseImportWindowWithText
+    ReturnMainPage
     EnterCodeLessSevenCharacter
+    ReturnMainPage
     EnterCodeMoreSevenCharacter
-    EnterFakeCode
-    EnterRealCode
 
-#############################################################################################################
-################################################ Dashboard ##################################################
-#############################################################################################################
     OpenDashboard
     GoToSuiviDapprenants
     GoToMonContenu
 
-#############################################################################################################
-################################################ + Activité #################################################
-#############################################################################################################
     ReturnMainPage
     OpenAddActivityWindow
     CloseAddActivityWindow
@@ -35,11 +26,27 @@ ScenarioMainMenu
     ReturnMainPage
     LookActivityCreate
     EditeOneActivity
+    ReturnToMainPage
     PlayOneActivity
+    ReturnToMainPage
     DeleteOneActivity
 
-#############################################################################################################
-################################################# + Option ##################################################
-#############################################################################################################
     OpenMoreOptionWindow
     Click
+
+    ReturnMainPage
+    EnterFakeCode
+    ReturnMainPage
+    EnterRealCode
+    ReturnMainPage
+
+ScenarioActiviteAugmenterUneImage
+    OpenMixap
+    AfficherCreationStage
+    ModifyTitle
+    ModifyDesc
+    GoBackToMainPageWithArrow
+    EditeOneActivity
+    GoBackToMainPageWithBrowserBack
+    EditeOneActivity
+    PasserEtapeSuivante

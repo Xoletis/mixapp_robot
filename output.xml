@@ -1,149 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0 (Python 3.10.7 on win32)" generated="20221124 13:57:34.143" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0 (Python 3.10.7 on win32)" generated="20221124 15:10:11.662" rpa="false" schemaversion="3">
 <suite id="s1" name="Scenario" source="C:\Users\Admin\Desktop\Scrum\mixapp_robot\scenario.robot">
 <test id="s1-t1" name="ScenarioMainMenu" line="6">
-<kw name="OpenMixap" library="resource_ivan">
+<kw name="OpenMixap" library="resources">
 <kw name="Open Browser" library="Selenium2Library">
 <arg>${WELCOMEPAGE_URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221124 13:57:34.483" level="INFO">Opening browser 'Chrome' to base url 'https://mixap-dev.surge.sh/'.</msg>
-<status status="PASS" starttime="20221124 13:57:34.481" endtime="20221124 13:58:08.392"/>
+<msg timestamp="20221124 15:10:11.999" level="INFO">Opening browser 'Chrome' to base url 'https://mixap-dev.surge.sh/'.</msg>
+<status status="PASS" starttime="20221124 15:10:11.999" endtime="20221124 15:10:15.930"/>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221124 13:58:08.392" endtime="20221124 13:58:08.523"/>
+<status status="PASS" starttime="20221124 15:10:15.930" endtime="20221124 15:10:16.099"/>
 </kw>
 <kw name="Set Selenium Speed" library="Selenium2Library">
 <arg>${DELAY}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20221124 13:58:08.523" endtime="20221124 13:58:08.523"/>
+<status status="PASS" starttime="20221124 15:10:16.099" endtime="20221124 15:10:16.100"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${LOGO_XPATH}</arg>
 <arg>100000</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221124 13:58:08.524" endtime="20221124 13:58:09.729"/>
+<status status="PASS" starttime="20221124 15:10:16.100" endtime="20221124 15:10:16.637"/>
 </kw>
-<kw name="WelcomePageShouldBeOpen" library="resource_ivan">
+<kw name="WelcomePageShouldBeOpen" library="resources">
 <kw name="Title Should Be" library="Selenium2Library">
 <arg>${TITLE}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221124 13:58:09.735" level="INFO">Page title is 'MIXAP'.</msg>
-<status status="PASS" starttime="20221124 13:58:09.729" endtime="20221124 13:58:09.735"/>
+<msg timestamp="20221124 15:10:16.644" level="INFO">Page title is 'MIXAP'.</msg>
+<status status="PASS" starttime="20221124 15:10:16.638" endtime="20221124 15:10:16.644"/>
 </kw>
-<status status="PASS" starttime="20221124 13:58:09.729" endtime="20221124 13:58:09.736"/>
+<status status="PASS" starttime="20221124 15:10:16.637" endtime="20221124 15:10:16.644"/>
 </kw>
-<status status="PASS" starttime="20221124 13:57:34.481" endtime="20221124 13:58:09.736"/>
+<status status="PASS" starttime="20221124 15:10:11.998" endtime="20221124 15:10:16.644"/>
 </kw>
 <kw name="OpenImportWindow" library="CasDeTest">
-<kw name="ClickWindow" library="resource_ivan">
+<kw name="ClickWindow" library="resources">
 <arg>${IMPORT_DATA}</arg>
 <kw name="Click Button" library="Selenium2Library">
 <arg>${Button}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221124 13:58:09.738" level="INFO">Clicking button 'xpath://*[@id="root"]/div/div[1]/div/div[1]/span/div/div[1]/button'.</msg>
-<status status="PASS" starttime="20221124 13:58:09.737" endtime="20221124 13:58:09.822"/>
+<msg timestamp="20221124 15:10:16.646" level="INFO">Clicking button 'xpath://*[@id="root"]/div/div[1]/div/div[1]/span/div/div[1]/button'.</msg>
+<status status="PASS" starttime="20221124 15:10:16.645" endtime="20221124 15:10:16.722"/>
 </kw>
-<status status="PASS" starttime="20221124 13:58:09.737" endtime="20221124 13:58:09.822"/>
+<status status="PASS" starttime="20221124 15:10:16.645" endtime="20221124 15:10:16.722"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:58:11.833" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:58:09.822" endtime="20221124 13:58:11.833"/>
+<msg timestamp="20221124 15:10:18.729" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 15:10:16.722" endtime="20221124 15:10:18.729"/>
 </kw>
-<status status="PASS" starttime="20221124 13:58:09.736" endtime="20221124 13:58:11.833"/>
+<status status="PASS" starttime="20221124 15:10:16.645" endtime="20221124 15:10:18.729"/>
 </kw>
 <kw name="Click" library="CasDeTest">
 <kw name="Click Element" library="Selenium2Library">
 <arg>${LOGO_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221124 13:58:11.835" level="INFO">Clicking element 'xpath://*[@id="root"]/div/div[1]/div/div[1]/div/span/span/img'.</msg>
-<status status="PASS" starttime="20221124 13:58:11.834" endtime="20221124 13:58:11.898"/>
+<msg timestamp="20221124 15:10:18.733" level="INFO">Clicking element 'xpath://*[@id="root"]/div/div[1]/div/div[1]/div/span/span/img'.</msg>
+<status status="PASS" starttime="20221124 15:10:18.732" endtime="20221124 15:10:18.797"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:58:13.907" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:58:11.899" endtime="20221124 13:58:13.907"/>
+<msg timestamp="20221124 15:10:20.804" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 15:10:18.797" endtime="20221124 15:10:20.804"/>
 </kw>
-<status status="PASS" starttime="20221124 13:58:11.834" endtime="20221124 13:58:13.907"/>
+<status status="PASS" starttime="20221124 15:10:18.732" endtime="20221124 15:10:20.804"/>
 </kw>
 <kw name="OpenImportWindow" library="CasDeTest">
-<kw name="ClickWindow" library="resource_ivan">
+<kw name="ClickWindow" library="resources">
 <arg>${IMPORT_DATA}</arg>
 <kw name="Click Button" library="Selenium2Library">
 <arg>${Button}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221124 13:58:13.909" level="INFO">Clicking button 'xpath://*[@id="root"]/div/div[1]/div/div[1]/span/div/div[1]/button'.</msg>
-<status status="PASS" starttime="20221124 13:58:13.908" endtime="20221124 13:58:13.953"/>
+<msg timestamp="20221124 15:10:20.806" level="INFO">Clicking button 'xpath://*[@id="root"]/div/div[1]/div/div[1]/span/div/div[1]/button'.</msg>
+<status status="PASS" starttime="20221124 15:10:20.805" endtime="20221124 15:10:20.853"/>
 </kw>
-<status status="PASS" starttime="20221124 13:58:13.908" endtime="20221124 13:58:13.953"/>
+<status status="PASS" starttime="20221124 15:10:20.805" endtime="20221124 15:10:20.853"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:58:15.958" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:58:13.953" endtime="20221124 13:58:15.958"/>
+<msg timestamp="20221124 15:10:22.867" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 15:10:20.854" endtime="20221124 15:10:22.867"/>
 </kw>
-<status status="PASS" starttime="20221124 13:58:13.907" endtime="20221124 13:58:15.959"/>
+<status status="PASS" starttime="20221124 15:10:20.805" endtime="20221124 15:10:22.867"/>
 </kw>
 <kw name="CloseImportWindowWithText" library="CasDeTest">
 <kw name="Generate Random String" library="String">
 <var>${txt}</var>
 <arg>3</arg>
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<msg timestamp="20221124 13:58:15.962" level="INFO">${txt} = Ww8</msg>
-<status status="PASS" starttime="20221124 13:58:15.961" endtime="20221124 13:58:15.962"/>
+<msg timestamp="20221124 15:10:22.868" level="INFO">${txt} = Dod</msg>
+<status status="PASS" starttime="20221124 15:10:22.868" endtime="20221124 15:10:22.868"/>
 </kw>
-<kw name="EnterText" library="resource_ivan">
+<kw name="EnterText" library="resources">
 <arg>${IMPORT_DATA_INPUT_TEXT}</arg>
 <arg>${txt}</arg>
 <kw name="Input Text" library="Selenium2Library">
 <arg>${Input}</arg>
 <arg>${Text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221124 13:58:15.963" level="INFO">Typing text 'Ww8' into text field 'xpath:/html/body/div[2]/div/div/div/div[2]/div[2]/div/div[1]/input'.</msg>
-<status status="PASS" starttime="20221124 13:58:15.962" endtime="20221124 13:58:16.125"/>
+<msg timestamp="20221124 15:10:22.869" level="INFO">Typing text 'Dod' into text field 'xpath:/html/body/div[2]/div/div/div/div[2]/div[2]/div/div[1]/input'.</msg>
+<status status="PASS" starttime="20221124 15:10:22.869" endtime="20221124 15:10:22.986"/>
 </kw>
-<status status="PASS" starttime="20221124 13:58:15.962" endtime="20221124 13:58:16.125"/>
+<status status="PASS" starttime="20221124 15:10:22.868" endtime="20221124 15:10:22.986"/>
 </kw>
 <kw name="Click" library="CasDeTest">
 <kw name="Click Element" library="Selenium2Library">
 <arg>${LOGO_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221124 13:58:16.128" level="INFO">Clicking element 'xpath://*[@id="root"]/div/div[1]/div/div[1]/div/span/span/img'.</msg>
-<status status="PASS" starttime="20221124 13:58:16.126" endtime="20221124 13:58:16.187"/>
+<msg timestamp="20221124 15:10:22.987" level="INFO">Clicking element 'xpath://*[@id="root"]/div/div[1]/div/div[1]/div/span/span/img'.</msg>
+<status status="PASS" starttime="20221124 15:10:22.986" endtime="20221124 15:10:23.033"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:58:18.197" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:58:16.188" endtime="20221124 13:58:18.197"/>
+<msg timestamp="20221124 15:10:25.038" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 15:10:23.033" endtime="20221124 15:10:25.038"/>
 </kw>
-<status status="PASS" starttime="20221124 13:58:16.126" endtime="20221124 13:58:18.198"/>
+<status status="PASS" starttime="20221124 15:10:22.986" endtime="20221124 15:10:25.038"/>
 </kw>
 <kw name="OpenImportWindow" library="CasDeTest">
-<kw name="ClickWindow" library="resource_ivan">
+<kw name="ClickWindow" library="resources">
 <arg>${IMPORT_DATA}</arg>
 <kw name="Click Button" library="Selenium2Library">
 <arg>${Button}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221124 13:58:18.199" level="INFO">Clicking button 'xpath://*[@id="root"]/div/div[1]/div/div[1]/span/div/div[1]/button'.</msg>
-<status status="PASS" starttime="20221124 13:58:18.198" endtime="20221124 13:58:18.252"/>
+<msg timestamp="20221124 15:10:25.040" level="INFO">Clicking button 'xpath://*[@id="root"]/div/div[1]/div/div[1]/span/div/div[1]/button'.</msg>
+<status status="PASS" starttime="20221124 15:10:25.039" endtime="20221124 15:10:25.102"/>
 </kw>
-<status status="PASS" starttime="20221124 13:58:18.198" endtime="20221124 13:58:18.253"/>
+<status status="PASS" starttime="20221124 15:10:25.038" endtime="20221124 15:10:25.102"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:58:20.268" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:58:18.253" endtime="20221124 13:58:20.268"/>
+<msg timestamp="20221124 15:10:27.115" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 15:10:25.102" endtime="20221124 15:10:27.115"/>
 </kw>
-<status status="PASS" starttime="20221124 13:58:18.198" endtime="20221124 13:58:20.268"/>
+<status status="PASS" starttime="20221124 15:10:25.038" endtime="20221124 15:10:27.115"/>
 </kw>
-<kw name="GetInputValue" library="resource_ivan">
+<kw name="GetInputValue" library="resources">
 <var>${result}</var>
 <arg>${IMPORT_DATA_INPUT_TEXT}</arg>
 <kw name="Get Element Attribute" library="Selenium2Library">
@@ -151,714 +151,548 @@
 <arg>${Input}</arg>
 <arg>value</arg>
 <doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20221124 13:58:20.293" level="INFO">${INPUT_RETURN} = Ww8</msg>
-<status status="PASS" starttime="20221124 13:58:20.268" endtime="20221124 13:58:20.293"/>
+<msg timestamp="20221124 15:10:27.142" level="INFO">${INPUT_RETURN} = Dod</msg>
+<status status="PASS" starttime="20221124 15:10:27.116" endtime="20221124 15:10:27.142"/>
 </kw>
-<msg timestamp="20221124 13:58:20.293" level="INFO">${result} = Ww8</msg>
-<status status="PASS" starttime="20221124 13:58:20.268" endtime="20221124 13:58:20.293"/>
+<msg timestamp="20221124 15:10:27.142" level="INFO">${result} = Dod</msg>
+<status status="PASS" starttime="20221124 15:10:27.115" endtime="20221124 15:10:27.142"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>"${result}" != "${txt}"</arg>
 <arg>Fatal Error</arg>
 <arg>${result} n'est pas égale à ${txt}</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20221124 13:58:20.293" endtime="20221124 13:58:20.293"/>
+<status status="PASS" starttime="20221124 15:10:27.142" endtime="20221124 15:10:27.143"/>
 </kw>
 <kw name="Click" library="CasDeTest">
 <kw name="Click Element" library="Selenium2Library">
 <arg>${LOGO_XPATH}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221124 13:58:20.294" level="INFO">Clicking element 'xpath://*[@id="root"]/div/div[1]/div/div[1]/div/span/span/img'.</msg>
-<status status="PASS" starttime="20221124 13:58:20.294" endtime="20221124 13:58:20.337"/>
+<msg timestamp="20221124 15:10:27.144" level="INFO">Clicking element 'xpath://*[@id="root"]/div/div[1]/div/div[1]/div/span/span/img'.</msg>
+<status status="PASS" starttime="20221124 15:10:27.143" endtime="20221124 15:10:27.183"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:58:22.340" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:58:20.337" endtime="20221124 13:58:22.340"/>
+<msg timestamp="20221124 15:10:29.198" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 15:10:27.183" endtime="20221124 15:10:29.198"/>
 </kw>
-<status status="PASS" starttime="20221124 13:58:20.293" endtime="20221124 13:58:22.340"/>
+<status status="PASS" starttime="20221124 15:10:27.143" endtime="20221124 15:10:29.198"/>
 </kw>
-<status status="PASS" starttime="20221124 13:58:15.961" endtime="20221124 13:58:22.340"/>
+<status status="PASS" starttime="20221124 15:10:22.868" endtime="20221124 15:10:29.198"/>
 </kw>
-<kw name="EnterCodeLessSevenCharacter" library="CasDeTest">
-<kw name="ReturnMainPage" library="resource_ivan">
+<kw name="ReturnMainPage" library="resources">
 <kw name="Go To" library="Selenium2Library">
 <arg>${WELCOMEPAGE_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221124 13:58:22.341" level="INFO">Opening url 'https://mixap-dev.surge.sh/'</msg>
-<status status="PASS" starttime="20221124 13:58:22.341" endtime="20221124 13:58:24.517"/>
+<msg timestamp="20221124 15:10:29.200" level="INFO">Opening url 'https://mixap-dev.surge.sh/'</msg>
+<status status="PASS" starttime="20221124 15:10:29.199" endtime="20221124 15:10:29.845"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:58:26.522" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:58:24.517" endtime="20221124 13:58:26.522"/>
+<msg timestamp="20221124 15:10:31.848" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 15:10:29.845" endtime="20221124 15:10:31.848"/>
 </kw>
-<status status="PASS" starttime="20221124 13:58:22.341" endtime="20221124 13:58:26.522"/>
+<status status="PASS" starttime="20221124 15:10:29.199" endtime="20221124 15:10:31.848"/>
+</kw>
+<kw name="EnterCodeLessSevenCharacter" library="CasDeTest">
+<kw name="ReturnMainPage" library="resources">
+<kw name="Go To" library="Selenium2Library">
+<arg>${WELCOMEPAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221124 15:10:31.849" level="INFO">Opening url 'https://mixap-dev.surge.sh/'</msg>
+<status status="PASS" starttime="20221124 15:10:31.849" endtime="20221124 15:10:32.205"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221124 15:10:34.221" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 15:10:32.206" endtime="20221124 15:10:34.221"/>
+</kw>
+<status status="PASS" starttime="20221124 15:10:31.849" endtime="20221124 15:10:34.221"/>
 </kw>
 <kw name="OpenImportWindow" library="CasDeTest">
-<kw name="ClickWindow" library="resource_ivan">
+<kw name="ClickWindow" library="resources">
 <arg>${IMPORT_DATA}</arg>
 <kw name="Click Button" library="Selenium2Library">
 <arg>${Button}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221124 13:58:26.523" level="INFO">Clicking button 'xpath://*[@id="root"]/div/div[1]/div/div[1]/span/div/div[1]/button'.</msg>
-<status status="PASS" starttime="20221124 13:58:26.523" endtime="20221124 13:58:26.577"/>
+<msg timestamp="20221124 15:10:34.222" level="INFO">Clicking button 'xpath://*[@id="root"]/div/div[1]/div/div[1]/span/div/div[1]/button'.</msg>
+<status status="PASS" starttime="20221124 15:10:34.221" endtime="20221124 15:10:34.284"/>
 </kw>
-<status status="PASS" starttime="20221124 13:58:26.522" endtime="20221124 13:58:26.578"/>
+<status status="PASS" starttime="20221124 15:10:34.221" endtime="20221124 15:10:34.284"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:58:28.584" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:58:26.578" endtime="20221124 13:58:28.584"/>
+<msg timestamp="20221124 15:10:36.297" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 15:10:34.285" endtime="20221124 15:10:36.297"/>
 </kw>
-<status status="PASS" starttime="20221124 13:58:26.522" endtime="20221124 13:58:28.584"/>
+<status status="PASS" starttime="20221124 15:10:34.221" endtime="20221124 15:10:36.297"/>
 </kw>
 <kw name="Generate Random String" library="String">
 <var>${txt}</var>
 <arg>3</arg>
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<msg timestamp="20221124 13:58:28.584" level="INFO">${txt} = xxK</msg>
-<status status="PASS" starttime="20221124 13:58:28.584" endtime="20221124 13:58:28.584"/>
+<msg timestamp="20221124 15:10:36.298" level="INFO">${txt} = RAa</msg>
+<status status="PASS" starttime="20221124 15:10:36.297" endtime="20221124 15:10:36.298"/>
 </kw>
-<kw name="EnterText" library="resource_ivan">
+<kw name="EnterText" library="resources">
 <arg>${IMPORT_DATA_INPUT_TEXT}</arg>
 <arg>${txt}</arg>
 <kw name="Input Text" library="Selenium2Library">
 <arg>${Input}</arg>
 <arg>${Text}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221124 13:58:28.585" level="INFO">Typing text 'xxK' into text field 'xpath:/html/body/div[2]/div/div/div/div[2]/div[2]/div/div[1]/input'.</msg>
-<status status="PASS" starttime="20221124 13:58:28.585" endtime="20221124 13:58:28.690"/>
+<msg timestamp="20221124 15:10:36.299" level="INFO">Typing text 'RAa' into text field 'xpath:/html/body/div[2]/div/div/div/div[2]/div[2]/div/div[1]/input'.</msg>
+<status status="PASS" starttime="20221124 15:10:36.298" endtime="20221124 15:10:36.396"/>
 </kw>
-<status status="PASS" starttime="20221124 13:58:28.584" endtime="20221124 13:58:28.690"/>
+<status status="PASS" starttime="20221124 15:10:36.298" endtime="20221124 15:10:36.396"/>
 </kw>
 <kw name="Element Should Be Disabled" library="Selenium2Library">
 <arg>${IMPORT_DATA_BUTTON}</arg>
 <doc>Verifies that element identified by ``locator`` is disabled.</doc>
-<status status="PASS" starttime="20221124 13:58:28.690" endtime="20221124 13:58:28.714"/>
+<status status="PASS" starttime="20221124 15:10:36.396" endtime="20221124 15:10:36.418"/>
 </kw>
 <kw name="Clear Element Text" library="Selenium2Library">
 <arg>${IMPORT_DATA_INPUT_TEXT}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20221124 13:58:28.715" endtime="20221124 13:58:28.766"/>
+<status status="PASS" starttime="20221124 15:10:36.418" endtime="20221124 15:10:36.462"/>
 </kw>
-<kw name="Click" library="CasDeTest">
-<kw name="Click Element" library="Selenium2Library">
-<arg>${LOGO_XPATH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221124 13:58:28.767" level="INFO">Clicking element 'xpath://*[@id="root"]/div/div[1]/div/div[1]/div/span/span/img'.</msg>
-<status status="PASS" starttime="20221124 13:58:28.766" endtime="20221124 13:58:28.825"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:58:30.826" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:58:28.825" endtime="20221124 13:58:30.826"/>
-</kw>
-<status status="PASS" starttime="20221124 13:58:28.766" endtime="20221124 13:58:30.826"/>
-</kw>
-<status status="PASS" starttime="20221124 13:58:22.340" endtime="20221124 13:58:30.826"/>
-</kw>
-<kw name="EnterCodeMoreSevenCharacter" library="CasDeTest">
-<kw name="ReturnMainPage" library="resource_ivan">
+<kw name="ReturnMainPage" library="resources">
 <kw name="Go To" library="Selenium2Library">
 <arg>${WELCOMEPAGE_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221124 13:58:30.828" level="INFO">Opening url 'https://mixap-dev.surge.sh/'</msg>
-<status status="PASS" starttime="20221124 13:58:30.827" endtime="20221124 13:58:31.917"/>
+<msg timestamp="20221124 15:10:36.463" level="INFO">Opening url 'https://mixap-dev.surge.sh/'</msg>
+<status status="PASS" starttime="20221124 15:10:36.463" endtime="20221124 15:10:36.806"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:58:33.922" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:58:31.917" endtime="20221124 13:58:33.922"/>
+<msg timestamp="20221124 15:10:38.809" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 15:10:36.806" endtime="20221124 15:10:38.809"/>
 </kw>
-<status status="PASS" starttime="20221124 13:58:30.827" endtime="20221124 13:58:33.922"/>
+<status status="PASS" starttime="20221124 15:10:36.462" endtime="20221124 15:10:38.809"/>
 </kw>
+<status status="PASS" starttime="20221124 15:10:31.848" endtime="20221124 15:10:38.810"/>
+</kw>
+<kw name="ReturnMainPage" library="resources">
+<kw name="Go To" library="Selenium2Library">
+<arg>${WELCOMEPAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221124 15:10:38.811" level="INFO">Opening url 'https://mixap-dev.surge.sh/'</msg>
+<status status="PASS" starttime="20221124 15:10:38.811" endtime="20221124 15:10:39.019"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221124 15:10:41.028" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 15:10:39.020" endtime="20221124 15:10:41.028"/>
+</kw>
+<status status="PASS" starttime="20221124 15:10:38.810" endtime="20221124 15:10:41.028"/>
+</kw>
+<kw name="EnterCodeMoreSevenCharacter" library="CasDeTest">
 <kw name="OpenImportWindow" library="CasDeTest">
-<kw name="ClickWindow" library="resource_ivan">
+<kw name="ClickWindow" library="resources">
 <arg>${IMPORT_DATA}</arg>
 <kw name="Click Button" library="Selenium2Library">
 <arg>${Button}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221124 13:58:33.924" level="INFO">Clicking button 'xpath://*[@id="root"]/div/div[1]/div/div[1]/span/div/div[1]/button'.</msg>
-<status status="PASS" starttime="20221124 13:58:33.923" endtime="20221124 13:58:33.981"/>
+<msg timestamp="20221124 15:10:41.031" level="INFO">Clicking button 'xpath://*[@id="root"]/div/div[1]/div/div[1]/span/div/div[1]/button'.</msg>
+<msg timestamp="20221124 15:10:42.297" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221124 15:10:42.297" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="button" class="ant-btn ant-btn-round ant-btn-default ant-btn-icon-only"&gt;...&lt;/button&gt; is not clickable at point (1208, 36). Other element would receive the click: &lt;div class="ant-notification-notice ant-notification-notice-info ant-notification-notice-closable"&gt;...&lt;/div&gt;
+  (Session info: chrome=107.0.5304.107)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x005EACD3+2075859]
+	Ordinal0 [0x0057EE61+1633889]
+	Ordinal0 [0x0047B7BD+571325]
+	Ordinal0 [0x004B1499+791705]
+	Ordinal0 [0x004AF4AC+783532]
+	Ordinal0 [0x004AD0AB+774315]
+	Ordinal0 [0x004ABD37+769335]
+	Ordinal0 [0x004A1C76+728182]
+	Ordinal0 [0x004C731C+881436]
+	Ordinal0 [0x004A15BF+726463]
+	Ordinal0 [0x004C7534+881972]
+	Ordinal0 [0x004DB56A+963946]
+	Ordinal0 [0x004C7136+880950]
+	Ordinal0 [0x0049FEFD+720637]
+	Ordinal0 [0x004A0F3F+724799]
+	GetHandleVerifier [0x0089EED2+2769538]
+	GetHandleVerifier [0x00890D95+2711877]
+	GetHandleVerifier [0x0067A03A+521194]
+	GetHandleVerifier [0x00678DA0+516432]
+	Ordinal0 [0x0058682C+1665068]
+	Ordinal0 [0x0058B128+1683752]
+	Ordinal0 [0x0058B215+1683989]
+	Ordinal0 [0x00596484+1729668]
+	BaseThreadInitThunk [0x75E8FEF9+25]
+	RtlGetAppContainerNamedObjectPath [0x77117BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77117B8E+238]
+</msg>
+<status status="FAIL" starttime="20221124 15:10:41.031" endtime="20221124 15:10:42.300"/>
 </kw>
-<status status="PASS" starttime="20221124 13:58:33.923" endtime="20221124 13:58:33.981"/>
+<status status="FAIL" starttime="20221124 15:10:41.030" endtime="20221124 15:10:42.301"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:58:35.989" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:58:33.982" endtime="20221124 13:58:35.989"/>
+<status status="NOT RUN" starttime="20221124 15:10:42.301" endtime="20221124 15:10:42.301"/>
 </kw>
-<status status="PASS" starttime="20221124 13:58:33.922" endtime="20221124 13:58:35.989"/>
+<status status="FAIL" starttime="20221124 15:10:41.029" endtime="20221124 15:10:42.301"/>
 </kw>
 <kw name="Generate Random String" library="String">
 <var>${txt}</var>
 <arg>7</arg>
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<msg timestamp="20221124 13:58:35.990" level="INFO">${txt} = M22yp4h</msg>
-<status status="PASS" starttime="20221124 13:58:35.990" endtime="20221124 13:58:35.990"/>
+<status status="NOT RUN" starttime="20221124 15:10:42.301" endtime="20221124 15:10:42.301"/>
 </kw>
-<kw name="EnterText" library="resource_ivan">
+<kw name="EnterText" library="resources">
 <arg>${IMPORT_DATA_INPUT_TEXT}</arg>
 <arg>${txt}</arg>
-<kw name="Input Text" library="Selenium2Library">
-<arg>${Input}</arg>
-<arg>${Text}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221124 13:58:35.992" level="INFO">Typing text 'M22yp4h' into text field 'xpath:/html/body/div[2]/div/div/div/div[2]/div[2]/div/div[1]/input'.</msg>
-<status status="PASS" starttime="20221124 13:58:35.992" endtime="20221124 13:58:36.101"/>
-</kw>
-<status status="PASS" starttime="20221124 13:58:35.991" endtime="20221124 13:58:36.102"/>
+<status status="NOT RUN" starttime="20221124 15:10:42.301" endtime="20221124 15:10:42.301"/>
 </kw>
 <kw name="Element Should Be Enabled" library="Selenium2Library">
 <arg>${IMPORT_DATA_BUTTON}</arg>
 <doc>Verifies that element identified by ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20221124 13:58:36.102" endtime="20221124 13:58:36.132"/>
+<status status="NOT RUN" starttime="20221124 15:10:42.301" endtime="20221124 15:10:42.302"/>
 </kw>
 <kw name="Clear Element Text" library="Selenium2Library">
 <arg>${IMPORT_DATA_INPUT_TEXT}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20221124 13:58:36.132" endtime="20221124 13:58:36.163"/>
+<status status="NOT RUN" starttime="20221124 15:10:42.302" endtime="20221124 15:10:42.302"/>
 </kw>
-<kw name="Click" library="CasDeTest">
-<kw name="Click Element" library="Selenium2Library">
-<arg>${LOGO_XPATH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221124 13:58:36.164" level="INFO">Clicking element 'xpath://*[@id="root"]/div/div[1]/div/div[1]/div/span/span/img'.</msg>
-<status status="PASS" starttime="20221124 13:58:36.164" endtime="20221124 13:58:36.216"/>
+<kw name="ReturnMainPage" library="resources">
+<status status="NOT RUN" starttime="20221124 15:10:42.302" endtime="20221124 15:10:42.302"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:58:38.222" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:58:36.216" endtime="20221124 13:58:38.222"/>
-</kw>
-<status status="PASS" starttime="20221124 13:58:36.164" endtime="20221124 13:58:38.222"/>
-</kw>
-<status status="PASS" starttime="20221124 13:58:30.827" endtime="20221124 13:58:38.222"/>
-</kw>
-<kw name="EnterFakeCode" library="CasDeTest">
-<kw name="ReturnMainPage" library="resource_ivan">
-<kw name="Go To" library="Selenium2Library">
-<arg>${WELCOMEPAGE_URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221124 13:58:38.224" level="INFO">Opening url 'https://mixap-dev.surge.sh/'</msg>
-<status status="PASS" starttime="20221124 13:58:38.223" endtime="20221124 13:58:39.361"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:58:41.376" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:58:39.361" endtime="20221124 13:58:41.376"/>
-</kw>
-<status status="PASS" starttime="20221124 13:58:38.223" endtime="20221124 13:58:41.376"/>
-</kw>
-<kw name="OpenImportWindow" library="CasDeTest">
-<kw name="ClickWindow" library="resource_ivan">
-<arg>${IMPORT_DATA}</arg>
-<kw name="Click Button" library="Selenium2Library">
-<arg>${Button}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221124 13:58:41.377" level="INFO">Clicking button 'xpath://*[@id="root"]/div/div[1]/div/div[1]/span/div/div[1]/button'.</msg>
-<status status="PASS" starttime="20221124 13:58:41.377" endtime="20221124 13:58:41.435"/>
-</kw>
-<status status="PASS" starttime="20221124 13:58:41.377" endtime="20221124 13:58:41.435"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:58:43.447" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:58:41.435" endtime="20221124 13:58:43.447"/>
-</kw>
-<status status="PASS" starttime="20221124 13:58:41.376" endtime="20221124 13:58:43.447"/>
-</kw>
-<kw name="Generate Random String" library="String">
-<var>${txt}</var>
-<arg>7</arg>
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<msg timestamp="20221124 13:58:43.447" level="INFO">${txt} = 0M3QmsH</msg>
-<status status="PASS" starttime="20221124 13:58:43.447" endtime="20221124 13:58:43.447"/>
-</kw>
-<kw name="EnterText" library="resource_ivan">
-<arg>${IMPORT_DATA_INPUT_TEXT}</arg>
-<arg>${txt}</arg>
-<kw name="Input Text" library="Selenium2Library">
-<arg>${Input}</arg>
-<arg>${Text}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221124 13:58:43.448" level="INFO">Typing text '0M3QmsH' into text field 'xpath:/html/body/div[2]/div/div/div/div[2]/div[2]/div/div[1]/input'.</msg>
-<status status="PASS" starttime="20221124 13:58:43.447" endtime="20221124 13:58:43.558"/>
-</kw>
-<status status="PASS" starttime="20221124 13:58:43.447" endtime="20221124 13:58:43.559"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:58:45.565" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:58:43.559" endtime="20221124 13:58:45.565"/>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<arg>${IMPORT_DATA_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221124 13:58:45.566" level="INFO">Clicking element 'xpath:/html/body/div[2]/div/div/div/div[2]/div[2]/div/div[2]/button'.</msg>
-<status status="PASS" starttime="20221124 13:58:45.565" endtime="20221124 13:58:45.622"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:58:50.630" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20221124 13:58:45.622" endtime="20221124 13:58:50.630"/>
-</kw>
-<status status="PASS" starttime="20221124 13:58:38.223" endtime="20221124 13:58:50.631"/>
-</kw>
-<kw name="EnterRealCode" library="CasDeTest">
-<kw name="ReturnMainPage" library="resource_ivan">
-<kw name="Go To" library="Selenium2Library">
-<arg>${WELCOMEPAGE_URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221124 13:58:50.632" level="INFO">Opening url 'https://mixap-dev.surge.sh/'</msg>
-<status status="PASS" starttime="20221124 13:58:50.632" endtime="20221124 13:58:51.764"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:58:53.780" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:58:51.764" endtime="20221124 13:58:53.780"/>
-</kw>
-<status status="PASS" starttime="20221124 13:58:50.632" endtime="20221124 13:58:53.780"/>
-</kw>
-<kw name="OpenImportWindow" library="CasDeTest">
-<kw name="ClickWindow" library="resource_ivan">
-<arg>${IMPORT_DATA}</arg>
-<kw name="Click Button" library="Selenium2Library">
-<arg>${Button}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221124 13:58:53.781" level="INFO">Clicking button 'xpath://*[@id="root"]/div/div[1]/div/div[1]/span/div/div[1]/button'.</msg>
-<status status="PASS" starttime="20221124 13:58:53.780" endtime="20221124 13:58:53.842"/>
-</kw>
-<status status="PASS" starttime="20221124 13:58:53.780" endtime="20221124 13:58:53.843"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:58:55.852" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:58:53.843" endtime="20221124 13:58:55.852"/>
-</kw>
-<status status="PASS" starttime="20221124 13:58:53.780" endtime="20221124 13:58:55.853"/>
-</kw>
-<kw name="EnterText" library="resource_ivan">
-<arg>${IMPORT_DATA_INPUT_TEXT}</arg>
-<arg>${CODE_IMPORT}</arg>
-<kw name="Input Text" library="Selenium2Library">
-<arg>${Input}</arg>
-<arg>${Text}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221124 13:58:55.854" level="INFO">Typing text '5eda26' into text field 'xpath:/html/body/div[2]/div/div/div/div[2]/div[2]/div/div[1]/input'.</msg>
-<status status="PASS" starttime="20221124 13:58:55.853" endtime="20221124 13:58:55.959"/>
-</kw>
-<status status="PASS" starttime="20221124 13:58:55.853" endtime="20221124 13:58:55.959"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:58:57.973" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:58:55.960" endtime="20221124 13:58:57.973"/>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<arg>${IMPORT_DATA_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221124 13:58:57.974" level="INFO">Clicking element 'xpath:/html/body/div[2]/div/div/div/div[2]/div[2]/div/div[2]/button'.</msg>
-<status status="PASS" starttime="20221124 13:58:57.974" endtime="20221124 13:58:58.021"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:59:03.032" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20221124 13:58:58.021" endtime="20221124 13:59:03.032"/>
-</kw>
-<status status="PASS" starttime="20221124 13:58:50.631" endtime="20221124 13:59:03.032"/>
+<status status="FAIL" starttime="20221124 15:10:41.029" endtime="20221124 15:10:42.302"/>
 </kw>
 <kw name="OpenDashboard" library="CasDeTest">
-<kw name="Click Element" library="Selenium2Library">
-<arg>${DASHBORD_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221124 13:59:03.034" level="INFO">Clicking element 'xpath://*[@id="root"]/div/div[1]/div/div/span/div/div[3]/button'.</msg>
-<status status="PASS" starttime="20221124 13:59:03.034" endtime="20221124 13:59:03.136"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:59:05.145" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:59:03.136" endtime="20221124 13:59:05.145"/>
-</kw>
-<kw name="Get Location" library="Selenium2Library">
-<var>${url}</var>
-<doc>Returns the current browser window URL.</doc>
-<msg timestamp="20221124 13:59:05.151" level="INFO">${url} = https://mixap-dev.surge.sh/dashboard</msg>
-<status status="PASS" starttime="20221124 13:59:05.145" endtime="20221124 13:59:05.151"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>"${url}" != "https://mixap-dev.surge.sh/dashboard"</arg>
-<arg>Fatal Error</arg>
-<arg>Nous ne somme pas sur le dashboard : ${url}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20221124 13:59:05.151" endtime="20221124 13:59:05.151"/>
-</kw>
-<kw name="ChekIfDisplayNone" library="resource_ivan">
-<var>${contenu}</var>
-<arg>${MON_CONTENU}</arg>
-<kw name="Get Element Attribute" library="Selenium2Library">
-<var>${style}</var>
-<arg>${Element}</arg>
-<arg>style</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20221124 13:59:05.176" level="INFO">${style} = </msg>
-<status status="PASS" starttime="20221124 13:59:05.152" endtime="20221124 13:59:05.176"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${return}</var>
-<arg>"null"</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20221124 13:59:05.177" level="INFO">${return} = "null"</msg>
-<status status="PASS" starttime="20221124 13:59:05.176" endtime="20221124 13:59:05.177"/>
-</kw>
-<if>
-<branch type="IF" condition="&quot;${style}&quot; == &quot;display: none;&quot;">
-<kw name="Set Variable" library="BuiltIn">
-<var>${return}</var>
-<arg>"false"</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" starttime="20221124 13:59:05.177" endtime="20221124 13:59:05.177"/>
-</kw>
-<status status="NOT RUN" starttime="20221124 13:59:05.177" endtime="20221124 13:59:05.177"/>
-</branch>
-<branch type="ELSE">
-<kw name="Set Variable" library="BuiltIn">
-<var>${return}</var>
-<arg>"true"</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20221124 13:59:05.177" level="INFO">${return} = "true"</msg>
-<status status="PASS" starttime="20221124 13:59:05.177" endtime="20221124 13:59:05.177"/>
-</kw>
-<status status="PASS" starttime="20221124 13:59:05.177" endtime="20221124 13:59:05.177"/>
-</branch>
-<status status="PASS" starttime="20221124 13:59:05.177" endtime="20221124 13:59:05.177"/>
-</if>
-<msg timestamp="20221124 13:59:05.178" level="INFO">${contenu} = "true"</msg>
-<status status="PASS" starttime="20221124 13:59:05.151" endtime="20221124 13:59:05.178"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>${contenu} == "false"</arg>
-<arg>Fatal Error</arg>
-<arg>L'onglet Mon Contnu n'est pas visible</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20221124 13:59:05.178" endtime="20221124 13:59:05.178"/>
-</kw>
-<status status="PASS" starttime="20221124 13:59:03.034" endtime="20221124 13:59:05.178"/>
+<status status="NOT RUN" starttime="20221124 15:10:42.303" endtime="20221124 15:10:42.303"/>
 </kw>
 <kw name="GoToSuiviDapprenants" library="CasDeTest">
-<kw name="Click Element" library="Selenium2Library">
-<arg>${SUIVI_APPRENANTS_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221124 13:59:05.179" level="INFO">Clicking element 'xpath://*[@id="rc-tabs-0-tab-2"]/h4'.</msg>
-<status status="PASS" starttime="20221124 13:59:05.179" endtime="20221124 13:59:05.234"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:59:07.235" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:59:05.234" endtime="20221124 13:59:07.235"/>
-</kw>
-<kw name="ChekIfDisplayNone" library="resource_ivan">
-<var>${apprenants}</var>
-<arg>${SUIVI_APPRENANTS}</arg>
-<kw name="Get Element Attribute" library="Selenium2Library">
-<var>${style}</var>
-<arg>${Element}</arg>
-<arg>style</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20221124 13:59:07.260" level="INFO">${style} = </msg>
-<status status="PASS" starttime="20221124 13:59:07.236" endtime="20221124 13:59:07.261"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${return}</var>
-<arg>"null"</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20221124 13:59:07.261" level="INFO">${return} = "null"</msg>
-<status status="PASS" starttime="20221124 13:59:07.261" endtime="20221124 13:59:07.261"/>
-</kw>
-<if>
-<branch type="IF" condition="&quot;${style}&quot; == &quot;display: none;&quot;">
-<kw name="Set Variable" library="BuiltIn">
-<var>${return}</var>
-<arg>"false"</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" starttime="20221124 13:59:07.261" endtime="20221124 13:59:07.261"/>
-</kw>
-<status status="NOT RUN" starttime="20221124 13:59:07.261" endtime="20221124 13:59:07.261"/>
-</branch>
-<branch type="ELSE">
-<kw name="Set Variable" library="BuiltIn">
-<var>${return}</var>
-<arg>"true"</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20221124 13:59:07.262" level="INFO">${return} = "true"</msg>
-<status status="PASS" starttime="20221124 13:59:07.261" endtime="20221124 13:59:07.262"/>
-</kw>
-<status status="PASS" starttime="20221124 13:59:07.261" endtime="20221124 13:59:07.262"/>
-</branch>
-<status status="PASS" starttime="20221124 13:59:07.261" endtime="20221124 13:59:07.262"/>
-</if>
-<msg timestamp="20221124 13:59:07.262" level="INFO">${apprenants} = "true"</msg>
-<status status="PASS" starttime="20221124 13:59:07.236" endtime="20221124 13:59:07.262"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>${apprenants} == "false"</arg>
-<arg>Fatal Error</arg>
-<arg>L'onglet Suivi d'Apprenants n'est pas visible</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20221124 13:59:07.262" endtime="20221124 13:59:07.262"/>
-</kw>
-<status status="PASS" starttime="20221124 13:59:05.179" endtime="20221124 13:59:07.262"/>
+<status status="NOT RUN" starttime="20221124 15:10:42.303" endtime="20221124 15:10:42.304"/>
 </kw>
 <kw name="GoToMonContenu" library="CasDeTest">
-<kw name="Click Element" library="Selenium2Library">
-<arg>${MON_CONTENU_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221124 13:59:07.264" level="INFO">Clicking element 'xpath://*[@id="rc-tabs-0-tab-1"]/h4'.</msg>
-<status status="PASS" starttime="20221124 13:59:07.263" endtime="20221124 13:59:07.313"/>
+<status status="NOT RUN" starttime="20221124 15:10:42.304" endtime="20221124 15:10:42.304"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:59:09.324" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:59:07.313" endtime="20221124 13:59:09.324"/>
-</kw>
-<kw name="ChekIfDisplayNone" library="resource_ivan">
-<var>${contenu}</var>
-<arg>${MON_CONTENU}</arg>
-<kw name="Get Element Attribute" library="Selenium2Library">
-<var>${style}</var>
-<arg>${Element}</arg>
-<arg>style</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<msg timestamp="20221124 13:59:09.341" level="INFO">${style} = </msg>
-<status status="PASS" starttime="20221124 13:59:09.324" endtime="20221124 13:59:09.341"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${return}</var>
-<arg>"null"</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20221124 13:59:09.342" level="INFO">${return} = "null"</msg>
-<status status="PASS" starttime="20221124 13:59:09.342" endtime="20221124 13:59:09.342"/>
-</kw>
-<if>
-<branch type="IF" condition="&quot;${style}&quot; == &quot;display: none;&quot;">
-<kw name="Set Variable" library="BuiltIn">
-<var>${return}</var>
-<arg>"false"</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" starttime="20221124 13:59:09.342" endtime="20221124 13:59:09.342"/>
-</kw>
-<status status="NOT RUN" starttime="20221124 13:59:09.342" endtime="20221124 13:59:09.342"/>
-</branch>
-<branch type="ELSE">
-<kw name="Set Variable" library="BuiltIn">
-<var>${return}</var>
-<arg>"true"</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20221124 13:59:09.343" level="INFO">${return} = "true"</msg>
-<status status="PASS" starttime="20221124 13:59:09.342" endtime="20221124 13:59:09.343"/>
-</kw>
-<status status="PASS" starttime="20221124 13:59:09.342" endtime="20221124 13:59:09.343"/>
-</branch>
-<status status="PASS" starttime="20221124 13:59:09.342" endtime="20221124 13:59:09.343"/>
-</if>
-<msg timestamp="20221124 13:59:09.343" level="INFO">${contenu} = "true"</msg>
-<status status="PASS" starttime="20221124 13:59:09.324" endtime="20221124 13:59:09.343"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>${contenu} == "false"</arg>
-<arg>Fatal Error</arg>
-<arg>L'onglet Mon Contnu n'est pas visible</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20221124 13:59:09.343" endtime="20221124 13:59:09.343"/>
-</kw>
-<status status="PASS" starttime="20221124 13:59:07.263" endtime="20221124 13:59:09.343"/>
-</kw>
-<kw name="ReturnMainPage" library="resource_ivan">
-<kw name="Go To" library="Selenium2Library">
-<arg>${WELCOMEPAGE_URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221124 13:59:09.344" level="INFO">Opening url 'https://mixap-dev.surge.sh/'</msg>
-<status status="PASS" starttime="20221124 13:59:09.344" endtime="20221124 13:59:10.677"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:59:12.689" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:59:10.678" endtime="20221124 13:59:12.689"/>
-</kw>
-<status status="PASS" starttime="20221124 13:59:09.344" endtime="20221124 13:59:12.689"/>
+<kw name="ReturnMainPage" library="resources">
+<status status="NOT RUN" starttime="20221124 15:10:42.305" endtime="20221124 15:10:42.305"/>
 </kw>
 <kw name="OpenAddActivityWindow" library="CasDeTest">
-<kw name="ClickWindow" library="resource_ivan">
-<arg>${ADD_ACTIVITY}</arg>
-<kw name="Click Button" library="Selenium2Library">
-<arg>${Button}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221124 13:59:12.690" level="INFO">Clicking button 'xpath://*[@id="root"]/div/div[2]/div/div[1]/div/div/button'.</msg>
-<status status="PASS" starttime="20221124 13:59:12.690" endtime="20221124 13:59:12.782"/>
-</kw>
-<status status="PASS" starttime="20221124 13:59:12.689" endtime="20221124 13:59:12.782"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:59:14.790" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:59:12.782" endtime="20221124 13:59:14.790"/>
-</kw>
-<status status="PASS" starttime="20221124 13:59:12.689" endtime="20221124 13:59:14.790"/>
+<status status="NOT RUN" starttime="20221124 15:10:42.305" endtime="20221124 15:10:42.305"/>
 </kw>
 <kw name="CloseAddActivityWindow" library="CasDeTest">
-<kw name="Click Element" library="Selenium2Library">
-<arg>${CLOSE_ADD_ACTIVITY_WINDOW}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221124 13:59:14.791" level="INFO">Clicking element 'xpath:/html/body/div[2]/div/div[2]/div/div[2]/button'.</msg>
-<status status="PASS" starttime="20221124 13:59:14.791" endtime="20221124 13:59:14.840"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:59:16.845" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:59:14.841" endtime="20221124 13:59:16.845"/>
-</kw>
-<status status="PASS" starttime="20221124 13:59:14.791" endtime="20221124 13:59:16.845"/>
+<status status="NOT RUN" starttime="20221124 15:10:42.305" endtime="20221124 15:10:42.306"/>
 </kw>
 <kw name="CreateAugmenterUneImageActivity" library="CasDeTest">
+<status status="NOT RUN" starttime="20221124 15:10:42.306" endtime="20221124 15:10:42.306"/>
+</kw>
+<kw name="ReturnMainPage" library="resources">
+<status status="NOT RUN" starttime="20221124 15:10:42.306" endtime="20221124 15:10:42.306"/>
+</kw>
+<kw name="LookActivityCreate" library="CasDeTest">
+<status status="NOT RUN" starttime="20221124 15:10:42.307" endtime="20221124 15:10:42.307"/>
+</kw>
+<kw name="EditeOneActivity" library="CasDeTest">
+<status status="NOT RUN" starttime="20221124 15:10:42.308" endtime="20221124 15:10:42.308"/>
+</kw>
+<kw name="ReturnToMainPage">
+<status status="NOT RUN" starttime="20221124 15:10:42.312" endtime="20221124 15:10:42.312"/>
+</kw>
+<kw name="PlayOneActivity" library="CasDeTest">
+<status status="NOT RUN" starttime="20221124 15:10:42.313" endtime="20221124 15:10:42.313"/>
+</kw>
+<kw name="ReturnToMainPage">
+<status status="NOT RUN" starttime="20221124 15:10:42.317" endtime="20221124 15:10:42.317"/>
+</kw>
+<kw name="DeleteOneActivity" library="CasDeTest">
+<status status="NOT RUN" starttime="20221124 15:10:42.317" endtime="20221124 15:10:42.317"/>
+</kw>
+<kw name="OpenMoreOptionWindow" library="CasDeTest">
+<status status="NOT RUN" starttime="20221124 15:10:42.318" endtime="20221124 15:10:42.318"/>
+</kw>
+<kw name="Click" library="CasDeTest">
+<status status="NOT RUN" starttime="20221124 15:10:42.318" endtime="20221124 15:10:42.318"/>
+</kw>
+<kw name="ReturnMainPage" library="resources">
+<status status="NOT RUN" starttime="20221124 15:10:42.319" endtime="20221124 15:10:42.319"/>
+</kw>
+<kw name="EnterFakeCode" library="CasDeTest">
+<status status="NOT RUN" starttime="20221124 15:10:42.320" endtime="20221124 15:10:42.320"/>
+</kw>
+<kw name="ReturnMainPage" library="resources">
+<status status="NOT RUN" starttime="20221124 15:10:42.320" endtime="20221124 15:10:42.320"/>
+</kw>
+<kw name="EnterRealCode" library="CasDeTest">
+<status status="NOT RUN" starttime="20221124 15:10:42.321" endtime="20221124 15:10:42.321"/>
+</kw>
+<kw name="ReturnMainPage" library="resources">
+<status status="NOT RUN" starttime="20221124 15:10:42.321" endtime="20221124 15:10:42.321"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221124 15:10:42.322" endtime="20221124 15:10:44.639"/>
+</kw>
+<status status="FAIL" starttime="20221124 15:10:11.997" endtime="20221124 15:10:44.639">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="button" class="ant-btn ant-btn-round ant-btn-default ant-btn-icon-only"&gt;...&lt;/button&gt; is not clickable at point (1208, 36). Other element would receive the click: &lt;div class="ant-notification-notice ant-notification-notice-info ant-notification-notice-closable"&gt;...&lt;/div&gt;
+  (Session info: chrome=107.0.5304.107)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x005EACD3+2075859]
+	Ordinal0 [0x0057EE61+1633889]
+	Ordinal0 [0x0047B7BD+571325]
+	Ordinal0 [0x004B1499+791705]
+	Ordinal0 [0x004AF4AC+783532]
+	Ordinal0 [0x004AD0AB+774315]
+	Ordinal0 [0x004ABD37+769335]
+	Ordinal0 [0x004A1C76+728182]
+	Ordinal0 [0x004C731C+881436]
+	Ordinal0 [0x004A15BF+726463]
+	Ordinal0 [0x004C7534+881972]
+	Ordinal0 [0x004DB56A+963946]
+	Ordinal0 [0x004C7136+880950]
+	Ordinal0 [0x0049FEFD+720637]
+	Ordinal0 [0x004A0F3F+724799]
+	GetHandleVerifier [0x0089EED2+2769538]
+	GetHandleVerifier [0x00890D95+2711877]
+	GetHandleVerifier [0x0067A03A+521194]
+	GetHandleVerifier [0x00678DA0+516432]
+	Ordinal0 [0x0058682C+1665068]
+	Ordinal0 [0x0058B128+1683752]
+	Ordinal0 [0x0058B215+1683989]
+	Ordinal0 [0x00596484+1729668]
+	BaseThreadInitThunk [0x75E8FEF9+25]
+	RtlGetAppContainerNamedObjectPath [0x77117BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77117B8E+238]
+</status>
+</test>
+<test id="s1-t2" name="ScenarioActiviteAugmenterUneImage" line="43">
+<kw name="OpenMixap" library="resources">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${WELCOMEPAGE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221124 15:10:44.644" level="INFO">Opening browser 'Chrome' to base url 'https://mixap-dev.surge.sh/'.</msg>
+<status status="PASS" starttime="20221124 15:10:44.644" endtime="20221124 15:10:49.942"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221124 15:10:49.942" endtime="20221124 15:10:50.130"/>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221124 15:10:50.130" endtime="20221124 15:10:50.131"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${LOGO_XPATH}</arg>
+<arg>100000</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221124 15:10:50.131" endtime="20221124 15:10:50.482"/>
+</kw>
+<kw name="WelcomePageShouldBeOpen" library="resources">
+<kw name="Title Should Be" library="Selenium2Library">
+<arg>${TITLE}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20221124 15:10:50.489" level="INFO">Page title is 'MIXAP'.</msg>
+<status status="PASS" starttime="20221124 15:10:50.483" endtime="20221124 15:10:50.489"/>
+</kw>
+<status status="PASS" starttime="20221124 15:10:50.482" endtime="20221124 15:10:50.489"/>
+</kw>
+<status status="PASS" starttime="20221124 15:10:44.643" endtime="20221124 15:10:50.490"/>
+</kw>
+<kw name="AfficherCreationStage" library="CasDeTest">
+<kw name="CreateAugmenterUneImageActivity" library="CasDeTest">
 <kw name="OpenAddActivityWindow" library="CasDeTest">
-<kw name="ClickWindow" library="resource_ivan">
+<kw name="ClickWindow" library="resources">
 <arg>${ADD_ACTIVITY}</arg>
 <kw name="Click Button" library="Selenium2Library">
 <arg>${Button}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221124 13:59:16.847" level="INFO">Clicking button 'xpath://*[@id="root"]/div/div[2]/div/div[1]/div/div/button'.</msg>
-<status status="PASS" starttime="20221124 13:59:16.847" endtime="20221124 13:59:16.901"/>
+<msg timestamp="20221124 15:10:50.492" level="INFO">Clicking button 'xpath://*[@id="root"]/div/div[2]/div/div[1]/div/div/button'.</msg>
+<status status="PASS" starttime="20221124 15:10:50.492" endtime="20221124 15:10:50.702"/>
 </kw>
-<status status="PASS" starttime="20221124 13:59:16.847" endtime="20221124 13:59:16.901"/>
+<status status="PASS" starttime="20221124 15:10:50.491" endtime="20221124 15:10:50.702"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:59:18.906" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:59:16.902" endtime="20221124 13:59:18.906"/>
+<msg timestamp="20221124 15:10:52.705" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 15:10:50.702" endtime="20221124 15:10:52.705"/>
 </kw>
-<status status="PASS" starttime="20221124 13:59:16.845" endtime="20221124 13:59:18.907"/>
+<status status="PASS" starttime="20221124 15:10:50.491" endtime="20221124 15:10:52.706"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${AUGMENTER_UNE_IMAGE}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221124 13:59:18.907" level="INFO">Clicking element 'xpath:/html/body/div[2]/div/div[2]/div/div[2]/div[2]/div/div[1]/div[1]'.</msg>
-<status status="PASS" starttime="20221124 13:59:18.907" endtime="20221124 13:59:18.973"/>
+<msg timestamp="20221124 15:10:52.707" level="INFO">Clicking element 'xpath:/html/body/div[2]/div/div[2]/div/div[2]/div[2]/div/div[1]/div[1]'.</msg>
+<status status="PASS" starttime="20221124 15:10:52.706" endtime="20221124 15:10:52.826"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:59:20.980" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:59:18.973" endtime="20221124 13:59:20.980"/>
+<msg timestamp="20221124 15:10:54.839" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 15:10:52.826" endtime="20221124 15:10:54.839"/>
 </kw>
-<status status="PASS" starttime="20221124 13:59:16.845" endtime="20221124 13:59:20.980"/>
-</kw>
-<kw name="ReturnMainPage" library="resource_ivan">
-<kw name="Go To" library="Selenium2Library">
-<arg>${WELCOMEPAGE_URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221124 13:59:20.982" level="INFO">Opening url 'https://mixap-dev.surge.sh/'</msg>
-<status status="PASS" starttime="20221124 13:59:20.982" endtime="20221124 13:59:24.379"/>
+<status status="PASS" starttime="20221124 15:10:50.490" endtime="20221124 15:10:54.839"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:59:26.379" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:59:24.379" endtime="20221124 13:59:26.379"/>
+<msg timestamp="20221124 15:10:56.850" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 15:10:54.840" endtime="20221124 15:10:56.850"/>
 </kw>
-<status status="PASS" starttime="20221124 13:59:20.981" endtime="20221124 13:59:26.379"/>
-</kw>
-<kw name="LookActivityCreate" library="CasDeTest">
-<kw name="GetChild" library="resource_ivan">
-<var>${nbCard}</var>
-<arg>${CARDS}</arg>
-<kw name="Get WebElement" library="Selenium2Library">
-<var>${element}</var>
-<arg>${locator}</arg>
-<doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20221124 13:59:26.393" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="88321157002030d02fe3b22a8be1a3dc", element="3be5c24a-d5fb-4d80-8573-87c3f90bf018")&gt;</msg>
-<status status="PASS" starttime="20221124 13:59:26.381" endtime="20221124 13:59:26.393"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<var>${children}</var>
-<arg>${element}</arg>
-<arg>find_elements</arg>
-<arg>by=xpath</arg>
-<arg>value=child::*</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<msg timestamp="20221124 13:59:26.405" level="INFO">${children} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="88321157002030d02fe3b22a8be1a3dc", element="ead0e26a-a108-4ac4-8478-01fdcb3a0f86")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
-<status status="PASS" starttime="20221124 13:59:26.393" endtime="20221124 13:59:26.405"/>
-</kw>
-<kw name="Get Length" library="BuiltIn">
-<var>${return}</var>
-<arg>${children}</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20221124 13:59:26.405" level="INFO">Length is 2</msg>
-<msg timestamp="20221124 13:59:26.405" level="INFO">${return} = 2</msg>
-<status status="PASS" starttime="20221124 13:59:26.405" endtime="20221124 13:59:26.405"/>
-</kw>
-<msg timestamp="20221124 13:59:26.406" level="INFO">${nbCard} = 2</msg>
-<status status="PASS" starttime="20221124 13:59:26.381" endtime="20221124 13:59:26.406"/>
-</kw>
-<for flavor="IN RANGE">
-<var>${i}</var>
-<value>${nbCard}</value>
-<iter>
-<var name="${i}">0</var>
 <kw name="Element Should Be Visible" library="Selenium2Library">
-<arg>//*[@id="root"]/div/div[2]/div/div[${i+1}]</arg>
+<arg>${ETAPE_NOMMAGE}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221124 13:59:26.431" level="INFO">Element '//*[@id="root"]/div/div[2]/div/div[1]' is displayed.</msg>
-<status status="PASS" starttime="20221124 13:59:26.406" endtime="20221124 13:59:26.432"/>
+<msg timestamp="20221124 15:10:56.891" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[1]' is displayed.</msg>
+<status status="PASS" starttime="20221124 15:10:56.850" endtime="20221124 15:10:56.891"/>
 </kw>
-<status status="PASS" starttime="20221124 13:59:26.406" endtime="20221124 13:59:26.432"/>
-</iter>
-<iter>
-<var name="${i}">1</var>
 <kw name="Element Should Be Visible" library="Selenium2Library">
-<arg>//*[@id="root"]/div/div[2]/div/div[${i+1}]</arg>
+<arg>${ETAPE_MARQUEUR}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221124 13:59:26.456" level="INFO">Element '//*[@id="root"]/div/div[2]/div/div[2]' is displayed.</msg>
-<status status="PASS" starttime="20221124 13:59:26.432" endtime="20221124 13:59:26.456"/>
+<msg timestamp="20221124 15:10:56.918" level="INFO">Element 'xpath:html/body/div[1]/section/section/main/section/main/header/div/div[2]' is displayed.</msg>
+<status status="PASS" starttime="20221124 15:10:56.892" endtime="20221124 15:10:56.919"/>
 </kw>
-<status status="PASS" starttime="20221124 13:59:26.432" endtime="20221124 13:59:26.456"/>
-</iter>
-<status status="PASS" starttime="20221124 13:59:26.406" endtime="20221124 13:59:26.456"/>
-</for>
-<status status="PASS" starttime="20221124 13:59:26.381" endtime="20221124 13:59:26.456"/>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${ETAPE_AUGMENTATION}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221124 15:10:56.945" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[3]' is displayed.</msg>
+<status status="PASS" starttime="20221124 15:10:56.920" endtime="20221124 15:10:56.945"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${ETAPE_ESSAI}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221124 15:10:56.972" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[4]' is displayed.</msg>
+<status status="PASS" starttime="20221124 15:10:56.945" endtime="20221124 15:10:56.973"/>
+</kw>
+<status status="PASS" starttime="20221124 15:10:50.490" endtime="20221124 15:10:56.973"/>
+</kw>
+<kw name="ModifyTitle" library="CasDeTest">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${BOUTON_TITRE_MODIFIER}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221124 15:10:56.974" level="INFO">Clicking element 'xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[1]/h5/div/span'.</msg>
+<status status="PASS" starttime="20221124 15:10:56.973" endtime="20221124 15:10:57.078"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>none</arg>
+<arg>CONTROL+A</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20221124 15:10:57.079" level="INFO">Sending key(s) ('CONTROL+A',) to page.</msg>
+<msg timestamp="20221124 15:10:57.079" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20221124 15:10:57.079" level="INFO">Sending key A</msg>
+<msg timestamp="20221124 15:10:57.080" level="INFO">Releasing special key CONTROL.</msg>
+<status status="PASS" starttime="20221124 15:10:57.079" endtime="20221124 15:10:57.124"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221124 15:10:59.131" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 15:10:57.124" endtime="20221124 15:10:59.131"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>none</arg>
+<arg>${TITRE}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20221124 15:10:59.132" level="INFO">Sending key(s) ('TitreTest',) to page.</msg>
+<msg timestamp="20221124 15:10:59.132" level="INFO">Sending keys TitreTest</msg>
+<status status="PASS" starttime="20221124 15:10:59.131" endtime="20221124 15:10:59.217"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221124 15:11:01.226" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 15:10:59.217" endtime="20221124 15:11:01.226"/>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<arg>${EMPLACEMENT_TITRE}</arg>
+<arg>${TITRE}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20221124 15:11:01.259" level="INFO">Element 'xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[1]' contains text 'TitreTest'.</msg>
+<status status="PASS" starttime="20221124 15:11:01.226" endtime="20221124 15:11:01.260"/>
+</kw>
+<status status="PASS" starttime="20221124 15:10:56.973" endtime="20221124 15:11:01.260"/>
+</kw>
+<kw name="ModifyDesc" library="CasDeTest">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${BOUTON_DESCRIPTION_MODIFIER}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221124 15:11:01.261" level="INFO">Clicking element 'xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[2]/span/div'.</msg>
+<status status="PASS" starttime="20221124 15:11:01.261" endtime="20221124 15:11:01.322"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>none</arg>
+<arg>CONTROL+A</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20221124 15:11:01.323" level="INFO">Sending key(s) ('CONTROL+A',) to page.</msg>
+<msg timestamp="20221124 15:11:01.323" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20221124 15:11:01.323" level="INFO">Sending key A</msg>
+<msg timestamp="20221124 15:11:01.323" level="INFO">Releasing special key CONTROL.</msg>
+<status status="PASS" starttime="20221124 15:11:01.322" endtime="20221124 15:11:01.332"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221124 15:11:03.345" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 15:11:01.332" endtime="20221124 15:11:03.345"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>none</arg>
+<arg>${DESCRIPTION}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20221124 15:11:03.346" level="INFO">Sending key(s) ('Ceci est une description',) to page.</msg>
+<msg timestamp="20221124 15:11:03.346" level="INFO">Sending keys Ceci est une description</msg>
+<status status="PASS" starttime="20221124 15:11:03.345" endtime="20221124 15:11:03.465"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221124 15:11:05.473" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 15:11:03.465" endtime="20221124 15:11:05.473"/>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<arg>${EMPLACEMENT_DESCRIPTION}</arg>
+<arg>${DESCRIPTION}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20221124 15:11:05.502" level="INFO">Element 'xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[2]' contains text 'Ceci est une description'.</msg>
+<status status="PASS" starttime="20221124 15:11:05.473" endtime="20221124 15:11:05.502"/>
+</kw>
+<status status="PASS" starttime="20221124 15:11:01.260" endtime="20221124 15:11:05.503"/>
+</kw>
+<kw name="GoBackToMainPageWithArrow" library="CasDeTest">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${RETOUR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221124 15:11:05.507" level="INFO">Clicking element 'xpath://*[@id="root"]/section/header/div/div/div/div/div/span'.</msg>
+<status status="PASS" starttime="20221124 15:11:05.506" endtime="20221124 15:11:05.632"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221124 15:11:07.634" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 15:11:05.633" endtime="20221124 15:11:07.634"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${ADD_ACTIVITY}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221124 15:11:07.686" level="INFO">Element 'xpath://*[@id="root"]/div/div[2]/div/div[1]/div/div/button' is displayed.</msg>
+<status status="PASS" starttime="20221124 15:11:07.634" endtime="20221124 15:11:07.686"/>
+</kw>
+<status status="PASS" starttime="20221124 15:11:05.506" endtime="20221124 15:11:07.686"/>
 </kw>
 <kw name="EditeOneActivity" library="CasDeTest">
-<kw name="GetChild" library="resource_ivan">
+<kw name="GetChild" library="resources">
 <var>${nbCard}</var>
 <arg>${CARDS}</arg>
 <kw name="Get WebElement" library="Selenium2Library">
 <var>${element}</var>
 <arg>${locator}</arg>
 <doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20221124 13:59:26.465" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="88321157002030d02fe3b22a8be1a3dc", element="3be5c24a-d5fb-4d80-8573-87c3f90bf018")&gt;</msg>
-<status status="PASS" starttime="20221124 13:59:26.457" endtime="20221124 13:59:26.465"/>
+<msg timestamp="20221124 15:11:07.700" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="a038cd266eb2c8400b9556cf3744150d", element="7463bae5-dbbe-4145-8822-fba5c9ec07f0")&gt;</msg>
+<status status="PASS" starttime="20221124 15:11:07.687" endtime="20221124 15:11:07.700"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <var>${children}</var>
@@ -867,73 +701,71 @@
 <arg>by=xpath</arg>
 <arg>value=child::*</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<msg timestamp="20221124 13:59:26.473" level="INFO">${children} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="88321157002030d02fe3b22a8be1a3dc", element="ead0e26a-a108-4ac4-8478-01fdcb3a0f86")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
-<status status="PASS" starttime="20221124 13:59:26.466" endtime="20221124 13:59:26.473"/>
+<msg timestamp="20221124 15:11:07.716" level="INFO">${children} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="a038cd266eb2c8400b9556cf3744150d", element="c68e01ae-99f0-4c66-8802-023038df5c20")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20221124 15:11:07.701" endtime="20221124 15:11:07.717"/>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <var>${return}</var>
 <arg>${children}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20221124 13:59:26.474" level="INFO">Length is 2</msg>
-<msg timestamp="20221124 13:59:26.474" level="INFO">${return} = 2</msg>
-<status status="PASS" starttime="20221124 13:59:26.474" endtime="20221124 13:59:26.474"/>
+<msg timestamp="20221124 15:11:07.717" level="INFO">Length is 2</msg>
+<msg timestamp="20221124 15:11:07.718" level="INFO">${return} = 2</msg>
+<status status="PASS" starttime="20221124 15:11:07.717" endtime="20221124 15:11:07.718"/>
 </kw>
-<msg timestamp="20221124 13:59:26.474" level="INFO">${nbCard} = 2</msg>
-<status status="PASS" starttime="20221124 13:59:26.457" endtime="20221124 13:59:26.474"/>
+<msg timestamp="20221124 15:11:07.718" level="INFO">${nbCard} = 2</msg>
+<status status="PASS" starttime="20221124 15:11:07.687" endtime="20221124 15:11:07.718"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${number}</var>
 <arg>random.sample(range(2, ${nbCard+1}), 1)</arg>
 <arg>random</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20221124 13:59:26.476" level="INFO">${number} = [2]</msg>
-<status status="PASS" starttime="20221124 13:59:26.475" endtime="20221124 13:59:26.476"/>
+<msg timestamp="20221124 15:11:07.720" level="INFO">${number} = [2]</msg>
+<status status="PASS" starttime="20221124 15:11:07.718" endtime="20221124 15:11:07.720"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>//*[@id="root"]/div/div[2]/div/div[${number[0]}]/ul/li[3]/span/button/span</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221124 13:59:26.478" level="INFO">Clicking element '//*[@id="root"]/div/div[2]/div/div[2]/ul/li[3]/span/button/span'.</msg>
-<status status="PASS" starttime="20221124 13:59:26.476" endtime="20221124 13:59:26.559"/>
+<msg timestamp="20221124 15:11:07.721" level="INFO">Clicking element '//*[@id="root"]/div/div[2]/div/div[2]/ul/li[3]/span/button/span'.</msg>
+<status status="PASS" starttime="20221124 15:11:07.720" endtime="20221124 15:11:07.841"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:59:28.573" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:59:26.559" endtime="20221124 13:59:28.573"/>
+<msg timestamp="20221124 15:11:09.846" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 15:11:07.841" endtime="20221124 15:11:09.846"/>
 </kw>
-<kw name="ReturnMainPage" library="resource_ivan">
-<kw name="Go To" library="Selenium2Library">
-<arg>${WELCOMEPAGE_URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221124 13:59:28.574" level="INFO">Opening url 'https://mixap-dev.surge.sh/'</msg>
-<status status="PASS" starttime="20221124 13:59:28.574" endtime="20221124 13:59:30.182"/>
+<status status="PASS" starttime="20221124 15:11:07.687" endtime="20221124 15:11:09.846"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:59:32.191" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:59:30.182" endtime="20221124 13:59:32.191"/>
-</kw>
-<status status="PASS" starttime="20221124 13:59:28.573" endtime="20221124 13:59:32.191"/>
+<kw name="GoBackToMainPageWithBrowserBack" library="CasDeTest">
+<kw name="Go Back" library="Selenium2Library">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20221124 15:11:09.847" endtime="20221124 15:11:09.896"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:59:34.201" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:59:32.191" endtime="20221124 13:59:34.201"/>
+<msg timestamp="20221124 15:11:11.903" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 15:11:09.897" endtime="20221124 15:11:11.903"/>
 </kw>
-<status status="PASS" starttime="20221124 13:59:26.457" endtime="20221124 13:59:34.201"/>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${ADD_ACTIVITY}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221124 15:11:11.925" level="INFO">Element 'xpath://*[@id="root"]/div/div[2]/div/div[1]/div/div/button' is displayed.</msg>
+<status status="PASS" starttime="20221124 15:11:11.903" endtime="20221124 15:11:11.925"/>
 </kw>
-<kw name="PlayOneActivity" library="CasDeTest">
-<kw name="GetChild" library="resource_ivan">
+<status status="PASS" starttime="20221124 15:11:09.847" endtime="20221124 15:11:11.925"/>
+</kw>
+<kw name="EditeOneActivity" library="CasDeTest">
+<kw name="GetChild" library="resources">
 <var>${nbCard}</var>
 <arg>${CARDS}</arg>
 <kw name="Get WebElement" library="Selenium2Library">
 <var>${element}</var>
 <arg>${locator}</arg>
 <doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20221124 13:59:34.212" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="88321157002030d02fe3b22a8be1a3dc", element="d7e9c341-7f51-4bc1-83de-898ddd3d9837")&gt;</msg>
-<status status="PASS" starttime="20221124 13:59:34.203" endtime="20221124 13:59:34.212"/>
+<msg timestamp="20221124 15:11:11.938" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="a038cd266eb2c8400b9556cf3744150d", element="44c1aed4-d01c-4ccc-bd77-bc64761670ec")&gt;</msg>
+<status status="PASS" starttime="20221124 15:11:11.926" endtime="20221124 15:11:11.939"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <var>${children}</var>
@@ -942,179 +774,85 @@
 <arg>by=xpath</arg>
 <arg>value=child::*</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<msg timestamp="20221124 13:59:34.223" level="INFO">${children} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="88321157002030d02fe3b22a8be1a3dc", element="15ada7ee-e7a5-4251-9c9f-c1f0e45900fd")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
-<status status="PASS" starttime="20221124 13:59:34.212" endtime="20221124 13:59:34.223"/>
+<msg timestamp="20221124 15:11:11.950" level="INFO">${children} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="a038cd266eb2c8400b9556cf3744150d", element="767aedf4-33d9-4f9c-a5df-85dca8459c21")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20221124 15:11:11.939" endtime="20221124 15:11:11.950"/>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <var>${return}</var>
 <arg>${children}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20221124 13:59:34.223" level="INFO">Length is 2</msg>
-<msg timestamp="20221124 13:59:34.224" level="INFO">${return} = 2</msg>
-<status status="PASS" starttime="20221124 13:59:34.223" endtime="20221124 13:59:34.224"/>
+<msg timestamp="20221124 15:11:11.951" level="INFO">Length is 2</msg>
+<msg timestamp="20221124 15:11:11.951" level="INFO">${return} = 2</msg>
+<status status="PASS" starttime="20221124 15:11:11.950" endtime="20221124 15:11:11.952"/>
 </kw>
-<msg timestamp="20221124 13:59:34.224" level="INFO">${nbCard} = 2</msg>
-<status status="PASS" starttime="20221124 13:59:34.203" endtime="20221124 13:59:34.224"/>
+<msg timestamp="20221124 15:11:11.952" level="INFO">${nbCard} = 2</msg>
+<status status="PASS" starttime="20221124 15:11:11.926" endtime="20221124 15:11:11.952"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${number}</var>
 <arg>random.sample(range(2, ${nbCard+1}), 1)</arg>
 <arg>random</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20221124 13:59:34.225" level="INFO">${number} = [2]</msg>
-<status status="PASS" starttime="20221124 13:59:34.224" endtime="20221124 13:59:34.225"/>
+<msg timestamp="20221124 15:11:11.953" level="INFO">${number} = [2]</msg>
+<status status="PASS" starttime="20221124 15:11:11.952" endtime="20221124 15:11:11.953"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
-<arg>//*[@id="root"]/div/div[2]/div/div[${number[0]}]/div[1]/div/div[2]/button/span</arg>
+<arg>//*[@id="root"]/div/div[2]/div/div[${number[0]}]/ul/li[3]/span/button/span</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221124 13:59:34.226" level="INFO">Clicking element '//*[@id="root"]/div/div[2]/div/div[2]/div[1]/div/div[2]/button/span'.</msg>
-<status status="PASS" starttime="20221124 13:59:34.225" endtime="20221124 13:59:34.309"/>
+<msg timestamp="20221124 15:11:11.954" level="INFO">Clicking element '//*[@id="root"]/div/div[2]/div/div[2]/ul/li[3]/span/button/span'.</msg>
+<status status="PASS" starttime="20221124 15:11:11.953" endtime="20221124 15:11:12.030"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:59:36.313" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:59:34.309" endtime="20221124 13:59:36.313"/>
+<msg timestamp="20221124 15:11:14.040" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 15:11:12.030" endtime="20221124 15:11:14.040"/>
 </kw>
-<kw name="ReturnMainPage" library="resource_ivan">
-<kw name="Go To" library="Selenium2Library">
-<arg>${WELCOMEPAGE_URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221124 13:59:36.314" level="INFO">Opening url 'https://mixap-dev.surge.sh/'</msg>
-<status status="PASS" starttime="20221124 13:59:36.314" endtime="20221124 13:59:37.641"/>
+<status status="PASS" starttime="20221124 15:11:11.926" endtime="20221124 15:11:14.040"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:59:39.653" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:59:37.641" endtime="20221124 13:59:39.653"/>
-</kw>
-<status status="PASS" starttime="20221124 13:59:36.313" endtime="20221124 13:59:39.653"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:59:41.658" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:59:39.653" endtime="20221124 13:59:41.658"/>
-</kw>
-<status status="PASS" starttime="20221124 13:59:34.202" endtime="20221124 13:59:41.659"/>
-</kw>
-<kw name="DeleteOneActivity" library="CasDeTest">
-<kw name="GetChild" library="resource_ivan">
-<var>${nbCard}</var>
-<arg>${CARDS}</arg>
-<kw name="Get WebElement" library="Selenium2Library">
-<var>${element}</var>
-<arg>${locator}</arg>
-<doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20221124 13:59:41.668" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="88321157002030d02fe3b22a8be1a3dc", element="543f5976-7c11-43e3-81ec-b1699958068a")&gt;</msg>
-<status status="PASS" starttime="20221124 13:59:41.660" endtime="20221124 13:59:41.668"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<var>${children}</var>
-<arg>${element}</arg>
-<arg>find_elements</arg>
-<arg>by=xpath</arg>
-<arg>value=child::*</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<msg timestamp="20221124 13:59:41.680" level="INFO">${children} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="88321157002030d02fe3b22a8be1a3dc", element="bf64ee61-0ce2-4cee-b439-087a5bdf33bc")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
-<status status="PASS" starttime="20221124 13:59:41.669" endtime="20221124 13:59:41.680"/>
-</kw>
-<kw name="Get Length" library="BuiltIn">
-<var>${return}</var>
-<arg>${children}</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20221124 13:59:41.680" level="INFO">Length is 2</msg>
-<msg timestamp="20221124 13:59:41.680" level="INFO">${return} = 2</msg>
-<status status="PASS" starttime="20221124 13:59:41.680" endtime="20221124 13:59:41.680"/>
-</kw>
-<msg timestamp="20221124 13:59:41.680" level="INFO">${nbCard} = 2</msg>
-<status status="PASS" starttime="20221124 13:59:41.659" endtime="20221124 13:59:41.680"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${number}</var>
-<arg>random.sample(range(2, ${nbCard+1}), 1)</arg>
-<arg>random</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20221124 13:59:41.681" level="INFO">${number} = [2]</msg>
-<status status="PASS" starttime="20221124 13:59:41.681" endtime="20221124 13:59:41.681"/>
-</kw>
+<kw name="PasserEtapeSuivante" library="CasDeTest">
 <kw name="Click Element" library="Selenium2Library">
-<arg>//*[@id="root"]/div/div[2]/div/div[${number[0]}]/ul/li[4]/span/button/span</arg>
+<arg>${SUIVANT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221124 13:59:41.682" level="INFO">Clicking element '//*[@id="root"]/div/div[2]/div/div[2]/ul/li[4]/span/button/span'.</msg>
-<status status="PASS" starttime="20221124 13:59:41.681" endtime="20221124 13:59:41.742"/>
+<msg timestamp="20221124 15:11:14.042" level="INFO">Clicking element 'xpath://*[@id="board-content"]/footer/div/div/button/span[2]'.</msg>
+<status status="PASS" starttime="20221124 15:11:14.041" endtime="20221124 15:11:14.108"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:59:43.750" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:59:41.743" endtime="20221124 13:59:43.750"/>
+<msg timestamp="20221124 15:11:16.113" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 15:11:14.108" endtime="20221124 15:11:16.113"/>
 </kw>
-<kw name="Click Element" library="Selenium2Library">
-<arg>xpath:/html/body/div[2]/div/div/ul/li/span/button/span</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221124 13:59:43.751" level="INFO">Clicking element 'xpath:/html/body/div[2]/div/div/ul/li/span/button/span'.</msg>
-<status status="PASS" starttime="20221124 13:59:43.750" endtime="20221124 13:59:43.806"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:59:45.806" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:59:43.806" endtime="20221124 13:59:45.806"/>
-</kw>
-<status status="PASS" starttime="20221124 13:59:41.659" endtime="20221124 13:59:45.807"/>
-</kw>
-<kw name="OpenMoreOptionWindow" library="CasDeTest">
-<kw name="ClickWindow" library="resource_ivan">
-<arg>${MORE_OPTION_BUTTON}</arg>
-<kw name="Click Button" library="Selenium2Library">
-<arg>${Button}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221124 13:59:45.808" level="INFO">Clicking button 'xpath://*[@id="root"]/div/div[1]/div/div[1]/span/div/div[4]/button'.</msg>
-<status status="PASS" starttime="20221124 13:59:45.808" endtime="20221124 13:59:45.868"/>
-</kw>
-<status status="PASS" starttime="20221124 13:59:45.807" endtime="20221124 13:59:45.868"/>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${PRENDRE_PHOTO}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20221124 15:11:16.147" level="INFO">Element 'xpath://*[@id="three-canvas"]/div[3]/div/div/div[1]/button/div/div[2]/div' is displayed.</msg>
+<status status="PASS" starttime="20221124 15:11:16.113" endtime="20221124 15:11:16.147"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:59:47.884" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:59:45.869" endtime="20221124 13:59:47.884"/>
+<msg timestamp="20221124 15:11:18.159" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221124 15:11:16.147" endtime="20221124 15:11:18.159"/>
 </kw>
-<status status="PASS" starttime="20221124 13:59:45.807" endtime="20221124 13:59:47.884"/>
-</kw>
-<kw name="Click" library="CasDeTest">
-<kw name="Click Element" library="Selenium2Library">
-<arg>${LOGO_XPATH}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221124 13:59:47.885" level="INFO">Clicking element 'xpath://*[@id="root"]/div/div[1]/div/div[1]/div/span/span/img'.</msg>
-<status status="PASS" starttime="20221124 13:59:47.885" endtime="20221124 13:59:47.952"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221124 13:59:49.957" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221124 13:59:47.952" endtime="20221124 13:59:49.957"/>
-</kw>
-<status status="PASS" starttime="20221124 13:59:47.885" endtime="20221124 13:59:49.957"/>
+<status status="PASS" starttime="20221124 15:11:14.041" endtime="20221124 15:11:18.159"/>
 </kw>
 <kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221124 13:59:49.958" endtime="20221124 14:00:13.159"/>
+<status status="PASS" starttime="20221124 15:11:18.162" endtime="20221124 15:11:20.600"/>
 </kw>
-<status status="PASS" starttime="20221124 13:57:34.476" endtime="20221124 14:00:13.160"/>
+<status status="PASS" starttime="20221124 15:10:44.643" endtime="20221124 15:11:20.601"/>
 </test>
-<status status="PASS" starttime="20221124 13:57:34.144" endtime="20221124 14:00:13.162"/>
+<status status="FAIL" starttime="20221124 15:10:11.664" endtime="20221124 15:11:20.602"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Scenario">Scenario</stat>
+<stat pass="1" fail="1" skip="0" id="s1" name="Scenario">Scenario</stat>
 </suite>
 </statistics>
 <errors>
