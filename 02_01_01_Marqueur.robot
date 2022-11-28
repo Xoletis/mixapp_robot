@@ -10,8 +10,8 @@ Test Teardown     Close Browser
     Start Test
     Go to Augment Activity
     Go to Marqueur
-    Go to Augmentation
-    Element Should Be Visible    
+    #Go to Augmentation
+    #Element Should Be Visible    
 02.01.01.02
     Start Test
     Go to Augment Activity
@@ -28,42 +28,32 @@ Test Teardown     Close Browser
     Start Test
     Go to Augment Activity
     Go to Marqueur
+    Click Element    ${ALLUMER_CAMERA}
+    SleepB
     Click Element    ${PRENDRE_PHOTO}
-    Wait Until Element Is Visible    ${PHOTO_AREA}
+    SleepA
+    Click Element    ${PRENDRE_PHOTO}
+    SleepA
+    Element Should Not be Visible    ${ALLUMER_CAMERA}
 02.01.01.03.03
-02.01.04.06
+02.01.01.06
     Start Test
     Go to Augment Activity
-    Click Element    ${BOUTON_TITRE_MODIFIER}
-    Press Keys       none    CONTROL+A
-    SleepA
-    Press Keys       none    ${TITRE}
-    SleepA
-    Element Should Contain    ${EMPLACEMENT_TITRE}     ${TITRE}
-02.01.04.08
-    Start Test
-    Go to Augment Activity
-    Click Element    ${BOUTON_DESCRIPTION_MODIFIER}
-    Press Keys       none    CONTROL+A
-    SleepA
-    Press Keys       none    ${DESCRIPTION}
-    SleepA
-    Element Should Contain    ${EMPLACEMENT_DESCRIPTION}     ${DESCRIPTION}
-02.01.04.09
-    Start Test
-    Go to Augment Activity
-    Click Element    ${HOME}
-    SleepA
-    Element Should Be Visible    ${+ACTIVITE2} 
-02.01.04.11
-    Start Test
-    Go to Augment Activity
-    Click Element    ${RETOUR}
-    SleepA
-    Element Should Be Visible    ${+ACTIVITE} 
-02.01.04.12
-    Start Test
-    Go to Augment Activity
+    Go to Marqueur
     Go Back
     SleepA
     Element Should Be Visible    ${+ACTIVITE}
+02.01.01.07
+    Start Test
+    Go to Augment Activity
+    Go to Marqueur
+    Click Element    ${RETOUR}
+    SleepA
+    Element Should Be Visible    ${+ACTIVITE} 
+02.01.01.08
+   Start Test
+    Go to Augment Activity
+    Go to Marqueur
+    Click Element    ${HOME}
+    SleepA
+    Element Should Be Visible    ${+ACTIVITE2} 

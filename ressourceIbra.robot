@@ -12,6 +12,7 @@ Library           String
 
 ${WELCOMEPAGE_URL}                https://mixap-dev.surge.sh
 ${BROWSER}                        Chrome
+${DESIRED_CAPABILITIES}           {'version': 'latest', 'platform': 'WIN11', 'browserName': 'chrome', 'chromeOptions': {'args': ["--use-fake-device-for-media-stream", "--use-fake-ui-for-media-stream"]}}
 ${INITIAL_DELAY}                  0
 ${DELAY}                          0.5
 ${TITLE}                          MIXAP    
@@ -28,20 +29,32 @@ ${ETAPE_AUGMENTATION}             xpath:/html/body/div[1]/section/section/main/s
 ${ETAPE_ESSAI}                    xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[4]
 ${HOME}                           xpath://*[@id="root"]/section/header/div/div/span/div/div/a/button
 ${SUIVANT_NOMMAGE}                xpath://*[@id="board-content"]/footer/div/div/button/span[2]
-${PRENDRE_PHOTO}                  xpath://*[@id="three-canvas"]/div[3]/div/div/div[1]/button/div/div[2]/div
-${PHOTO_AREA}                     xpath:/html/body/div[15]/div/div[2]/div/div[2]
 ${BOUTON_TITRE_MODIFIER}          xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[1]/h5/div/span
 ${EMPLACEMENT_TITRE}              xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[1]
 ${BOUTON_DESCRIPTION_MODIFIER}    xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[2]/span/div  
-${EMPLACEMENT_DESCRIPTION}        xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[2]         
+${EMPLACEMENT_DESCRIPTION}        xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[2] 
+#Page Marqueur
+
+${ALLUMER_CAMERA}                  xpath://*[@id="three-canvas"]/div[3]/div/div/div[1]/button/div/div[2]/div
+${PHOTO_AREA}                     /html/body/div[17]/div/div[2]/div/div[2]/div[2]
+${PRENDRE_PHOTO}                  /html/body/div[17]/div/div[2]/div/div[2]/div[3]/div/div[2]/button        
 
 *** Keywords ***
 SleepA
     Sleep    ${DELAY}
+SleepB
+    Sleep    10
 Welcome Page Should Be Open
     Title Should Be    ${TITLE}
 Open Browser To Welcome Page
-    Open Browser    ${WELCOMEPAGE_URL}   ${BROWSER}
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()   modules=sys      # EdgeOptions() à changer en fonction du navigateur
+    Call Method    ${options}    add_argument    --use-fake-ui-for-media-stream           # Évite d'avoir à accorder des autorisations pour les caméras et les microphones.
+    # Call Method    ${options}    add_argument    --use-fake-device-for-media-stream       # Envoie un flux vidéo de test au lieu d'un flux vidéo de webcam
+    Call Method    ${options}    add_argument    --auto-select-desktop-capture-source     # Sélectionne automatiquement une source de média (en général la webcam)
+    Log    ${options}
+    Open Browser    ${WELCOMEPAGE_URL}   ${BROWSER}   options=${options}
+    #alias="None"    remote_url="False"    desired_capabilities=${DESIRED_CAPABILITIES} 
+    #      
     Maximize Browser Window
     Set Selenium Speed    ${INITIAL_DELAY}
     Welcome Page Should Be Open
