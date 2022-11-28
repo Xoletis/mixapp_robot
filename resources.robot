@@ -14,7 +14,6 @@ Library           DateTime
 
 #Important
 ${WELCOMEPAGE_URL}          https://mixap-dev.surge.sh/
-${BROWSER}                  Chrome
 ${DELAY}                    0
 ${TITLE}                    MIXAP
 
@@ -33,7 +32,7 @@ ${MORE_OPTION_BUTTON}           xpath://*[@id="root"]/div/div[1]/div/div[1]/span
 ${BOUTON_TITRE_MODIFIER}        xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[1]/h5/div/span
 ${BOUTON_DESCRIPTION_MODIFIER}  xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[2]/span/div
 ${RETOUR}                       xpath://*[@id="root"]/section/header/div/div/div/div/div/span
-${SUIVANT}              xpath://*[@id="board-content"]/footer/div/div/button/span[2]
+${SUIVANT}                      xpath://*[@id="board-content"]/footer/div/div/button/span[2]
 
 #Element Html
 ${LOGO_XPATH}                   xpath://*[@id="root"]/div/div[1]/div/div[1]/div/span/span/img
@@ -48,6 +47,8 @@ ${ETAPE_ESSAI}                  xpath:/html/body/div[1]/section/section/main/sec
 ${EMPLACEMENT_TITRE}            xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[1]
 ${EMPLACEMENT_DESCRIPTION}      xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[2]
 ${PRENDRE_PHOTO}                xpath://*[@id="three-canvas"]/div[3]/div/div/div[1]/button/div/div[2]/div
+${ADD_ACTIVITY_TXT}             xpath://*[@id=":r0:"]
+${PLAY_ACTIVITY_WINDOW}         xpath://*[@id="three-canvas"]/div[4]/div/span[1]
 
 #Autre
 ${CODE_IMPORT}                  5eda26
@@ -56,6 +57,7 @@ ${DESCRIPTION}                  Ceci est une description
 *** Keywords ***
 
 OpenMixap
+    [Arguments]                     ${BROWSER}
     OpenBrowser                     ${WELCOMEPAGE_URL}   ${BROWSER}
     Maximize Browser Window
     Set Selenium Speed              ${DELAY}

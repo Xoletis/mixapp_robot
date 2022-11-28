@@ -1,52 +1,19 @@
 *** Settings ***
-Resource          resources.robot
-Resource          CasDeTest.robot
+Resource            Activites/AugmenterUneImage/Nomage.robot
+Resource            CasDeTest.robot
+Resource            Connexion/ConexionSiteWeb.robot
+Resource            Connexion/AfficherMenuPrincipale.robot
+Resource            MenuPrincipal/Import.robot
+Resource            MenuPrincipal/Dashboard.robot
+Resource            MenuPrincipal/CreateActivity.robot
+
 Test Teardown    Close Browser
 *** Test Cases ***
-ScenarioMainMenPart1
-    OpenMixap
 
-    OpenImportWindow
-    Click
-    OpenImportWindow
-    CloseImportWindowWithText
-    ReturnMainPage
-    EnterCodeLessSevenCharacter
-    ReturnMainPage
-    EnterCodeMoreSevenCharacter
-    ReturnMainPage
-    EnterFakeCode
-    ReturnMainPage
-    EnterRealCode
-    ReturnMainPage
-
-ScenarioMainMenPart2
-    OpenDashboard
-    GoToSuiviDapprenants
-    GoToMonContenu
-
-    ReturnMainPage
-    OpenAddActivityWindow
-    CloseAddActivityWindow
-    CreateAugmenterUneImageActivity
-    ReturnMainPage
-    LookActivityCreate
-    EditeOneActivity
-    ReturnToMainPage
-    PlayOneActivity
-    ReturnToMainPage
-    DeleteOneActivity
-
-    OpenMoreOptionWindow
-    Click
-
-ScenarioActiviteAugmenterUneImage
-    OpenMixap
+Test1
+    OpenWebSiteChrome
+    ShowMainMenu
     AfficherCreationStage
     ModifyTitle
     ModifyDesc
-    GoBackToMainPageWithArrow
-    EditeOneActivity
-    GoBackToMainPageWithBrowserBack
-    EditeOneActivity
     PasserEtapeSuivante
