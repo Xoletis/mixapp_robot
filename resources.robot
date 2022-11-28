@@ -13,9 +13,9 @@ Library           DateTime
 *** Variables ***
 
 #Important
-${WELCOMEPAGE_URL}          https://mixap-dev.surge.sh/
-${DELAY}                    0
-${TITLE}                    MIXAP
+${WELCOMEPAGE_URL}              https://mixap-dev.surge.sh/
+${DELAY}                        0
+${TITLE}                        MIXAP
 
 #Boutton
 ${IMPORT_DATA}                  xpath://*[@id="root"]/div/div[1]/div/div[1]/span/div/div[1]/button

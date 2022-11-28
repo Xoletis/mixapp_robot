@@ -51,7 +51,6 @@ Open Browser To Welcome Page
     Call Method    ${options}    add_argument    --use-fake-ui-for-media-stream           # Évite d'avoir à accorder des autorisations pour les caméras et les microphones.
     # Call Method    ${options}    add_argument    --use-fake-device-for-media-stream       # Envoie un flux vidéo de test au lieu d'un flux vidéo de webcam
     Call Method    ${options}    add_argument    --auto-select-desktop-capture-source     # Sélectionne automatiquement une source de média (en général la webcam)
-    Log    ${options}
     Open Browser    ${WELCOMEPAGE_URL}   ${BROWSER}   options=${options}
     #alias="None"    remote_url="False"    desired_capabilities=${DESIRED_CAPABILITIES} 
     #      
