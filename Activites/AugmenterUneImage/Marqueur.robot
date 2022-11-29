@@ -17,9 +17,8 @@ PrendreUnePhoto
 ImporterImage
     Click Button  ${IMPORT_IMAGE}
     Sleep         2
-    #Choose File   ${IMPORT_IMAGE}       "C:\Users\Admin\Desktop\Scrum\mixapp_robot\resource\IMM.jpg"
-    Input Text Into Alert    "ok"
-    Sleep           2
+    Choose File   ${IMPORT_IMAGE}       "C:\Users\Admin\Desktop\Scrum\mixapp_robot\resource\IMM.jpg"
+    Sleep         2
 
 PasserEtapeAugmentation
     Click Element               ${SUIVANT_2}
