@@ -1,10 +1,7 @@
 *** Settings ***
 Documentation       Création d'acivité
 
-Library             Selenium2Library
-Library             String
-
-Resource            ../resources.robot
+Resource            ../Import.robot
 
 
 *** Keywords ***

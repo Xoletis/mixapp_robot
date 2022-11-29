@@ -5,11 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e38704a-c188-4a89-ac5c-43c52908ec69" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Activites/AugmenterUneImage/Commun.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Activites/AugmenterUneImage/Marqueur.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Import.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/02_01_01_Marqueur.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/02_01_04_Nommage.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Activites/AugmenterUneImage/Nomage.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Activites/AugmenterUneImage/Nomage.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Connexion/AfficherMenuPrincipale.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Connexion/AfficherMenuPrincipale.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Connexion/ConexionSiteWeb.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Connexion/ConexionSiteWeb.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MenuPrincipal/CreateActivity.robot" beforeDir="false" afterPath="$PROJECT_DIR$/MenuPrincipal/CreateActivity.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MenuPrincipal/Dashboard.robot" beforeDir="false" afterPath="$PROJECT_DIR$/MenuPrincipal/Dashboard.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MenuPrincipal/Import.robot" beforeDir="false" afterPath="$PROJECT_DIR$/MenuPrincipal/Importer.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/log.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources.robot" beforeDir="false" afterPath="$PROJECT_DIR$/resources.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressourceIbra.robot" beforeDir="false" afterPath="$PROJECT_DIR$/ressourceIbra.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressourceIbra.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenario.robot" beforeDir="false" afterPath="$PROJECT_DIR$/scenario.robot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,16 +40,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Desktop/Scrum/mixapp_robot&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Admin/Desktop/Scrum/mixapp_robot",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "settings.editor.selected.configurable": "PyScientificConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Admin\Desktop\Scrum\mixapp_robot" />
@@ -94,7 +109,10 @@
       <workItem from="1669282430824" duration="14437000" />
       <workItem from="1669364243092" duration="1776000" />
       <workItem from="1669622468866" duration="9531000" />
-      <workItem from="1669644505407" duration="312000" />
+      <workItem from="1669644505407" duration="1039000" />
+      <workItem from="1669645608900" duration="2645000" />
+      <workItem from="1669708086963" duration="3910000" />
+      <workItem from="1669712070628" duration="942000" />
     </task>
     <servers />
   </component>

@@ -1,10 +1,7 @@
 *** Settings ***
 Documentation       Affichage du menu pricipale
 
-Library             Selenium2Library
-Library             String
-
-Resource            ../resources.robot
+Resource            ../Import.robot
 
 *** Keywords ***
 ShowMainMenu

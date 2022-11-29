@@ -33,6 +33,10 @@ ${BOUTON_TITRE_MODIFIER}        xpath://*[@id="board-content"]/div/div/div/div[2
 ${BOUTON_DESCRIPTION_MODIFIER}  xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[2]/span/div
 ${RETOUR}                       xpath://*[@id="root"]/section/header/div/div/div/div/div/span
 ${SUIVANT}                      xpath://*[@id="board-content"]/footer/div/div/button/span[2]
+${SUIVANT_2}                    //*[@id="board-content"]/footer/div/div[2]/button
+${ALLUMER_CAMERA}               xpath://*[@id="three-canvas"]/div[3]/div/div/div[1]/button/div/div[2]/div
+${PRENDRE_PHOTO}                //div[3]/div/div[2]/button
+${IMPORT_IMAGE}                 //div[@id='three-canvas']/div[3]/div/div/div[3]/span/div/span/div/button
 
 #Element Html
 ${LOGO_XPATH}                   xpath://*[@id="root"]/div/div[1]/div/div[1]/div/span/span/img
@@ -46,9 +50,12 @@ ${ETAPE_AUGMENTATION}           xpath:/html/body/div[1]/section/section/main/sec
 ${ETAPE_ESSAI}                  xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[4]
 ${EMPLACEMENT_TITRE}            xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[1]
 ${EMPLACEMENT_DESCRIPTION}      xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[2]
-${PRENDRE_PHOTO}                xpath://*[@id="three-canvas"]/div[3]/div/div/div[1]/button/div/div[2]/div
+${PRENDRE_PHOTO}                //*[@id="three-canvas"]/div[3]/div/div/div[1]/button
 ${ADD_ACTIVITY_TXT}             xpath://*[@id=":r0:"]
 ${PLAY_ACTIVITY_WINDOW}         xpath://*[@id="three-canvas"]/div[4]/div/span[1]
+${PHOTO_AREA}                   xpath:/html/body/div[17]/div/div[2]/div/div[2]/div[2]
+${AUGMENTATION_WINDOW}          //*[@id="three-canvas"]/div[3]/div/div
+${TEXT_AUGMENTATION}            //*[@id="three-canvas"]/div[2]/div/div/button[1]/span[2]
 
 #Autre
 ${CODE_IMPORT}                  5eda26
@@ -57,8 +64,8 @@ ${DESCRIPTION}                  Ceci est une description
 *** Keywords ***
 
 OpenMixap
-    [Arguments]                     ${BROWSER}
-    OpenBrowser                     ${WELCOMEPAGE_URL}   ${BROWSER}
+    [Arguments]                     ${BROWSER}              ${options}
+    Open Browser    ${WELCOMEPAGE_URL}   ${BROWSER}   options=${options}
     Maximize Browser Window
     Set Selenium Speed              ${DELAY}
     Wait Until Element Is Visible   ${LOGO_XPATH}        100000

@@ -1,11 +1,5 @@
 *** Settings ***
-Resource            Activites/AugmenterUneImage/Nomage.robot
-Resource            CasDeTest.robot
-Resource            Connexion/ConexionSiteWeb.robot
-Resource            Connexion/AfficherMenuPrincipale.robot
-Resource            MenuPrincipal/Import.robot
-Resource            MenuPrincipal/Dashboard.robot
-Resource            MenuPrincipal/CreateActivity.robot
+Resource            Import.robot
 
 Test Teardown    Close Browser
 *** Test Cases ***
@@ -13,7 +7,8 @@ Test Teardown    Close Browser
 Test1
     OpenWebSiteChrome
     ShowMainMenu
+    CreateAugmenterUneImageActivity
+    PasserEtapeMarqueur
     AfficherCreationStage
-    ModifyTitle
-    ModifyDesc
-    PasserEtapeSuivante
+    ImporterImage
+    PasserEtapeAugmentation

@@ -1,10 +1,8 @@
 *** Settings ***
 Documentation       Cas de test sur le dashboard
 
-Library             Selenium2Library
-Library             String
 
-Resource            ../resources.robot
+Resource            ../Import.robot
 
 
 *** Keywords ***
