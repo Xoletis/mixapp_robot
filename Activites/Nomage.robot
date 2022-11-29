@@ -1,8 +1,9 @@
 *** Settings ***
 Documentation       La liste des Différents pas de test
 
-Resource            ../../Import.robot
+Resource            ../Import.robot
 
+Library    Selenium2Library
 
 *** Keywords ***
 
@@ -22,7 +23,11 @@ ModifyDesc
     Sleep                       2
     Element Should Contain      ${EMPLACEMENT_DESCRIPTION}      ${DESCRIPTION}
 
-PasserEtapeMarqueur
-    Click Element               ${SUIVANT}
+ModifiConsigne
+    Click Element               ${BOUTON_CONSIGNE_MODIFIER}
+    Press Keys                  none                        CONTROL+A
     Sleep                       2
-    Element Should Be Visible   ${AUGMENTATION_WINDOW}
+    Press Keys                  none                           ${CONSIGNE}
+    Sleep                       2
+    Element Should Contain      ${EMPLACEMENT_CONSIGNE}        ${CONSIGNE}
+

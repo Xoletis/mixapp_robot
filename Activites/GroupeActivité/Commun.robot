@@ -4,13 +4,13 @@ Documentation       La liste des Différents pas de test
 Resource            ../../Import.robot
 
 *** Keywords ***
-AfficherCreationStageAI
+AfficherCreationStageGA
     ${url}=         Get Location
     IF              "${url}" == "https://mixap-dev.surge.sh/"
-        CreateAugmenterUneImageActivity
+        CreateGroupeActivite
         Sleep                           2
     END
-    AfficherCreationStage    4
+    AfficherCreationStage               3
 
-PasserEtapeMarqueur
-    PasserEtapeSuivante         ${AUGMENTATION_WINDOW}
+PasserEtapeSelection
+    PasserEtapeSuivante         ${SELECTION_WINDOW}

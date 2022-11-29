@@ -21,6 +21,11 @@ CreateAugmenterUneImageActivity
     ClickElement    ${AUGMENTER_UNE_IMAGE}
     Sleep           2
 
+CreateGroupeActivite
+    OpenAddActivityWindow
+    ClickElement    ${GROUPE_ACTIVITE}
+    Sleep           2
+
 LookActivityCreate
     ReturnMainPage
     Sleep           2

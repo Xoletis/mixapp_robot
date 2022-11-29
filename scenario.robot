@@ -8,7 +8,13 @@ Test1
     OpenWebSiteChrome
     ShowMainMenu
     CreateAugmenterUneImageActivity
-    PasserEtapeMarqueur
-    AfficherCreationStage
-    ImporterImage
-    PasserEtapeAugmentation
+    AfficherCreationStageAI
+    ReturnMainPage
+    CreateAugmenterUneImageActivity
+    ReturnMainPage
+    CreateGroupeActivite
+    AfficherCreationStageGA
+    ModifyTitle
+    ModifyDesc
+    ModifiConsigne
+    PasserEtapeSelection

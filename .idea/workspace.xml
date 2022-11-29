@@ -5,12 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e38704a-c188-4a89-ac5c-43c52908ec69" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Activites/Commun.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Activites/GroupeActivité/Commun.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Activites/GroupeActivité/Nomage.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Activites/AugmenterUneImage/Marqueur.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Activites/AugmenterUneImage/Marqueur.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Activites/AugmenterUneImage/Commun.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Activites/AugmenterUneImage/Commun.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Activites/AugmenterUneImage/Nomage.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Activites/Nomage.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Import.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Import.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MenuPrincipal/CreateActivity.robot" beforeDir="false" afterPath="$PROJECT_DIR$/MenuPrincipal/CreateActivity.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/log.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/output.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources.robot" beforeDir="false" afterPath="$PROJECT_DIR$/resources.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenario.robot" beforeDir="false" afterPath="$PROJECT_DIR$/scenario.robot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +53,8 @@
       <recent name="C:\Users\Admin\Desktop\Scrum\mixapp_robot\Tests" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\Scrum\mixapp_robot\Activites" />
+      <recent name="C:\Users\Admin\Desktop\Scrum\mixapp_robot\Activites\AugmenterUneImage" />
       <recent name="C:\Users\Admin\Desktop\Scrum\mixapp_robot" />
       <recent name="C:\Users\Admin\Desktop\Scrum\mixapp_robot\Resources" />
       <recent name="C:\Users\Admin\Desktop\Scrum\mixapp_robot\Tests" />
@@ -100,7 +109,7 @@
       <workItem from="1669644505407" duration="1039000" />
       <workItem from="1669645608900" duration="2645000" />
       <workItem from="1669708086963" duration="3910000" />
-      <workItem from="1669712070628" duration="2189000" />
+      <workItem from="1669712070628" duration="8614000" />
     </task>
     <servers />
   </component>

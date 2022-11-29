@@ -4,10 +4,8 @@ Documentation     A resource file with reusable keywords and variables.
 ...               The system specific keywords created here form our own
 ...               domain specific language. They utilize keywords provided
 ...               by the imported SeleniumLibrary.
-Library           Selenium2Library
-Library           String
-Library           OperatingSystem
-Library           DateTime
+
+Resource        Import.robot
 
 
 *** Variables ***
@@ -24,13 +22,15 @@ ${IMPORT_DATA_BUTTON}           xpath:/html/body/div[2]/div/div/div/div[2]/div[2
 ${ADD_ACTIVITY}                 xpath://*[@id="root"]/div/div[2]/div/div[1]/div/div/button
 ${ADD_ACTIVITY_2}               xpath://*[@id="rc-tabs-3-panel-1"]/div/div[1]/div/div/button
 ${AUGMENTER_UNE_IMAGE}          xpath:/html/body/div[2]/div/div[2]/div/div[2]/div[2]/div/div[1]/div[1]
+${GROUPE_ACTIVITE}              xpath:(//img[@alt='example'])[5]
 ${DASHBORD_BUTTON}              xpath://*[@id="root"]/div/div[1]/div/div/span/div/div[3]/button
 ${SUIVI_APPRENANTS_BUTTON}      xpath://*[@id="rc-tabs-0-tab-2"]/h4
 ${MON_CONTENU_BUTTON}           xpath://*[@id="rc-tabs-0-tab-1"]/h4
 ${CLOSE_ADD_ACTIVITY_WINDOW}    xpath:/html/body/div[2]/div/div[2]/div/div[2]/button
 ${MORE_OPTION_BUTTON}           xpath://*[@id="root"]/div/div[1]/div/div[1]/span/div/div[4]/button
 ${BOUTON_TITRE_MODIFIER}        xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[1]/h5/div/span
-${BOUTON_DESCRIPTION_MODIFIER}  xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[2]/span/div
+${BOUTON_DESCRIPTION_MODIFIER}  xpath:(.//*[normalize-space(text()) and normalize-space(.)=concat('Un groupe d', "'", 'activités sans ordre défini')])[1]//*[name()='svg'][1]
+${BOUTON_CONSIGNE_MODIFIER}     xpath:(.//*[normalize-space(text()) and normalize-space(.)='Jouer les activités du groupe'])[1]//*[name()='svg'][1]
 ${RETOUR}                       xpath://*[@id="root"]/section/header/div/div/div/div/div/span
 ${SUIVANT}                      xpath://*[@id="board-content"]/footer/div/div/button/span[2]
 ${SUIVANT_2}                    //*[@id="board-content"]/footer/div/div[2]/button
@@ -44,23 +44,22 @@ ${SUIVI_APPRENANTS}             xpath://*[@id="rc-tabs-0-panel-2"]
 ${MON_CONTENU}                  xpath://*[@id="rc-tabs-0-panel-1"]
 ${CARDS}                        xpath://*[@id="root"]/div/div[2]/div
 ${CODE_UTILISATEUR}             xpath:/html/body/div[7]/div/div/ul/li[2]/span/span[2]/strong
-${ETAPE_NOMMAGE}                xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[1]
-${ETAPE_MARQUEUR}               xpath:html/body/div[1]/section/section/main/section/main/header/div/div[2]
-${ETAPE_AUGMENTATION}           xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[3]
-${ETAPE_ESSAI}                  xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[4]
 ${EMPLACEMENT_TITRE}            xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[1]
-${EMPLACEMENT_DESCRIPTION}      xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[2]
+${EMPLACEMENT_DESCRIPTION}      xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[3]
+${EMPLACEMENT_CONSIGNE}         xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[2]
 ${PRENDRE_PHOTO}                //*[@id="three-canvas"]/div[3]/div/div/div[1]/button
 ${ADD_ACTIVITY_TXT}             xpath://*[@id=":r0:"]
 ${PLAY_ACTIVITY_WINDOW}         xpath://*[@id="three-canvas"]/div[4]/div/span[1]
 ${PHOTO_AREA}                   xpath:/html/body/div[17]/div/div[2]/div/div[2]/div[2]
 ${AUGMENTATION_WINDOW}          //*[@id="three-canvas"]/div[3]/div/div
 ${TEXT_AUGMENTATION}            //*[@id="three-canvas"]/div[2]/div/div/button[1]/span[2]
+${SELECTION_WINDOW}             xpath://*[@id="board-content"]/div/div/div/div/div
 
 #Autre
 ${CODE_IMPORT}                  5eda26
 ${TITRE}                        TitreTest
 ${DESCRIPTION}                  Ceci est une description
+${CONSIGNE}                     Ceci est une consigne
 *** Keywords ***
 
 OpenMixap
@@ -113,3 +112,16 @@ GetChild
 
     ${return}=        Get Length    ${children}
     [Return]          ${return}
+
+
+AfficherCreationStage
+    [Arguments]     ${nb}
+    FOR    ${i}    IN RANGE   ${nb}
+        Element Should Be Visible       xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[${i+1}]
+    END
+
+PasserEtapeSuivante
+    [Arguments]                 ${elements}
+    Click Element               ${SUIVANT}
+    Sleep                       2
+    Element Should Be Visible   ${elements}
