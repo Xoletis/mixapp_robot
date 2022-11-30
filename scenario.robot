@@ -7,14 +7,21 @@ Test Teardown    Close Browser
 Test1
     OpenWebSiteChrome
     ShowMainMenu
-    CreateAugmenterUneImageActivity
-    AfficherCreationStageAI
-    ReturnMainPage
-    CreateAugmenterUneImageActivity
-    ReturnMainPage
+    FOR    ${i}    IN RANGE    3
+        CreateAugmenterUneImageActivity
+        AfficherCreationStageAI
+        ReturnMainPage
+    END
     CreateGroupeActivite
     AfficherCreationStageGA
     ModifyTitle
     ModifyDesc
     ModifiConsigne
     PasserEtapeSelection
+    AfficherCreationStageGA
+    AddOneActivityInGroupeActivite
+    AddAllActivityInGroupeActivite
+    PasserEtapeTest
+    NextActivity
+    PrevousActivity
+    ViewAllActivities

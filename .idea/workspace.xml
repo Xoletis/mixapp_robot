@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e38704a-c188-4a89-ac5c-43c52908ec69" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Activites/Commun.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Activites/GroupeActivité/Commun.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Activites/GroupeActivité/Nomage.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Activites/GroupeActivité/Essais.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Activites/GroupeActivité/Selection.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Activites/AugmenterUneImage/Commun.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Activites/AugmenterUneImage/Commun.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Activites/AugmenterUneImage/Nomage.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Activites/Nomage.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Import.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Import.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MenuPrincipal/CreateActivity.robot" beforeDir="false" afterPath="$PROJECT_DIR$/MenuPrincipal/CreateActivity.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/log/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/log/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/log/report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/output.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources.robot" beforeDir="false" afterPath="$PROJECT_DIR$/resources.robot" afterDir="false" />
@@ -35,18 +34,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Admin/Desktop/Scrum/mixapp_robot",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "settings.editor.selected.configurable": "PyScientificConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Desktop/Scrum/mixapp_robot&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;PyScientificConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Admin\Desktop\Scrum\mixapp_robot" />
@@ -109,7 +108,8 @@
       <workItem from="1669644505407" duration="1039000" />
       <workItem from="1669645608900" duration="2645000" />
       <workItem from="1669708086963" duration="3910000" />
-      <workItem from="1669712070628" duration="8614000" />
+      <workItem from="1669712070628" duration="10101000" />
+      <workItem from="1669795021703" duration="11419000" />
     </task>
     <servers />
   </component>

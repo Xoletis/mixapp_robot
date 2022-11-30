@@ -1,8 +1,9 @@
 *** Settings ***
 Library             Selenium2Library
 Library             String
-Library           OperatingSystem
-Library           DateTime
+Library             OperatingSystem
+Library             DateTime
+Library             XML
 
 Resource            Activites/Nomage.robot
 Resource            Connexion/ConexionSiteWeb.robot
@@ -15,3 +16,5 @@ Resource            Activites/AugmenterUneImage/Marqueur.robot
 Resource            resources.robot
 Resource            Activites/GroupeActivité/Commun.robot
 Resource            Activites/Commun.robot
+Resource            Activites/GroupeActivité/Selection.robot
+Resource            Activites/GroupeActivité/Essais.robot

@@ -32,11 +32,16 @@ ${BOUTON_TITRE_MODIFIER}        xpath://*[@id="board-content"]/div/div/div/div[2
 ${BOUTON_DESCRIPTION_MODIFIER}  xpath:(.//*[normalize-space(text()) and normalize-space(.)=concat('Un groupe d', "'", 'activités sans ordre défini')])[1]//*[name()='svg'][1]
 ${BOUTON_CONSIGNE_MODIFIER}     xpath:(.//*[normalize-space(text()) and normalize-space(.)='Jouer les activités du groupe'])[1]//*[name()='svg'][1]
 ${RETOUR}                       xpath://*[@id="root"]/section/header/div/div/div/div/div/span
-${SUIVANT}                      xpath://*[@id="board-content"]/footer/div/div/button/span[2]
+${SUIVANT}                      //button[@type = 'button' and (text() = 'Suivant' or . = 'Suivant')]
 ${SUIVANT_2}                    //*[@id="board-content"]/footer/div/div[2]/button
 ${ALLUMER_CAMERA}               xpath://*[@id="three-canvas"]/div[3]/div/div/div[1]/button/div/div[2]/div
 ${PRENDRE_PHOTO}                //div[3]/div/div[2]/button
 ${IMPORT_IMAGE}                 //div[@id='three-canvas']/div[3]/div/div/div[3]/span/div/span/div/button
+${ADD_ACTIVITY_GA}              //button[@type = 'button' and (text() = 'Activité' or . = 'Activité')]
+${VALIDE_BUTON}                 //span[(text() = 'Valider' or . = 'Valider')]
+${BUTON_NEXT}                   //div[@id='three-canvas']/div[6]/div/div/div[2]/button
+${BUTON_PREVIUS}                //div[@id="three-canvas"]/div[6]/div/div/div[1]/button
+${VIEW_ALL_ACTIVITY}            //div[@id="three-canvas"]/div[6]/div/div/div[3]/button
 
 #Element Html
 ${LOGO_XPATH}                   xpath://*[@id="root"]/div/div[1]/div/div[1]/div/span/span/img
@@ -54,6 +59,9 @@ ${PHOTO_AREA}                   xpath:/html/body/div[17]/div/div[2]/div/div[2]/d
 ${AUGMENTATION_WINDOW}          //*[@id="three-canvas"]/div[3]/div/div
 ${TEXT_AUGMENTATION}            //*[@id="three-canvas"]/div[2]/div/div/button[1]/span[2]
 ${SELECTION_WINDOW}             xpath://*[@id="board-content"]/div/div/div/div/div
+${ADD_ACTIVITY_GA_WINDOW}       xpath:(.//*[normalize-space(text()) and normalize-space(.)='Sélectionner le groupe d‘activités'])[1]/following::div[2]
+${TEST_WINDOW}                  //span[(text() = 'Placer l‘image dans le cadre' or . = 'Placer l‘image dans le cadre')]
+${VIEW_ALL_ACTIVITY_WINDOW}     //div/div[3]/div/div/div/div/div
 
 #Autre
 ${CODE_IMPORT}                  5eda26
@@ -111,7 +119,7 @@ GetChild
     ...                  by=xpath    value=child::*
 
     ${return}=        Get Length    ${children}
-    [Return]          ${return}
+    [Return]          ${children}
 
 
 AfficherCreationStage
