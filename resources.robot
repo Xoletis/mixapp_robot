@@ -42,6 +42,7 @@ ${VALIDE_BUTON}                 //span[(text() = 'Valider' or . = 'Valider')]
 ${BUTON_NEXT}                   //div[@id='three-canvas']/div[6]/div/div/div[2]/button
 ${BUTON_PREVIUS}                //div[@id="three-canvas"]/div[6]/div/div/div[1]/button
 ${VIEW_ALL_ACTIVITY}            //div[@id="three-canvas"]/div[6]/div/div/div[3]/button
+${CLOSE_VIEW_ACTIVITIES_BUTON}  //div[3]/div/div/div[1]/div/button/span
 
 #Element Html
 ${LOGO_XPATH}                   xpath://*[@id="root"]/div/div[1]/div/div[1]/div/span/span/img
@@ -62,6 +63,7 @@ ${SELECTION_WINDOW}             xpath://*[@id="board-content"]/div/div/div/div/d
 ${ADD_ACTIVITY_GA_WINDOW}       xpath:(.//*[normalize-space(text()) and normalize-space(.)='Sélectionner le groupe d‘activités'])[1]/following::div[2]
 ${TEST_WINDOW}                  //span[(text() = 'Placer l‘image dans le cadre' or . = 'Placer l‘image dans le cadre')]
 ${VIEW_ALL_ACTIVITY_WINDOW}     //div/div[3]/div/div/div/div/div
+${ACTIVITIES_IN_GA}             //div[3]/div/div/div[2]/div/div/div
 
 #Autre
 ${CODE_IMPORT}                  5eda26

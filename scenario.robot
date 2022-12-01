@@ -7,7 +7,7 @@ Test Teardown    Close Browser
 Test1
     OpenWebSiteChrome
     ShowMainMenu
-    FOR    ${i}    IN RANGE    3
+    FOR    ${i}    IN RANGE     3
         CreateAugmenterUneImageActivity
         AfficherCreationStageAI
         ReturnMainPage
@@ -22,6 +22,7 @@ Test1
     AddOneActivityInGroupeActivite
     AddAllActivityInGroupeActivite
     PasserEtapeTest
+    Initialise
     NextActivity
     PrevousActivity
     ViewAllActivities
