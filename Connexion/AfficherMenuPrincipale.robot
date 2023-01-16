@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Affichage du menu pricipale
 
-Resource            ../Import.robot
+Resource            ../resource/Import.robot
 
 *** Keywords ***
 ShowMainMenu

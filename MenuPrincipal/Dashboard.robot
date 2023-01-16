@@ -2,7 +2,7 @@
 Documentation       Cas de test sur le dashboard
 
 
-Resource            ../Import.robot
+Resource            ../resource/Import.robot
 
 
 *** Keywords ***

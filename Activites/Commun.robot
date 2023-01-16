@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Test Commun à toute les activité
 
-Resource            ../Import.robot
+Resource            ../resource/Import.robot
 
 *** Keywords ***
 GoBackToMainPageWithArrow

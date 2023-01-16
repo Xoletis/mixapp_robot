@@ -1,28 +1,22 @@
 *** Settings ***
-Resource            Import.robot
+Resource            resource/Import.robot
 
 Test Teardown    Close Browser
 *** Test Cases ***
 
-Test1
+SuiteActivite
     OpenWebSiteChrome
     ShowMainMenu
-    FOR    ${i}    IN RANGE     3
-        CreateAugmenterUneImageActivity
-        AfficherCreationStageAI
-        ReturnMainPage
-    END
+    CreateAllActivies
     CreateGroupeActivite
     AfficherCreationStageGA
     ModifyTitle
     ModifyDesc
-    ModifiConsigne
     PasserEtapeSelection
     AfficherCreationStageGA
     AddOneActivityInGroupeActivite
     AddAllActivityInGroupeActivite
     PasserEtapeTest
-    Initialise
     NextActivity
     PrevousActivity
     ViewAllActivities

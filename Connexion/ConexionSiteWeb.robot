@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Connexion au site web
 
-Resource            ../Import.robot
+Resource            ../resource/Import.robot
 
 *** Keywords ***
 OpenWebSiteChrome

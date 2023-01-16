@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Création d'acivité
 
-Resource            ../Import.robot
+Resource            ../resource/Import.robot
 
 
 *** Keywords ***
@@ -17,14 +17,13 @@ CloseAddActivityWindow
     Sleep                        2
 
 CreateAugmenterUneImageActivity
-    OpenAddActivityWindow
-    ClickElement    ${AUGMENTER_UNE_IMAGE}
-    Sleep           2
+    CreateActivity    ${AUGMENTER_UNE_IMAGE}
+
+CreateValideUneImageActivity
+    CreateActivity    ${VALIDER_UNE_IMAGE}
 
 CreateGroupeActivite
-    OpenAddActivityWindow
-    ClickElement    ${GROUPE_ACTIVITE}
-    Sleep           2
+    CreateActivity    ${GROUPE_ACTIVITE}
 
 LookActivityCreate
     ReturnMainPage
@@ -58,3 +57,13 @@ PlayOneActivity
     ClickElement    //*[@id="root"]/div/div[2]/div/div[${number[0]}]/div[1]/div/div[2]/button/span
     Sleep           2
     Element Should Be Visible       ${PLAY_ACTIVITY_WINDOW}
+
+
+CreateAllActivies
+    FOR    ${i}    IN RANGE   4
+        CreateActivity    xpath:(//img[@alt='example'])[${i+1}]
+            AfficherCreationStageAI
+            ModifyTitle
+            ModifyDesc
+            ReturnMainPage
+    END

@@ -22,6 +22,7 @@ ${IMPORT_DATA_BUTTON}           xpath:/html/body/div[2]/div/div/div/div[2]/div[2
 ${ADD_ACTIVITY}                 xpath://*[@id="root"]/div/div[2]/div/div[1]/div/div/button
 ${ADD_ACTIVITY_2}               xpath://*[@id="rc-tabs-3-panel-1"]/div/div[1]/div/div/button
 ${AUGMENTER_UNE_IMAGE}          xpath:/html/body/div[2]/div/div[2]/div/div[2]/div[2]/div/div[1]/div[1]
+${VALIDER_UNE_IMAGE}            xpath:(//img[@alt='example'])[2]
 ${GROUPE_ACTIVITE}              xpath:(//img[@alt='example'])[5]
 ${DASHBORD_BUTTON}              xpath://*[@id="root"]/div/div[1]/div/div/span/div/div[3]/button
 ${SUIVI_APPRENANTS_BUTTON}      xpath://*[@id="rc-tabs-0-tab-2"]/h4
@@ -29,8 +30,7 @@ ${MON_CONTENU_BUTTON}           xpath://*[@id="rc-tabs-0-tab-1"]/h4
 ${CLOSE_ADD_ACTIVITY_WINDOW}    xpath:/html/body/div[2]/div/div[2]/div/div[2]/button
 ${MORE_OPTION_BUTTON}           xpath://*[@id="root"]/div/div[1]/div/div[1]/span/div/div[4]/button
 ${BOUTON_TITRE_MODIFIER}        xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[1]/h5/div/span
-${BOUTON_DESCRIPTION_MODIFIER}  xpath:(.//*[normalize-space(text()) and normalize-space(.)=concat('Un groupe d', "'", 'activités sans ordre défini')])[1]//*[name()='svg'][1]
-${BOUTON_CONSIGNE_MODIFIER}     xpath:(.//*[normalize-space(text()) and normalize-space(.)='Jouer les activités du groupe'])[1]//*[name()='svg'][1]
+${BOUTON_DESCRIPTION_MODIFIER}  xpath://*[@id='board-content']/div/div/div/div[2]/div/div[2]/span/div
 ${RETOUR}                       xpath://*[@id="root"]/section/header/div/div/div/div/div/span
 ${SUIVANT}                      //button[@type = 'button' and (text() = 'Suivant' or . = 'Suivant')]
 ${SUIVANT_2}                    //*[@id="board-content"]/footer/div/div[2]/button
@@ -42,7 +42,7 @@ ${VALIDE_BUTON}                 //span[(text() = 'Valider' or . = 'Valider')]
 ${BUTON_NEXT}                   //div[@id='three-canvas']/div[6]/div/div/div[2]/button
 ${BUTON_PREVIUS}                //div[@id="three-canvas"]/div[6]/div/div/div[1]/button
 ${VIEW_ALL_ACTIVITY}            //div[@id="three-canvas"]/div[6]/div/div/div[3]/button
-${CLOSE_VIEW_ACTIVITIES_BUTON}  //div[3]/div/div/div[1]/div/button/span
+${CLOSE_VIEW_ACTIVITIES_BUTON}  //div[3]/div/div/div[1]/div/button
 
 #Element Html
 ${LOGO_XPATH}                   xpath://*[@id="root"]/div/div[1]/div/div[1]/div/span/span/img
@@ -51,8 +51,8 @@ ${MON_CONTENU}                  xpath://*[@id="rc-tabs-0-panel-1"]
 ${CARDS}                        xpath://*[@id="root"]/div/div[2]/div
 ${CODE_UTILISATEUR}             xpath:/html/body/div[7]/div/div/ul/li[2]/span/span[2]/strong
 ${EMPLACEMENT_TITRE}            xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[1]
-${EMPLACEMENT_DESCRIPTION}      xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[3]
-${EMPLACEMENT_CONSIGNE}         xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[2]
+${EMPLACEMENT_DESCRIPTION}      xpath://main[@id='board-content']/div/div/div/div[2]/div/div[2]
+${EMPLACEMENT_CONSIGNE}         xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[3]
 ${PRENDRE_PHOTO}                //*[@id="three-canvas"]/div[3]/div/div/div[1]/button
 ${ADD_ACTIVITY_TXT}             xpath://*[@id=":r0:"]
 ${PLAY_ACTIVITY_WINDOW}         xpath://*[@id="three-canvas"]/div[4]/div/span[1]
@@ -69,7 +69,6 @@ ${ACTIVITIES_IN_GA}             //div[3]/div/div/div[2]/div/div/div
 ${CODE_IMPORT}                  5eda26
 ${TITRE}                        TitreTest
 ${DESCRIPTION}                  Ceci est une description
-${CONSIGNE}                     Ceci est une consigne
 *** Keywords ***
 
 OpenMixap
@@ -106,6 +105,12 @@ ChekIfDisplayNone
         ${return}=  Set Variable                  "true"
     END
     [return]            ${return}
+
+CreateActivity
+    [Arguments]         ${Activity}
+    OpenAddActivityWindow
+    ClickElement    ${Activity}
+    Sleep           2
 
 ReturnMainPage
     Go To       ${WELCOMEPAGE_URL}

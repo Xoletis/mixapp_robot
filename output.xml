@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0 (Python 3.10.7 on win32)" generated="20221201 10:05:23.490" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.11.0 on win32)" generated="20230116 10:14:55.370" rpa="false" schemaversion="3">
 <suite id="s1" name="Scenario" source="C:\Users\Admin\Desktop\Scrum\mixapp_robot\scenario.robot">
-<test id="s1-t1" name="Test1" line="7">
+<test id="s1-t1" name="SuiteActivite" line="7">
 <kw name="OpenWebSiteChrome" library="ConexionSiteWeb">
 <kw name="Evaluate" library="BuiltIn">
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
 <arg>modules=sys</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20221201 10:05:23.936" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002166800A4A0&gt;</msg>
-<status status="PASS" starttime="20221201 10:05:23.936" endtime="20221201 10:05:23.937"/>
+<msg timestamp="20230116 10:14:55.782" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001C7209BD190&gt;</msg>
+<status status="PASS" starttime="20230116 10:14:55.781" endtime="20230116 10:14:55.782"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--use-fake-ui-for-media-stream</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20221201 10:05:23.937" endtime="20221201 10:05:23.937"/>
+<status status="PASS" starttime="20230116 10:14:55.782" endtime="20230116 10:14:55.782"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--auto-select-desktop-capture-source</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20221201 10:05:23.937" endtime="20221201 10:05:23.937"/>
+<status status="PASS" starttime="20230116 10:14:55.783" endtime="20230116 10:14:55.783"/>
 </kw>
 <kw name="OpenMixap" library="resources">
 <arg>Chrome</arg>
@@ -33,117 +33,119 @@
 <arg>${BROWSER}</arg>
 <arg>options=${options}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221201 10:05:23.940" level="INFO">Opening browser 'Chrome' to base url 'https://mixap-dev.surge.sh/'.</msg>
-<status status="PASS" starttime="20221201 10:05:23.938" endtime="20221201 10:05:27.685"/>
+<msg timestamp="20230116 10:14:55.785" level="INFO">Opening browser 'Chrome' to base url 'https://mixap-dev.surge.sh/'.</msg>
+<status status="PASS" starttime="20230116 10:14:55.784" endtime="20230116 10:15:23.900"/>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221201 10:05:27.685" endtime="20221201 10:05:27.822"/>
+<status status="PASS" starttime="20230116 10:15:23.901" endtime="20230116 10:15:24.333"/>
 </kw>
 <kw name="Set Selenium Speed" library="Selenium2Library">
 <arg>${DELAY}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20221201 10:05:27.822" endtime="20221201 10:05:27.823"/>
+<status status="PASS" starttime="20230116 10:15:24.334" endtime="20230116 10:15:24.334"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <arg>${LOGO_XPATH}</arg>
 <arg>100000</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221201 10:05:27.823" endtime="20221201 10:05:28.424"/>
+<status status="PASS" starttime="20230116 10:15:24.335" endtime="20230116 10:15:25.910"/>
 </kw>
 <kw name="WelcomePageShouldBeOpen" library="resources">
 <kw name="Title Should Be" library="Selenium2Library">
 <arg>${TITLE}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221201 10:05:28.431" level="INFO">Page title is 'MIXAP'.</msg>
-<status status="PASS" starttime="20221201 10:05:28.425" endtime="20221201 10:05:28.432"/>
+<msg timestamp="20230116 10:15:25.943" level="INFO">Page title is 'MIXAP'.</msg>
+<status status="PASS" starttime="20230116 10:15:25.911" endtime="20230116 10:15:25.943"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:28.424" endtime="20221201 10:05:28.432"/>
+<status status="PASS" starttime="20230116 10:15:25.911" endtime="20230116 10:15:25.944"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:23.937" endtime="20221201 10:05:28.432"/>
+<status status="PASS" starttime="20230116 10:14:55.783" endtime="20230116 10:15:25.944"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:05:30.435" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:05:28.432" endtime="20221201 10:05:30.435"/>
+<msg timestamp="20230116 10:15:27.945" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:15:25.944" endtime="20230116 10:15:27.945"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:23.936" endtime="20221201 10:05:30.435"/>
+<status status="PASS" starttime="20230116 10:14:55.780" endtime="20230116 10:15:27.945"/>
 </kw>
 <kw name="ShowMainMenu" library="AfficherMenuPrincipale">
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>${LOGO_XPATH}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221201 10:05:30.458" level="INFO">Element 'xpath://*[@id="root"]/div/div[1]/div/div[1]/div/span/span/img' is displayed.</msg>
-<status status="PASS" starttime="20221201 10:05:30.437" endtime="20221201 10:05:30.458"/>
+<msg timestamp="20230116 10:15:28.262" level="INFO">Element 'xpath://*[@id="root"]/div/div[1]/div/div[1]/div/span/span/img' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:15:27.980" endtime="20230116 10:15:28.262"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:30.436" endtime="20221201 10:05:30.458"/>
+<status status="PASS" starttime="20230116 10:15:27.980" endtime="20230116 10:15:28.262"/>
 </kw>
+<kw name="CreateAllActivies" library="CreateActivity">
 <for flavor="IN RANGE">
 <var>${i}</var>
-<value>3</value>
+<value>4</value>
 <iter>
 <var name="${i}">0</var>
-<kw name="CreateAugmenterUneImageActivity" library="CreateActivity">
+<kw name="CreateActivity" library="resources">
+<arg>xpath:(//img[@alt='example'])[${i+1}]</arg>
 <kw name="OpenAddActivityWindow" library="CreateActivity">
 <kw name="ClickWindow" library="resources">
 <arg>${ADD_ACTIVITY}</arg>
 <kw name="Click Button" library="Selenium2Library">
 <arg>${Button}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221201 10:05:30.459" level="INFO">Clicking button 'xpath://*[@id="root"]/div/div[2]/div/div[1]/div/div/button'.</msg>
-<status status="PASS" starttime="20221201 10:05:30.459" endtime="20221201 10:05:30.576"/>
+<msg timestamp="20230116 10:15:28.289" level="INFO">Clicking button 'xpath://*[@id="root"]/div/div[2]/div/div[1]/div/div/button'.</msg>
+<status status="PASS" starttime="20230116 10:15:28.288" endtime="20230116 10:15:31.192"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:30.458" endtime="20221201 10:05:30.577"/>
+<status status="PASS" starttime="20230116 10:15:28.287" endtime="20230116 10:15:31.192"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:05:32.589" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:05:30.577" endtime="20221201 10:05:32.589"/>
+<msg timestamp="20230116 10:15:33.192" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:15:31.192" endtime="20230116 10:15:33.192"/>
 </kw>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>${ADD_ACTIVITY_TXT}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221201 10:05:32.622" level="INFO">Element 'xpath://*[@id=":r0:"]' is displayed.</msg>
-<status status="PASS" starttime="20221201 10:05:32.589" endtime="20221201 10:05:32.622"/>
+<msg timestamp="20230116 10:15:33.216" level="INFO">Element 'xpath://*[@id=":r0:"]' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:15:33.192" endtime="20230116 10:15:33.216"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:30.458" endtime="20221201 10:05:32.622"/>
+<status status="PASS" starttime="20230116 10:15:28.287" endtime="20230116 10:15:33.217"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
-<arg>${AUGMENTER_UNE_IMAGE}</arg>
+<arg>${Activity}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221201 10:05:32.623" level="INFO">Clicking element 'xpath:/html/body/div[2]/div/div[2]/div/div[2]/div[2]/div/div[1]/div[1]'.</msg>
-<status status="PASS" starttime="20221201 10:05:32.623" endtime="20221201 10:05:32.754"/>
+<msg timestamp="20230116 10:15:33.217" level="INFO">Clicking element 'xpath:(//img[@alt='example'])[1]'.</msg>
+<status status="PASS" starttime="20230116 10:15:33.217" endtime="20230116 10:15:33.291"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:05:34.760" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:05:32.754" endtime="20221201 10:05:34.760"/>
+<msg timestamp="20230116 10:15:35.292" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:15:33.291" endtime="20230116 10:15:35.292"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:30.458" endtime="20221201 10:05:34.760"/>
+<status status="PASS" starttime="20230116 10:15:28.285" endtime="20230116 10:15:35.292"/>
 </kw>
 <kw name="AfficherCreationStageAI" library="Commun">
 <kw name="Get Location" library="Selenium2Library">
 <var>${url}</var>
 <doc>Returns the current browser window URL.</doc>
-<msg timestamp="20221201 10:05:34.766" level="INFO">${url} = https://mixap-dev.surge.sh/edit-activity/u281I0kbb9Fr5iA_WZscIg</msg>
-<status status="PASS" starttime="20221201 10:05:34.761" endtime="20221201 10:05:34.766"/>
+<msg timestamp="20230116 10:15:35.298" level="INFO">${url} = https://mixap-dev.surge.sh/edit-activity/uvu2RSV0r-FkWpb2UOS5bj</msg>
+<status status="PASS" starttime="20230116 10:15:35.292" endtime="20230116 10:15:35.298"/>
 </kw>
 <if>
 <branch type="IF" condition="&quot;${url}&quot; == &quot;https://mixap-dev.surge.sh/&quot;">
 <kw name="CreateAugmenterUneImageActivity" library="CreateActivity">
-<status status="NOT RUN" starttime="20221201 10:05:34.767" endtime="20221201 10:05:34.767"/>
+<status status="NOT RUN" starttime="20230116 10:15:35.298" endtime="20230116 10:15:35.298"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20221201 10:05:34.767" endtime="20221201 10:05:34.767"/>
+<status status="NOT RUN" starttime="20230116 10:15:35.299" endtime="20230116 10:15:35.299"/>
 </kw>
-<status status="NOT RUN" starttime="20221201 10:05:34.767" endtime="20221201 10:05:34.767"/>
+<status status="NOT RUN" starttime="20230116 10:15:35.298" endtime="20230116 10:15:35.299"/>
 </branch>
-<status status="PASS" starttime="20221201 10:05:34.766" endtime="20221201 10:05:34.767"/>
+<status status="PASS" starttime="20230116 10:15:35.298" endtime="20230116 10:15:35.299"/>
 </if>
 <kw name="AfficherCreationStage" library="resources">
 <arg>4</arg>
@@ -155,126 +157,219 @@
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[${i+1}]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221201 10:05:34.795" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[1]' is displayed.</msg>
-<status status="PASS" starttime="20221201 10:05:34.768" endtime="20221201 10:05:34.795"/>
+<msg timestamp="20230116 10:15:35.325" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[1]' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:15:35.299" endtime="20230116 10:15:35.326"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:34.768" endtime="20221201 10:05:34.795"/>
+<status status="PASS" starttime="20230116 10:15:35.299" endtime="20230116 10:15:35.326"/>
 </iter>
 <iter>
 <var name="${i}">1</var>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[${i+1}]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221201 10:05:34.820" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[2]' is displayed.</msg>
-<status status="PASS" starttime="20221201 10:05:34.795" endtime="20221201 10:05:34.821"/>
+<msg timestamp="20230116 10:15:35.351" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[2]' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:15:35.326" endtime="20230116 10:15:35.351"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:34.795" endtime="20221201 10:05:34.821"/>
+<status status="PASS" starttime="20230116 10:15:35.326" endtime="20230116 10:15:35.352"/>
 </iter>
 <iter>
 <var name="${i}">2</var>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[${i+1}]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221201 10:05:34.847" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[3]' is displayed.</msg>
-<status status="PASS" starttime="20221201 10:05:34.821" endtime="20221201 10:05:34.847"/>
+<msg timestamp="20230116 10:15:35.378" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[3]' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:15:35.352" endtime="20230116 10:15:35.378"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:34.821" endtime="20221201 10:05:34.847"/>
+<status status="PASS" starttime="20230116 10:15:35.352" endtime="20230116 10:15:35.378"/>
 </iter>
 <iter>
 <var name="${i}">3</var>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[${i+1}]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221201 10:05:34.877" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[4]' is displayed.</msg>
-<status status="PASS" starttime="20221201 10:05:34.847" endtime="20221201 10:05:34.877"/>
+<msg timestamp="20230116 10:15:35.407" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[4]' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:15:35.378" endtime="20230116 10:15:35.407"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:34.847" endtime="20221201 10:05:34.877"/>
+<status status="PASS" starttime="20230116 10:15:35.378" endtime="20230116 10:15:35.407"/>
 </iter>
-<status status="PASS" starttime="20221201 10:05:34.767" endtime="20221201 10:05:34.877"/>
+<status status="PASS" starttime="20230116 10:15:35.299" endtime="20230116 10:15:35.407"/>
 </for>
-<status status="PASS" starttime="20221201 10:05:34.767" endtime="20221201 10:05:34.878"/>
+<status status="PASS" starttime="20230116 10:15:35.299" endtime="20230116 10:15:35.407"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:34.760" endtime="20221201 10:05:34.878"/>
+<status status="PASS" starttime="20230116 10:15:35.292" endtime="20230116 10:15:35.407"/>
+</kw>
+<kw name="ModifyTitle" library="Nomage">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${BOUTON_TITRE_MODIFIER}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230116 10:15:35.408" level="INFO">Clicking element 'xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[1]/h5/div/span'.</msg>
+<status status="PASS" starttime="20230116 10:15:35.408" endtime="20230116 10:15:35.481"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>none</arg>
+<arg>CONTROL+A</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230116 10:15:35.482" level="INFO">Sending key(s) ('CONTROL+A',) to page.</msg>
+<msg timestamp="20230116 10:15:35.482" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230116 10:15:35.482" level="INFO">Sending key A</msg>
+<msg timestamp="20230116 10:15:35.482" level="INFO">Releasing special key CONTROL.</msg>
+<status status="PASS" starttime="20230116 10:15:35.481" endtime="20230116 10:15:35.502"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230116 10:15:37.503" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:15:35.503" endtime="20230116 10:15:37.503"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>none</arg>
+<arg>${TITRE}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230116 10:15:37.504" level="INFO">Sending key(s) ('TitreTest',) to page.</msg>
+<msg timestamp="20230116 10:15:37.504" level="INFO">Sending keys TitreTest</msg>
+<status status="PASS" starttime="20230116 10:15:37.503" endtime="20230116 10:15:37.585"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230116 10:15:39.586" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:15:37.585" endtime="20230116 10:15:39.586"/>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<arg>${EMPLACEMENT_TITRE}</arg>
+<arg>${TITRE}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230116 10:15:39.622" level="INFO">Element 'xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[1]' contains text 'TitreTest'.</msg>
+<status status="PASS" starttime="20230116 10:15:39.586" endtime="20230116 10:15:39.622"/>
+</kw>
+<status status="PASS" starttime="20230116 10:15:35.408" endtime="20230116 10:15:39.622"/>
+</kw>
+<kw name="ModifyDesc" library="Nomage">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${BOUTON_DESCRIPTION_MODIFIER}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230116 10:15:39.623" level="INFO">Clicking element 'xpath://*[@id='board-content']/div/div/div/div[2]/div/div[2]/span/div'.</msg>
+<status status="PASS" starttime="20230116 10:15:39.623" endtime="20230116 10:15:39.690"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>none</arg>
+<arg>CONTROL+A</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230116 10:15:39.691" level="INFO">Sending key(s) ('CONTROL+A',) to page.</msg>
+<msg timestamp="20230116 10:15:39.691" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230116 10:15:39.691" level="INFO">Sending key A</msg>
+<msg timestamp="20230116 10:15:39.691" level="INFO">Releasing special key CONTROL.</msg>
+<status status="PASS" starttime="20230116 10:15:39.690" endtime="20230116 10:15:39.704"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230116 10:15:41.704" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:15:39.704" endtime="20230116 10:15:41.704"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>none</arg>
+<arg>${DESCRIPTION}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230116 10:15:41.705" level="INFO">Sending key(s) ('Ceci est une description',) to page.</msg>
+<msg timestamp="20230116 10:15:41.705" level="INFO">Sending keys Ceci est une description</msg>
+<status status="PASS" starttime="20230116 10:15:41.704" endtime="20230116 10:15:41.972"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230116 10:15:43.974" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:15:41.972" endtime="20230116 10:15:43.974"/>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<arg>${EMPLACEMENT_DESCRIPTION}</arg>
+<arg>${DESCRIPTION}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230116 10:15:44.009" level="INFO">Element 'xpath://main[@id='board-content']/div/div/div/div[2]/div/div[2]' contains text 'Ceci est une description'.</msg>
+<status status="PASS" starttime="20230116 10:15:43.974" endtime="20230116 10:15:44.009"/>
+</kw>
+<status status="PASS" starttime="20230116 10:15:39.622" endtime="20230116 10:15:44.009"/>
 </kw>
 <kw name="ReturnMainPage" library="resources">
 <kw name="Go To" library="Selenium2Library">
 <arg>${WELCOMEPAGE_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221201 10:05:34.879" level="INFO">Opening url 'https://mixap-dev.surge.sh/'</msg>
-<status status="PASS" starttime="20221201 10:05:34.879" endtime="20221201 10:05:35.448"/>
+<msg timestamp="20230116 10:15:44.009" level="INFO">Opening url 'https://mixap-dev.surge.sh/'</msg>
+<status status="PASS" starttime="20230116 10:15:44.009" endtime="20230116 10:15:45.514"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:05:37.462" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:05:35.448" endtime="20221201 10:05:37.462"/>
+<msg timestamp="20230116 10:15:47.515" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:15:45.515" endtime="20230116 10:15:47.515"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:34.878" endtime="20221201 10:05:37.462"/>
+<status status="PASS" starttime="20230116 10:15:44.009" endtime="20230116 10:15:47.515"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:30.458" endtime="20221201 10:05:37.462"/>
+<status status="PASS" starttime="20230116 10:15:28.285" endtime="20230116 10:15:47.515"/>
 </iter>
 <iter>
 <var name="${i}">1</var>
-<kw name="CreateAugmenterUneImageActivity" library="CreateActivity">
+<kw name="CreateActivity" library="resources">
+<arg>xpath:(//img[@alt='example'])[${i+1}]</arg>
 <kw name="OpenAddActivityWindow" library="CreateActivity">
 <kw name="ClickWindow" library="resources">
 <arg>${ADD_ACTIVITY}</arg>
 <kw name="Click Button" library="Selenium2Library">
 <arg>${Button}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221201 10:05:37.465" level="INFO">Clicking button 'xpath://*[@id="root"]/div/div[2]/div/div[1]/div/div/button'.</msg>
-<status status="PASS" starttime="20221201 10:05:37.464" endtime="20221201 10:05:37.585"/>
+<msg timestamp="20230116 10:15:47.518" level="INFO">Clicking button 'xpath://*[@id="root"]/div/div[2]/div/div[1]/div/div/button'.</msg>
+<status status="PASS" starttime="20230116 10:15:47.517" endtime="20230116 10:15:47.627"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:37.463" endtime="20221201 10:05:37.585"/>
+<status status="PASS" starttime="20230116 10:15:47.517" endtime="20230116 10:15:47.627"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:05:39.588" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:05:37.585" endtime="20221201 10:05:39.588"/>
+<msg timestamp="20230116 10:15:49.629" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:15:47.627" endtime="20230116 10:15:49.629"/>
 </kw>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>${ADD_ACTIVITY_TXT}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221201 10:05:39.663" level="INFO">Element 'xpath://*[@id=":r0:"]' is displayed.</msg>
-<status status="PASS" starttime="20221201 10:05:39.588" endtime="20221201 10:05:39.664"/>
+<msg timestamp="20230116 10:15:49.653" level="INFO">Element 'xpath://*[@id=":r0:"]' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:15:49.629" endtime="20230116 10:15:49.654"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:37.463" endtime="20221201 10:05:39.664"/>
+<status status="PASS" starttime="20230116 10:15:47.517" endtime="20230116 10:15:49.654"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
-<arg>${AUGMENTER_UNE_IMAGE}</arg>
+<arg>${Activity}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221201 10:05:39.665" level="INFO">Clicking element 'xpath:/html/body/div[2]/div/div[2]/div/div[2]/div[2]/div/div[1]/div[1]'.</msg>
-<status status="PASS" starttime="20221201 10:05:39.664" endtime="20221201 10:05:39.872"/>
+<msg timestamp="20230116 10:15:49.654" level="INFO">Clicking element 'xpath:(//img[@alt='example'])[2]'.</msg>
+<status status="PASS" starttime="20230116 10:15:49.654" endtime="20230116 10:15:49.773"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:05:41.882" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:05:39.872" endtime="20221201 10:05:41.882"/>
+<msg timestamp="20230116 10:15:51.775" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:15:49.774" endtime="20230116 10:15:51.775"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:37.463" endtime="20221201 10:05:41.882"/>
+<status status="PASS" starttime="20230116 10:15:47.515" endtime="20230116 10:15:51.775"/>
 </kw>
 <kw name="AfficherCreationStageAI" library="Commun">
 <kw name="Get Location" library="Selenium2Library">
 <var>${url}</var>
 <doc>Returns the current browser window URL.</doc>
-<msg timestamp="20221201 10:05:41.889" level="INFO">${url} = https://mixap-dev.surge.sh/edit-activity/upYHklVTyzIW9u8RrssRDx</msg>
-<status status="PASS" starttime="20221201 10:05:41.883" endtime="20221201 10:05:41.889"/>
+<msg timestamp="20230116 10:15:51.781" level="INFO">${url} = https://mixap-dev.surge.sh/edit-activity/uJKRiFSMHC5W94WBFDVxMt</msg>
+<status status="PASS" starttime="20230116 10:15:51.775" endtime="20230116 10:15:51.781"/>
 </kw>
 <if>
 <branch type="IF" condition="&quot;${url}&quot; == &quot;https://mixap-dev.surge.sh/&quot;">
 <kw name="CreateAugmenterUneImageActivity" library="CreateActivity">
-<status status="NOT RUN" starttime="20221201 10:05:41.890" endtime="20221201 10:05:41.890"/>
+<status status="NOT RUN" starttime="20230116 10:15:51.781" endtime="20230116 10:15:51.781"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20221201 10:05:41.890" endtime="20221201 10:05:41.890"/>
+<status status="NOT RUN" starttime="20230116 10:15:51.781" endtime="20230116 10:15:51.781"/>
 </kw>
-<status status="NOT RUN" starttime="20221201 10:05:41.890" endtime="20221201 10:05:41.890"/>
+<status status="NOT RUN" starttime="20230116 10:15:51.781" endtime="20230116 10:15:51.782"/>
 </branch>
-<status status="PASS" starttime="20221201 10:05:41.889" endtime="20221201 10:05:41.890"/>
+<status status="PASS" starttime="20230116 10:15:51.781" endtime="20230116 10:15:51.782"/>
 </if>
 <kw name="AfficherCreationStage" library="resources">
 <arg>4</arg>
@@ -286,126 +381,219 @@
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[${i+1}]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221201 10:05:41.919" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[1]' is displayed.</msg>
-<status status="PASS" starttime="20221201 10:05:41.891" endtime="20221201 10:05:41.919"/>
+<msg timestamp="20230116 10:15:51.804" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[1]' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:15:51.782" endtime="20230116 10:15:51.804"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:41.891" endtime="20221201 10:05:41.919"/>
+<status status="PASS" starttime="20230116 10:15:51.782" endtime="20230116 10:15:51.804"/>
 </iter>
 <iter>
 <var name="${i}">1</var>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[${i+1}]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221201 10:05:41.947" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[2]' is displayed.</msg>
-<status status="PASS" starttime="20221201 10:05:41.919" endtime="20221201 10:05:41.947"/>
+<msg timestamp="20230116 10:15:51.825" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[2]' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:15:51.804" endtime="20230116 10:15:51.825"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:41.919" endtime="20221201 10:05:41.948"/>
+<status status="PASS" starttime="20230116 10:15:51.804" endtime="20230116 10:15:51.825"/>
 </iter>
 <iter>
 <var name="${i}">2</var>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[${i+1}]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221201 10:05:41.978" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[3]' is displayed.</msg>
-<status status="PASS" starttime="20221201 10:05:41.948" endtime="20221201 10:05:41.978"/>
+<msg timestamp="20230116 10:15:51.846" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[3]' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:15:51.825" endtime="20230116 10:15:51.846"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:41.948" endtime="20221201 10:05:41.978"/>
+<status status="PASS" starttime="20230116 10:15:51.825" endtime="20230116 10:15:51.846"/>
 </iter>
 <iter>
 <var name="${i}">3</var>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[${i+1}]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221201 10:05:42.008" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[4]' is displayed.</msg>
-<status status="PASS" starttime="20221201 10:05:41.978" endtime="20221201 10:05:42.008"/>
+<msg timestamp="20230116 10:15:51.867" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[4]' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:15:51.846" endtime="20230116 10:15:51.867"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:41.978" endtime="20221201 10:05:42.009"/>
+<status status="PASS" starttime="20230116 10:15:51.846" endtime="20230116 10:15:51.867"/>
 </iter>
-<status status="PASS" starttime="20221201 10:05:41.891" endtime="20221201 10:05:42.009"/>
+<status status="PASS" starttime="20230116 10:15:51.782" endtime="20230116 10:15:51.867"/>
 </for>
-<status status="PASS" starttime="20221201 10:05:41.890" endtime="20221201 10:05:42.009"/>
+<status status="PASS" starttime="20230116 10:15:51.782" endtime="20230116 10:15:51.867"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:41.882" endtime="20221201 10:05:42.009"/>
+<status status="PASS" starttime="20230116 10:15:51.775" endtime="20230116 10:15:51.867"/>
+</kw>
+<kw name="ModifyTitle" library="Nomage">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${BOUTON_TITRE_MODIFIER}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230116 10:15:51.868" level="INFO">Clicking element 'xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[1]/h5/div/span'.</msg>
+<status status="PASS" starttime="20230116 10:15:51.867" endtime="20230116 10:15:51.923"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>none</arg>
+<arg>CONTROL+A</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230116 10:15:51.924" level="INFO">Sending key(s) ('CONTROL+A',) to page.</msg>
+<msg timestamp="20230116 10:15:51.924" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230116 10:15:51.924" level="INFO">Sending key A</msg>
+<msg timestamp="20230116 10:15:51.924" level="INFO">Releasing special key CONTROL.</msg>
+<status status="PASS" starttime="20230116 10:15:51.923" endtime="20230116 10:15:51.939"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230116 10:15:53.940" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:15:51.940" endtime="20230116 10:15:53.940"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>none</arg>
+<arg>${TITRE}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230116 10:15:53.941" level="INFO">Sending key(s) ('TitreTest',) to page.</msg>
+<msg timestamp="20230116 10:15:53.941" level="INFO">Sending keys TitreTest</msg>
+<status status="PASS" starttime="20230116 10:15:53.940" endtime="20230116 10:15:54.010"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230116 10:15:56.011" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:15:54.010" endtime="20230116 10:15:56.011"/>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<arg>${EMPLACEMENT_TITRE}</arg>
+<arg>${TITRE}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230116 10:15:56.043" level="INFO">Element 'xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[1]' contains text 'TitreTest'.</msg>
+<status status="PASS" starttime="20230116 10:15:56.011" endtime="20230116 10:15:56.043"/>
+</kw>
+<status status="PASS" starttime="20230116 10:15:51.867" endtime="20230116 10:15:56.044"/>
+</kw>
+<kw name="ModifyDesc" library="Nomage">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${BOUTON_DESCRIPTION_MODIFIER}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230116 10:15:56.045" level="INFO">Clicking element 'xpath://*[@id='board-content']/div/div/div/div[2]/div/div[2]/span/div'.</msg>
+<status status="PASS" starttime="20230116 10:15:56.044" endtime="20230116 10:15:56.124"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>none</arg>
+<arg>CONTROL+A</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230116 10:15:56.127" level="INFO">Sending key(s) ('CONTROL+A',) to page.</msg>
+<msg timestamp="20230116 10:15:56.128" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230116 10:15:56.128" level="INFO">Sending key A</msg>
+<msg timestamp="20230116 10:15:56.128" level="INFO">Releasing special key CONTROL.</msg>
+<status status="PASS" starttime="20230116 10:15:56.125" endtime="20230116 10:15:56.213"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230116 10:15:58.215" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:15:56.213" endtime="20230116 10:15:58.215"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>none</arg>
+<arg>${DESCRIPTION}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230116 10:15:58.218" level="INFO">Sending key(s) ('Ceci est une description',) to page.</msg>
+<msg timestamp="20230116 10:15:58.219" level="INFO">Sending keys Ceci est une description</msg>
+<status status="PASS" starttime="20230116 10:15:58.215" endtime="20230116 10:15:58.804"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230116 10:16:00.806" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:15:58.804" endtime="20230116 10:16:00.806"/>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<arg>${EMPLACEMENT_DESCRIPTION}</arg>
+<arg>${DESCRIPTION}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230116 10:16:00.831" level="INFO">Element 'xpath://main[@id='board-content']/div/div/div/div[2]/div/div[2]' contains text 'Ceci est une description'.</msg>
+<status status="PASS" starttime="20230116 10:16:00.806" endtime="20230116 10:16:00.832"/>
+</kw>
+<status status="PASS" starttime="20230116 10:15:56.044" endtime="20230116 10:16:00.832"/>
 </kw>
 <kw name="ReturnMainPage" library="resources">
 <kw name="Go To" library="Selenium2Library">
 <arg>${WELCOMEPAGE_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221201 10:05:42.011" level="INFO">Opening url 'https://mixap-dev.surge.sh/'</msg>
-<status status="PASS" starttime="20221201 10:05:42.010" endtime="20221201 10:05:42.628"/>
+<msg timestamp="20230116 10:16:00.832" level="INFO">Opening url 'https://mixap-dev.surge.sh/'</msg>
+<status status="PASS" starttime="20230116 10:16:00.832" endtime="20230116 10:16:04.668"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:05:44.631" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:05:42.629" endtime="20221201 10:05:44.631"/>
+<msg timestamp="20230116 10:16:06.669" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:16:04.668" endtime="20230116 10:16:06.669"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:42.010" endtime="20221201 10:05:44.632"/>
+<status status="PASS" starttime="20230116 10:16:00.832" endtime="20230116 10:16:06.669"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:37.462" endtime="20221201 10:05:44.632"/>
+<status status="PASS" starttime="20230116 10:15:47.515" endtime="20230116 10:16:06.669"/>
 </iter>
 <iter>
 <var name="${i}">2</var>
-<kw name="CreateAugmenterUneImageActivity" library="CreateActivity">
+<kw name="CreateActivity" library="resources">
+<arg>xpath:(//img[@alt='example'])[${i+1}]</arg>
 <kw name="OpenAddActivityWindow" library="CreateActivity">
 <kw name="ClickWindow" library="resources">
 <arg>${ADD_ACTIVITY}</arg>
 <kw name="Click Button" library="Selenium2Library">
 <arg>${Button}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221201 10:05:44.638" level="INFO">Clicking button 'xpath://*[@id="root"]/div/div[2]/div/div[1]/div/div/button'.</msg>
-<status status="PASS" starttime="20221201 10:05:44.637" endtime="20221201 10:05:44.972"/>
+<msg timestamp="20230116 10:16:06.671" level="INFO">Clicking button 'xpath://*[@id="root"]/div/div[2]/div/div[1]/div/div/button'.</msg>
+<status status="PASS" starttime="20230116 10:16:06.671" endtime="20230116 10:16:06.757"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:44.635" endtime="20221201 10:05:44.973"/>
+<status status="PASS" starttime="20230116 10:16:06.670" endtime="20230116 10:16:06.758"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:05:46.975" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:05:44.974" endtime="20221201 10:05:46.975"/>
+<msg timestamp="20230116 10:16:08.758" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:16:06.758" endtime="20230116 10:16:08.758"/>
 </kw>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>${ADD_ACTIVITY_TXT}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221201 10:05:47.031" level="INFO">Element 'xpath://*[@id=":r0:"]' is displayed.</msg>
-<status status="PASS" starttime="20221201 10:05:46.976" endtime="20221201 10:05:47.031"/>
+<msg timestamp="20230116 10:16:08.779" level="INFO">Element 'xpath://*[@id=":r0:"]' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:16:08.758" endtime="20230116 10:16:08.779"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:44.634" endtime="20221201 10:05:47.032"/>
+<status status="PASS" starttime="20230116 10:16:06.670" endtime="20230116 10:16:08.779"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
-<arg>${AUGMENTER_UNE_IMAGE}</arg>
+<arg>${Activity}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221201 10:05:47.034" level="INFO">Clicking element 'xpath:/html/body/div[2]/div/div[2]/div/div[2]/div[2]/div/div[1]/div[1]'.</msg>
-<status status="PASS" starttime="20221201 10:05:47.032" endtime="20221201 10:05:47.278"/>
+<msg timestamp="20230116 10:16:08.779" level="INFO">Clicking element 'xpath:(//img[@alt='example'])[3]'.</msg>
+<status status="PASS" starttime="20230116 10:16:08.779" endtime="20230116 10:16:08.872"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:05:49.289" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:05:47.278" endtime="20221201 10:05:49.289"/>
+<msg timestamp="20230116 10:16:10.874" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:16:08.872" endtime="20230116 10:16:10.874"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:44.633" endtime="20221201 10:05:49.289"/>
+<status status="PASS" starttime="20230116 10:16:06.669" endtime="20230116 10:16:10.874"/>
 </kw>
 <kw name="AfficherCreationStageAI" library="Commun">
 <kw name="Get Location" library="Selenium2Library">
 <var>${url}</var>
 <doc>Returns the current browser window URL.</doc>
-<msg timestamp="20221201 10:05:49.297" level="INFO">${url} = https://mixap-dev.surge.sh/edit-activity/uy8J0ejIqFk6yDiTjkJVtv</msg>
-<status status="PASS" starttime="20221201 10:05:49.290" endtime="20221201 10:05:49.297"/>
+<msg timestamp="20230116 10:16:10.879" level="INFO">${url} = https://mixap-dev.surge.sh/edit-activity/uWDK55FfHjx9DymX5raMiZ</msg>
+<status status="PASS" starttime="20230116 10:16:10.874" endtime="20230116 10:16:10.879"/>
 </kw>
 <if>
 <branch type="IF" condition="&quot;${url}&quot; == &quot;https://mixap-dev.surge.sh/&quot;">
 <kw name="CreateAugmenterUneImageActivity" library="CreateActivity">
-<status status="NOT RUN" starttime="20221201 10:05:49.297" endtime="20221201 10:05:49.297"/>
+<status status="NOT RUN" starttime="20230116 10:16:10.879" endtime="20230116 10:16:10.879"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20221201 10:05:49.297" endtime="20221201 10:05:49.297"/>
+<status status="NOT RUN" starttime="20230116 10:16:10.879" endtime="20230116 10:16:10.879"/>
 </kw>
-<status status="NOT RUN" starttime="20221201 10:05:49.297" endtime="20221201 10:05:49.297"/>
+<status status="NOT RUN" starttime="20230116 10:16:10.879" endtime="20230116 10:16:10.879"/>
 </branch>
-<status status="PASS" starttime="20221201 10:05:49.297" endtime="20221201 10:05:49.297"/>
+<status status="PASS" starttime="20230116 10:16:10.879" endtime="20230116 10:16:10.879"/>
 </if>
 <kw name="AfficherCreationStage" library="resources">
 <arg>4</arg>
@@ -417,126 +605,448 @@
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[${i+1}]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221201 10:05:49.316" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[1]' is displayed.</msg>
-<status status="PASS" starttime="20221201 10:05:49.298" endtime="20221201 10:05:49.316"/>
+<msg timestamp="20230116 10:16:10.902" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[1]' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:16:10.880" endtime="20230116 10:16:10.902"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:49.298" endtime="20221201 10:05:49.317"/>
+<status status="PASS" starttime="20230116 10:16:10.880" endtime="20230116 10:16:10.902"/>
 </iter>
 <iter>
 <var name="${i}">1</var>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[${i+1}]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221201 10:05:49.335" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[2]' is displayed.</msg>
-<status status="PASS" starttime="20221201 10:05:49.317" endtime="20221201 10:05:49.335"/>
+<msg timestamp="20230116 10:16:10.925" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[2]' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:16:10.903" endtime="20230116 10:16:10.925"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:49.317" endtime="20221201 10:05:49.335"/>
+<status status="PASS" starttime="20230116 10:16:10.903" endtime="20230116 10:16:10.925"/>
 </iter>
 <iter>
 <var name="${i}">2</var>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[${i+1}]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221201 10:05:49.354" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[3]' is displayed.</msg>
-<status status="PASS" starttime="20221201 10:05:49.336" endtime="20221201 10:05:49.354"/>
+<msg timestamp="20230116 10:16:10.946" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[3]' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:16:10.925" endtime="20230116 10:16:10.947"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:49.335" endtime="20221201 10:05:49.354"/>
+<status status="PASS" starttime="20230116 10:16:10.925" endtime="20230116 10:16:10.947"/>
 </iter>
 <iter>
 <var name="${i}">3</var>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[${i+1}]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221201 10:05:49.373" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[4]' is displayed.</msg>
-<status status="PASS" starttime="20221201 10:05:49.354" endtime="20221201 10:05:49.373"/>
+<msg timestamp="20230116 10:16:10.968" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[4]' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:16:10.947" endtime="20230116 10:16:10.968"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:49.354" endtime="20221201 10:05:49.373"/>
+<status status="PASS" starttime="20230116 10:16:10.947" endtime="20230116 10:16:10.968"/>
 </iter>
-<status status="PASS" starttime="20221201 10:05:49.298" endtime="20221201 10:05:49.373"/>
+<status status="PASS" starttime="20230116 10:16:10.880" endtime="20230116 10:16:10.968"/>
 </for>
-<status status="PASS" starttime="20221201 10:05:49.297" endtime="20221201 10:05:49.373"/>
+<status status="PASS" starttime="20230116 10:16:10.879" endtime="20230116 10:16:10.968"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:49.289" endtime="20221201 10:05:49.373"/>
+<status status="PASS" starttime="20230116 10:16:10.874" endtime="20230116 10:16:10.968"/>
+</kw>
+<kw name="ModifyTitle" library="Nomage">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${BOUTON_TITRE_MODIFIER}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230116 10:16:10.970" level="INFO">Clicking element 'xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[1]/h5/div/span'.</msg>
+<status status="PASS" starttime="20230116 10:16:10.969" endtime="20230116 10:16:11.024"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>none</arg>
+<arg>CONTROL+A</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230116 10:16:11.025" level="INFO">Sending key(s) ('CONTROL+A',) to page.</msg>
+<msg timestamp="20230116 10:16:11.025" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230116 10:16:11.025" level="INFO">Sending key A</msg>
+<msg timestamp="20230116 10:16:11.025" level="INFO">Releasing special key CONTROL.</msg>
+<status status="PASS" starttime="20230116 10:16:11.024" endtime="20230116 10:16:11.035"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230116 10:16:13.036" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:16:11.035" endtime="20230116 10:16:13.036"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>none</arg>
+<arg>${TITRE}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230116 10:16:13.037" level="INFO">Sending key(s) ('TitreTest',) to page.</msg>
+<msg timestamp="20230116 10:16:13.037" level="INFO">Sending keys TitreTest</msg>
+<status status="PASS" starttime="20230116 10:16:13.036" endtime="20230116 10:16:13.123"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230116 10:16:15.124" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:16:13.123" endtime="20230116 10:16:15.124"/>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<arg>${EMPLACEMENT_TITRE}</arg>
+<arg>${TITRE}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230116 10:16:15.151" level="INFO">Element 'xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[1]' contains text 'TitreTest'.</msg>
+<status status="PASS" starttime="20230116 10:16:15.124" endtime="20230116 10:16:15.151"/>
+</kw>
+<status status="PASS" starttime="20230116 10:16:10.968" endtime="20230116 10:16:15.151"/>
+</kw>
+<kw name="ModifyDesc" library="Nomage">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${BOUTON_DESCRIPTION_MODIFIER}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230116 10:16:15.152" level="INFO">Clicking element 'xpath://*[@id='board-content']/div/div/div/div[2]/div/div[2]/span/div'.</msg>
+<status status="PASS" starttime="20230116 10:16:15.152" endtime="20230116 10:16:15.205"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>none</arg>
+<arg>CONTROL+A</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230116 10:16:15.206" level="INFO">Sending key(s) ('CONTROL+A',) to page.</msg>
+<msg timestamp="20230116 10:16:15.206" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230116 10:16:15.206" level="INFO">Sending key A</msg>
+<msg timestamp="20230116 10:16:15.206" level="INFO">Releasing special key CONTROL.</msg>
+<status status="PASS" starttime="20230116 10:16:15.205" endtime="20230116 10:16:15.215"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230116 10:16:17.216" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:16:15.215" endtime="20230116 10:16:17.216"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>none</arg>
+<arg>${DESCRIPTION}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230116 10:16:17.217" level="INFO">Sending key(s) ('Ceci est une description',) to page.</msg>
+<msg timestamp="20230116 10:16:17.217" level="INFO">Sending keys Ceci est une description</msg>
+<status status="PASS" starttime="20230116 10:16:17.216" endtime="20230116 10:16:17.345"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230116 10:16:19.345" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:16:17.345" endtime="20230116 10:16:19.345"/>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<arg>${EMPLACEMENT_DESCRIPTION}</arg>
+<arg>${DESCRIPTION}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230116 10:16:19.373" level="INFO">Element 'xpath://main[@id='board-content']/div/div/div/div[2]/div/div[2]' contains text 'Ceci est une description'.</msg>
+<status status="PASS" starttime="20230116 10:16:19.345" endtime="20230116 10:16:19.373"/>
+</kw>
+<status status="PASS" starttime="20230116 10:16:15.152" endtime="20230116 10:16:19.373"/>
 </kw>
 <kw name="ReturnMainPage" library="resources">
 <kw name="Go To" library="Selenium2Library">
 <arg>${WELCOMEPAGE_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221201 10:05:49.374" level="INFO">Opening url 'https://mixap-dev.surge.sh/'</msg>
-<status status="PASS" starttime="20221201 10:05:49.374" endtime="20221201 10:05:49.726"/>
+<msg timestamp="20230116 10:16:19.374" level="INFO">Opening url 'https://mixap-dev.surge.sh/'</msg>
+<status status="PASS" starttime="20230116 10:16:19.374" endtime="20230116 10:16:20.367"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:05:51.727" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:05:49.727" endtime="20221201 10:05:51.727"/>
+<msg timestamp="20230116 10:16:22.368" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:16:20.367" endtime="20230116 10:16:22.368"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:49.374" endtime="20221201 10:05:51.727"/>
+<status status="PASS" starttime="20230116 10:16:19.373" endtime="20230116 10:16:22.368"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:44.632" endtime="20221201 10:05:51.727"/>
+<status status="PASS" starttime="20230116 10:16:06.669" endtime="20230116 10:16:22.368"/>
 </iter>
-<status status="PASS" starttime="20221201 10:05:30.458" endtime="20221201 10:05:51.727"/>
+<iter>
+<var name="${i}">3</var>
+<kw name="CreateActivity" library="resources">
+<arg>xpath:(//img[@alt='example'])[${i+1}]</arg>
+<kw name="OpenAddActivityWindow" library="CreateActivity">
+<kw name="ClickWindow" library="resources">
+<arg>${ADD_ACTIVITY}</arg>
+<kw name="Click Button" library="Selenium2Library">
+<arg>${Button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230116 10:16:22.371" level="INFO">Clicking button 'xpath://*[@id="root"]/div/div[2]/div/div[1]/div/div/button'.</msg>
+<status status="PASS" starttime="20230116 10:16:22.371" endtime="20230116 10:16:22.469"/>
+</kw>
+<status status="PASS" starttime="20230116 10:16:22.370" endtime="20230116 10:16:22.469"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230116 10:16:24.470" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:16:22.469" endtime="20230116 10:16:24.470"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${ADD_ACTIVITY_TXT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230116 10:16:24.492" level="INFO">Element 'xpath://*[@id=":r0:"]' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:16:24.470" endtime="20230116 10:16:24.492"/>
+</kw>
+<status status="PASS" starttime="20230116 10:16:22.370" endtime="20230116 10:16:24.492"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${Activity}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230116 10:16:24.493" level="INFO">Clicking element 'xpath:(//img[@alt='example'])[4]'.</msg>
+<status status="PASS" starttime="20230116 10:16:24.492" endtime="20230116 10:16:24.582"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230116 10:16:26.584" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:16:24.582" endtime="20230116 10:16:26.584"/>
+</kw>
+<status status="PASS" starttime="20230116 10:16:22.369" endtime="20230116 10:16:26.584"/>
+</kw>
+<kw name="AfficherCreationStageAI" library="Commun">
+<kw name="Get Location" library="Selenium2Library">
+<var>${url}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20230116 10:16:26.590" level="INFO">${url} = https://mixap-dev.surge.sh/edit-activity/uesXPBQdUAyzXeuToO8Mun</msg>
+<status status="PASS" starttime="20230116 10:16:26.584" endtime="20230116 10:16:26.590"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${url}&quot; == &quot;https://mixap-dev.surge.sh/&quot;">
+<kw name="CreateAugmenterUneImageActivity" library="CreateActivity">
+<status status="NOT RUN" starttime="20230116 10:16:26.590" endtime="20230116 10:16:26.590"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230116 10:16:26.590" endtime="20230116 10:16:26.590"/>
+</kw>
+<status status="NOT RUN" starttime="20230116 10:16:26.590" endtime="20230116 10:16:26.590"/>
+</branch>
+<status status="PASS" starttime="20230116 10:16:26.590" endtime="20230116 10:16:26.590"/>
+</if>
+<kw name="AfficherCreationStage" library="resources">
+<arg>4</arg>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>${nb}</value>
+<iter>
+<var name="${i}">0</var>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[${i+1}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230116 10:16:26.628" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[1]' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:16:26.591" endtime="20230116 10:16:26.629"/>
+</kw>
+<status status="PASS" starttime="20230116 10:16:26.591" endtime="20230116 10:16:26.629"/>
+</iter>
+<iter>
+<var name="${i}">1</var>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[${i+1}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230116 10:16:26.658" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[2]' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:16:26.629" endtime="20230116 10:16:26.658"/>
+</kw>
+<status status="PASS" starttime="20230116 10:16:26.629" endtime="20230116 10:16:26.658"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[${i+1}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230116 10:16:26.687" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[3]' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:16:26.659" endtime="20230116 10:16:26.687"/>
+</kw>
+<status status="PASS" starttime="20230116 10:16:26.659" endtime="20230116 10:16:26.687"/>
+</iter>
+<iter>
+<var name="${i}">3</var>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[${i+1}]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230116 10:16:26.715" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[4]' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:16:26.688" endtime="20230116 10:16:26.716"/>
+</kw>
+<status status="PASS" starttime="20230116 10:16:26.688" endtime="20230116 10:16:26.716"/>
+</iter>
+<status status="PASS" starttime="20230116 10:16:26.591" endtime="20230116 10:16:26.716"/>
 </for>
+<status status="PASS" starttime="20230116 10:16:26.591" endtime="20230116 10:16:26.716"/>
+</kw>
+<status status="PASS" starttime="20230116 10:16:26.584" endtime="20230116 10:16:26.716"/>
+</kw>
+<kw name="ModifyTitle" library="Nomage">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${BOUTON_TITRE_MODIFIER}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230116 10:16:26.717" level="INFO">Clicking element 'xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[1]/h5/div/span'.</msg>
+<status status="PASS" starttime="20230116 10:16:26.717" endtime="20230116 10:16:26.806"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>none</arg>
+<arg>CONTROL+A</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230116 10:16:26.808" level="INFO">Sending key(s) ('CONTROL+A',) to page.</msg>
+<msg timestamp="20230116 10:16:26.808" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230116 10:16:26.808" level="INFO">Sending key A</msg>
+<msg timestamp="20230116 10:16:26.808" level="INFO">Releasing special key CONTROL.</msg>
+<status status="PASS" starttime="20230116 10:16:26.807" endtime="20230116 10:16:26.831"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230116 10:16:28.833" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:16:26.832" endtime="20230116 10:16:28.833"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>none</arg>
+<arg>${TITRE}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230116 10:16:28.834" level="INFO">Sending key(s) ('TitreTest',) to page.</msg>
+<msg timestamp="20230116 10:16:28.834" level="INFO">Sending keys TitreTest</msg>
+<status status="PASS" starttime="20230116 10:16:28.833" endtime="20230116 10:16:28.899"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230116 10:16:30.899" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:16:28.899" endtime="20230116 10:16:30.899"/>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<arg>${EMPLACEMENT_TITRE}</arg>
+<arg>${TITRE}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230116 10:16:30.931" level="INFO">Element 'xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[1]' contains text 'TitreTest'.</msg>
+<status status="PASS" starttime="20230116 10:16:30.899" endtime="20230116 10:16:30.931"/>
+</kw>
+<status status="PASS" starttime="20230116 10:16:26.716" endtime="20230116 10:16:30.931"/>
+</kw>
+<kw name="ModifyDesc" library="Nomage">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${BOUTON_DESCRIPTION_MODIFIER}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230116 10:16:30.932" level="INFO">Clicking element 'xpath://*[@id='board-content']/div/div/div/div[2]/div/div[2]/span/div'.</msg>
+<status status="PASS" starttime="20230116 10:16:30.932" endtime="20230116 10:16:31.011"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>none</arg>
+<arg>CONTROL+A</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230116 10:16:31.012" level="INFO">Sending key(s) ('CONTROL+A',) to page.</msg>
+<msg timestamp="20230116 10:16:31.012" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230116 10:16:31.013" level="INFO">Sending key A</msg>
+<msg timestamp="20230116 10:16:31.013" level="INFO">Releasing special key CONTROL.</msg>
+<status status="PASS" starttime="20230116 10:16:31.011" endtime="20230116 10:16:31.022"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230116 10:16:33.023" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:16:31.022" endtime="20230116 10:16:33.023"/>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<arg>none</arg>
+<arg>${DESCRIPTION}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230116 10:16:33.024" level="INFO">Sending key(s) ('Ceci est une description',) to page.</msg>
+<msg timestamp="20230116 10:16:33.024" level="INFO">Sending keys Ceci est une description</msg>
+<status status="PASS" starttime="20230116 10:16:33.023" endtime="20230116 10:16:33.154"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230116 10:16:35.155" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:16:33.154" endtime="20230116 10:16:35.155"/>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<arg>${EMPLACEMENT_DESCRIPTION}</arg>
+<arg>${DESCRIPTION}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230116 10:16:35.179" level="INFO">Element 'xpath://main[@id='board-content']/div/div/div/div[2]/div/div[2]' contains text 'Ceci est une description'.</msg>
+<status status="PASS" starttime="20230116 10:16:35.155" endtime="20230116 10:16:35.180"/>
+</kw>
+<status status="PASS" starttime="20230116 10:16:30.931" endtime="20230116 10:16:35.180"/>
+</kw>
+<kw name="ReturnMainPage" library="resources">
+<kw name="Go To" library="Selenium2Library">
+<arg>${WELCOMEPAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230116 10:16:35.181" level="INFO">Opening url 'https://mixap-dev.surge.sh/'</msg>
+<status status="PASS" starttime="20230116 10:16:35.180" endtime="20230116 10:16:35.970"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230116 10:16:37.970" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:16:35.970" endtime="20230116 10:16:37.970"/>
+</kw>
+<status status="PASS" starttime="20230116 10:16:35.180" endtime="20230116 10:16:37.970"/>
+</kw>
+<status status="PASS" starttime="20230116 10:16:22.368" endtime="20230116 10:16:37.970"/>
+</iter>
+<status status="PASS" starttime="20230116 10:15:28.284" endtime="20230116 10:16:37.970"/>
+</for>
+<status status="PASS" starttime="20230116 10:15:28.284" endtime="20230116 10:16:37.970"/>
+</kw>
 <kw name="CreateGroupeActivite" library="CreateActivity">
+<kw name="CreateActivity" library="resources">
+<arg>${GROUPE_ACTIVITE}</arg>
 <kw name="OpenAddActivityWindow" library="CreateActivity">
 <kw name="ClickWindow" library="resources">
 <arg>${ADD_ACTIVITY}</arg>
 <kw name="Click Button" library="Selenium2Library">
 <arg>${Button}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221201 10:05:51.731" level="INFO">Clicking button 'xpath://*[@id="root"]/div/div[2]/div/div[1]/div/div/button'.</msg>
-<status status="PASS" starttime="20221201 10:05:51.730" endtime="20221201 10:05:51.824"/>
+<msg timestamp="20230116 10:16:37.973" level="INFO">Clicking button 'xpath://*[@id="root"]/div/div[2]/div/div[1]/div/div/button'.</msg>
+<status status="PASS" starttime="20230116 10:16:37.972" endtime="20230116 10:16:38.065"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:51.730" endtime="20221201 10:05:51.824"/>
+<status status="PASS" starttime="20230116 10:16:37.972" endtime="20230116 10:16:38.065"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:05:53.836" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:05:51.824" endtime="20221201 10:05:53.836"/>
+<msg timestamp="20230116 10:16:40.067" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:16:38.065" endtime="20230116 10:16:40.067"/>
 </kw>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>${ADD_ACTIVITY_TXT}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221201 10:05:53.859" level="INFO">Element 'xpath://*[@id=":r0:"]' is displayed.</msg>
-<status status="PASS" starttime="20221201 10:05:53.836" endtime="20221201 10:05:53.859"/>
+<msg timestamp="20230116 10:16:40.086" level="INFO">Element 'xpath://*[@id=":r0:"]' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:16:40.067" endtime="20230116 10:16:40.086"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:51.729" endtime="20221201 10:05:53.859"/>
+<status status="PASS" starttime="20230116 10:16:37.972" endtime="20230116 10:16:40.086"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
-<arg>${GROUPE_ACTIVITE}</arg>
+<arg>${Activity}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221201 10:05:53.860" level="INFO">Clicking element 'xpath:(//img[@alt='example'])[5]'.</msg>
-<status status="PASS" starttime="20221201 10:05:53.859" endtime="20221201 10:05:53.932"/>
+<msg timestamp="20230116 10:16:40.086" level="INFO">Clicking element 'xpath:(//img[@alt='example'])[5]'.</msg>
+<status status="PASS" starttime="20230116 10:16:40.086" endtime="20230116 10:16:40.202"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:05:55.944" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:05:53.932" endtime="20221201 10:05:55.944"/>
+<msg timestamp="20230116 10:16:42.202" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:16:40.202" endtime="20230116 10:16:42.202"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:51.729" endtime="20221201 10:05:55.944"/>
+<status status="PASS" starttime="20230116 10:16:37.971" endtime="20230116 10:16:42.202"/>
+</kw>
+<status status="PASS" starttime="20230116 10:16:37.971" endtime="20230116 10:16:42.202"/>
 </kw>
 <kw name="AfficherCreationStageGA" library="Commun">
 <kw name="Get Location" library="Selenium2Library">
 <var>${url}</var>
 <doc>Returns the current browser window URL.</doc>
-<msg timestamp="20221201 10:05:55.951" level="INFO">${url} = https://mixap-dev.surge.sh/edit-activity/ufa4AE8MNn7Q-0ALtaG9kW</msg>
-<status status="PASS" starttime="20221201 10:05:55.945" endtime="20221201 10:05:55.951"/>
+<msg timestamp="20230116 10:16:42.210" level="INFO">${url} = https://mixap-dev.surge.sh/edit-activity/u8NsTatc8X0AMS0ssu_Vb1</msg>
+<status status="PASS" starttime="20230116 10:16:42.203" endtime="20230116 10:16:42.210"/>
 </kw>
 <if>
 <branch type="IF" condition="&quot;${url}&quot; == &quot;https://mixap-dev.surge.sh/&quot;">
 <kw name="CreateGroupeActivite" library="CreateActivity">
-<status status="NOT RUN" starttime="20221201 10:05:55.951" endtime="20221201 10:05:55.952"/>
+<status status="NOT RUN" starttime="20230116 10:16:42.211" endtime="20230116 10:16:42.211"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20221201 10:05:55.952" endtime="20221201 10:05:55.952"/>
+<status status="NOT RUN" starttime="20230116 10:16:42.211" endtime="20230116 10:16:42.211"/>
 </kw>
-<status status="NOT RUN" starttime="20221201 10:05:55.951" endtime="20221201 10:05:55.952"/>
+<status status="NOT RUN" starttime="20230116 10:16:42.210" endtime="20230116 10:16:42.211"/>
 </branch>
-<status status="PASS" starttime="20221201 10:05:55.951" endtime="20221201 10:05:55.952"/>
+<status status="PASS" starttime="20230116 10:16:42.210" endtime="20230116 10:16:42.211"/>
 </if>
 <kw name="AfficherCreationStage" library="resources">
 <arg>3</arg>
@@ -548,174 +1058,128 @@
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[${i+1}]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221201 10:05:55.973" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[1]' is displayed.</msg>
-<status status="PASS" starttime="20221201 10:05:55.953" endtime="20221201 10:05:55.973"/>
+<msg timestamp="20230116 10:16:42.236" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[1]' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:16:42.212" endtime="20230116 10:16:42.236"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:55.952" endtime="20221201 10:05:55.973"/>
+<status status="PASS" starttime="20230116 10:16:42.212" endtime="20230116 10:16:42.236"/>
 </iter>
 <iter>
 <var name="${i}">1</var>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[${i+1}]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221201 10:05:55.995" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[2]' is displayed.</msg>
-<status status="PASS" starttime="20221201 10:05:55.974" endtime="20221201 10:05:55.995"/>
+<msg timestamp="20230116 10:16:42.257" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[2]' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:16:42.236" endtime="20230116 10:16:42.257"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:55.974" endtime="20221201 10:05:55.996"/>
+<status status="PASS" starttime="20230116 10:16:42.236" endtime="20230116 10:16:42.257"/>
 </iter>
 <iter>
 <var name="${i}">2</var>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[${i+1}]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221201 10:05:56.017" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[3]' is displayed.</msg>
-<status status="PASS" starttime="20221201 10:05:55.996" endtime="20221201 10:05:56.018"/>
+<msg timestamp="20230116 10:16:42.282" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[3]' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:16:42.257" endtime="20230116 10:16:42.282"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:55.996" endtime="20221201 10:05:56.018"/>
+<status status="PASS" starttime="20230116 10:16:42.257" endtime="20230116 10:16:42.282"/>
 </iter>
-<status status="PASS" starttime="20221201 10:05:55.952" endtime="20221201 10:05:56.018"/>
+<status status="PASS" starttime="20230116 10:16:42.212" endtime="20230116 10:16:42.282"/>
 </for>
-<status status="PASS" starttime="20221201 10:05:55.952" endtime="20221201 10:05:56.018"/>
+<status status="PASS" starttime="20230116 10:16:42.212" endtime="20230116 10:16:42.282"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:55.945" endtime="20221201 10:05:56.018"/>
+<status status="PASS" starttime="20230116 10:16:42.203" endtime="20230116 10:16:42.282"/>
 </kw>
 <kw name="ModifyTitle" library="Nomage">
 <kw name="Click Element" library="Selenium2Library">
 <arg>${BOUTON_TITRE_MODIFIER}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221201 10:05:56.020" level="INFO">Clicking element 'xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[1]/h5/div/span'.</msg>
-<status status="PASS" starttime="20221201 10:05:56.019" endtime="20221201 10:05:56.087"/>
+<msg timestamp="20230116 10:16:42.284" level="INFO">Clicking element 'xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[1]/h5/div/span'.</msg>
+<status status="PASS" starttime="20230116 10:16:42.283" endtime="20230116 10:16:42.351"/>
 </kw>
 <kw name="Press Keys" library="Selenium2Library">
 <arg>none</arg>
 <arg>CONTROL+A</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20221201 10:05:56.089" level="INFO">Sending key(s) ('CONTROL+A',) to page.</msg>
-<msg timestamp="20221201 10:05:56.089" level="INFO">Pressing special key CONTROL down.</msg>
-<msg timestamp="20221201 10:05:56.089" level="INFO">Sending key A</msg>
-<msg timestamp="20221201 10:05:56.089" level="INFO">Releasing special key CONTROL.</msg>
-<status status="PASS" starttime="20221201 10:05:56.087" endtime="20221201 10:05:56.124"/>
+<msg timestamp="20230116 10:16:42.352" level="INFO">Sending key(s) ('CONTROL+A',) to page.</msg>
+<msg timestamp="20230116 10:16:42.352" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230116 10:16:42.352" level="INFO">Sending key A</msg>
+<msg timestamp="20230116 10:16:42.352" level="INFO">Releasing special key CONTROL.</msg>
+<status status="PASS" starttime="20230116 10:16:42.351" endtime="20230116 10:16:42.368"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:05:58.131" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:05:56.124" endtime="20221201 10:05:58.131"/>
+<msg timestamp="20230116 10:16:44.369" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:16:42.368" endtime="20230116 10:16:44.369"/>
 </kw>
 <kw name="Press Keys" library="Selenium2Library">
 <arg>none</arg>
 <arg>${TITRE}</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20221201 10:05:58.132" level="INFO">Sending key(s) ('TitreTest',) to page.</msg>
-<msg timestamp="20221201 10:05:58.132" level="INFO">Sending keys TitreTest</msg>
-<status status="PASS" starttime="20221201 10:05:58.131" endtime="20221201 10:05:58.229"/>
+<msg timestamp="20230116 10:16:44.370" level="INFO">Sending key(s) ('TitreTest',) to page.</msg>
+<msg timestamp="20230116 10:16:44.370" level="INFO">Sending keys TitreTest</msg>
+<status status="PASS" starttime="20230116 10:16:44.369" endtime="20230116 10:16:44.430"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:06:00.243" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:05:58.230" endtime="20221201 10:06:00.243"/>
+<msg timestamp="20230116 10:16:46.432" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:16:44.430" endtime="20230116 10:16:46.432"/>
 </kw>
 <kw name="Element Should Contain" library="Selenium2Library">
 <arg>${EMPLACEMENT_TITRE}</arg>
 <arg>${TITRE}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20221201 10:06:00.397" level="INFO">Element 'xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[1]' contains text 'TitreTest'.</msg>
-<status status="PASS" starttime="20221201 10:06:00.243" endtime="20221201 10:06:00.397"/>
+<msg timestamp="20230116 10:16:46.459" level="INFO">Element 'xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[1]' contains text 'TitreTest'.</msg>
+<status status="PASS" starttime="20230116 10:16:46.432" endtime="20230116 10:16:46.459"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:56.019" endtime="20221201 10:06:00.398"/>
+<status status="PASS" starttime="20230116 10:16:42.283" endtime="20230116 10:16:46.459"/>
 </kw>
 <kw name="ModifyDesc" library="Nomage">
 <kw name="Click Element" library="Selenium2Library">
 <arg>${BOUTON_DESCRIPTION_MODIFIER}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221201 10:06:00.502" level="INFO">Clicking element 'xpath:(.//*[normalize-space(text()) and normalize-space(.)=concat('Un groupe d', "'", 'activités sans ordre défini')])[1]//*[name()='svg'][1]'.</msg>
-<status status="PASS" starttime="20221201 10:06:00.498" endtime="20221201 10:06:00.671"/>
+<msg timestamp="20230116 10:16:46.461" level="INFO">Clicking element 'xpath://*[@id='board-content']/div/div/div/div[2]/div/div[2]/span/div'.</msg>
+<status status="PASS" starttime="20230116 10:16:46.460" endtime="20230116 10:16:46.524"/>
 </kw>
 <kw name="Press Keys" library="Selenium2Library">
 <arg>none</arg>
 <arg>CONTROL+A</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20221201 10:06:00.672" level="INFO">Sending key(s) ('CONTROL+A',) to page.</msg>
-<msg timestamp="20221201 10:06:00.673" level="INFO">Pressing special key CONTROL down.</msg>
-<msg timestamp="20221201 10:06:00.673" level="INFO">Sending key A</msg>
-<msg timestamp="20221201 10:06:00.673" level="INFO">Releasing special key CONTROL.</msg>
-<status status="PASS" starttime="20221201 10:06:00.671" endtime="20221201 10:06:00.682"/>
+<msg timestamp="20230116 10:16:46.525" level="INFO">Sending key(s) ('CONTROL+A',) to page.</msg>
+<msg timestamp="20230116 10:16:46.526" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230116 10:16:46.526" level="INFO">Sending key A</msg>
+<msg timestamp="20230116 10:16:46.526" level="INFO">Releasing special key CONTROL.</msg>
+<status status="PASS" starttime="20230116 10:16:46.524" endtime="20230116 10:16:46.534"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:06:02.689" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:06:00.682" endtime="20221201 10:06:02.689"/>
+<msg timestamp="20230116 10:16:48.536" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:16:46.535" endtime="20230116 10:16:48.536"/>
 </kw>
 <kw name="Press Keys" library="Selenium2Library">
 <arg>none</arg>
 <arg>${DESCRIPTION}</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20221201 10:06:02.690" level="INFO">Sending key(s) ('Ceci est une description',) to page.</msg>
-<msg timestamp="20221201 10:06:02.690" level="INFO">Sending keys Ceci est une description</msg>
-<status status="PASS" starttime="20221201 10:06:02.689" endtime="20221201 10:06:02.822"/>
+<msg timestamp="20230116 10:16:48.537" level="INFO">Sending key(s) ('Ceci est une description',) to page.</msg>
+<msg timestamp="20230116 10:16:48.537" level="INFO">Sending keys Ceci est une description</msg>
+<status status="PASS" starttime="20230116 10:16:48.536" endtime="20230116 10:16:48.666"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:06:04.833" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:06:02.822" endtime="20221201 10:06:04.833"/>
+<msg timestamp="20230116 10:16:50.668" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:16:48.666" endtime="20230116 10:16:50.668"/>
 </kw>
 <kw name="Element Should Contain" library="Selenium2Library">
 <arg>${EMPLACEMENT_DESCRIPTION}</arg>
 <arg>${DESCRIPTION}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20221201 10:06:04.864" level="INFO">Element 'xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[3]' contains text 'Ceci est une description'.</msg>
-<status status="PASS" starttime="20221201 10:06:04.833" endtime="20221201 10:06:04.864"/>
+<msg timestamp="20230116 10:16:50.693" level="INFO">Element 'xpath://main[@id='board-content']/div/div/div/div[2]/div/div[2]' contains text 'Ceci est une description'.</msg>
+<status status="PASS" starttime="20230116 10:16:50.668" endtime="20230116 10:16:50.693"/>
 </kw>
-<status status="PASS" starttime="20221201 10:06:00.497" endtime="20221201 10:06:04.865"/>
-</kw>
-<kw name="ModifiConsigne" library="Nomage">
-<kw name="Click Element" library="Selenium2Library">
-<arg>${BOUTON_CONSIGNE_MODIFIER}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221201 10:06:04.866" level="INFO">Clicking element 'xpath:(.//*[normalize-space(text()) and normalize-space(.)='Jouer les activités du groupe'])[1]//*[name()='svg'][1]'.</msg>
-<status status="PASS" starttime="20221201 10:06:04.866" endtime="20221201 10:06:04.960"/>
-</kw>
-<kw name="Press Keys" library="Selenium2Library">
-<arg>none</arg>
-<arg>CONTROL+A</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20221201 10:06:04.962" level="INFO">Sending key(s) ('CONTROL+A',) to page.</msg>
-<msg timestamp="20221201 10:06:04.962" level="INFO">Pressing special key CONTROL down.</msg>
-<msg timestamp="20221201 10:06:04.962" level="INFO">Sending key A</msg>
-<msg timestamp="20221201 10:06:04.962" level="INFO">Releasing special key CONTROL.</msg>
-<status status="PASS" starttime="20221201 10:06:04.960" endtime="20221201 10:06:04.972"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:06:06.973" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:06:04.972" endtime="20221201 10:06:06.973"/>
-</kw>
-<kw name="Press Keys" library="Selenium2Library">
-<arg>none</arg>
-<arg>${CONSIGNE}</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20221201 10:06:06.974" level="INFO">Sending key(s) ('Ceci est une consigne',) to page.</msg>
-<msg timestamp="20221201 10:06:06.974" level="INFO">Sending keys Ceci est une consigne</msg>
-<status status="PASS" starttime="20221201 10:06:06.973" endtime="20221201 10:06:07.086"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:06:09.101" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:06:07.086" endtime="20221201 10:06:09.101"/>
-</kw>
-<kw name="Element Should Contain" library="Selenium2Library">
-<arg>${EMPLACEMENT_CONSIGNE}</arg>
-<arg>${CONSIGNE}</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20221201 10:06:09.133" level="INFO">Element 'xpath://*[@id="board-content"]/div/div/div/div[2]/div/div[2]' contains text 'Ceci est une consigne'.</msg>
-<status status="PASS" starttime="20221201 10:06:09.101" endtime="20221201 10:06:09.133"/>
-</kw>
-<status status="PASS" starttime="20221201 10:06:04.865" endtime="20221201 10:06:09.133"/>
+<status status="PASS" starttime="20230116 10:16:46.460" endtime="20230116 10:16:50.693"/>
 </kw>
 <kw name="PasserEtapeSelection" library="Commun">
 <kw name="PasserEtapeSuivante" library="resources">
@@ -723,45 +1187,45 @@
 <kw name="Click Element" library="Selenium2Library">
 <arg>${SUIVANT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221201 10:06:09.136" level="INFO">Clicking element '//button[@type = 'button' and (text() = 'Suivant' or . = 'Suivant')]'.</msg>
-<status status="PASS" starttime="20221201 10:06:09.135" endtime="20221201 10:06:09.224"/>
+<msg timestamp="20230116 10:16:50.695" level="INFO">Clicking element '//button[@type = 'button' and (text() = 'Suivant' or . = 'Suivant')]'.</msg>
+<status status="PASS" starttime="20230116 10:16:50.695" endtime="20230116 10:16:50.783"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:06:11.230" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:06:09.224" endtime="20221201 10:06:11.230"/>
+<msg timestamp="20230116 10:16:52.783" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:16:50.783" endtime="20230116 10:16:52.783"/>
 </kw>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>${elements}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221201 10:06:11.260" level="INFO">Element 'xpath://*[@id="board-content"]/div/div/div/div/div' is displayed.</msg>
-<status status="PASS" starttime="20221201 10:06:11.230" endtime="20221201 10:06:11.260"/>
+<msg timestamp="20230116 10:16:52.804" level="INFO">Element 'xpath://*[@id="board-content"]/div/div/div/div/div' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:16:52.783" endtime="20230116 10:16:52.804"/>
 </kw>
-<status status="PASS" starttime="20221201 10:06:09.135" endtime="20221201 10:06:11.261"/>
+<status status="PASS" starttime="20230116 10:16:50.694" endtime="20230116 10:16:52.804"/>
 </kw>
-<status status="PASS" starttime="20221201 10:06:09.134" endtime="20221201 10:06:11.261"/>
+<status status="PASS" starttime="20230116 10:16:50.694" endtime="20230116 10:16:52.804"/>
 </kw>
 <kw name="AfficherCreationStageGA" library="Commun">
 <kw name="Get Location" library="Selenium2Library">
 <var>${url}</var>
 <doc>Returns the current browser window URL.</doc>
-<msg timestamp="20221201 10:06:11.268" level="INFO">${url} = https://mixap-dev.surge.sh/edit-activity/ufa4AE8MNn7Q-0ALtaG9kW</msg>
-<status status="PASS" starttime="20221201 10:06:11.263" endtime="20221201 10:06:11.268"/>
+<msg timestamp="20230116 10:16:52.810" level="INFO">${url} = https://mixap-dev.surge.sh/edit-activity/u8NsTatc8X0AMS0ssu_Vb1</msg>
+<status status="PASS" starttime="20230116 10:16:52.806" endtime="20230116 10:16:52.810"/>
 </kw>
 <if>
 <branch type="IF" condition="&quot;${url}&quot; == &quot;https://mixap-dev.surge.sh/&quot;">
 <kw name="CreateGroupeActivite" library="CreateActivity">
-<status status="NOT RUN" starttime="20221201 10:06:11.269" endtime="20221201 10:06:11.269"/>
+<status status="NOT RUN" starttime="20230116 10:16:52.811" endtime="20230116 10:16:52.811"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20221201 10:06:11.269" endtime="20221201 10:06:11.269"/>
+<status status="NOT RUN" starttime="20230116 10:16:52.811" endtime="20230116 10:16:52.811"/>
 </kw>
-<status status="NOT RUN" starttime="20221201 10:06:11.268" endtime="20221201 10:06:11.269"/>
+<status status="NOT RUN" starttime="20230116 10:16:52.811" endtime="20230116 10:16:52.811"/>
 </branch>
-<status status="PASS" starttime="20221201 10:06:11.268" endtime="20221201 10:06:11.269"/>
+<status status="PASS" starttime="20230116 10:16:52.811" endtime="20230116 10:16:52.811"/>
 </if>
 <kw name="AfficherCreationStage" library="resources">
 <arg>3</arg>
@@ -773,55 +1237,55 @@
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[${i+1}]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221201 10:06:11.393" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[1]' is displayed.</msg>
-<status status="PASS" starttime="20221201 10:06:11.270" endtime="20221201 10:06:11.393"/>
+<msg timestamp="20230116 10:16:52.833" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[1]' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:16:52.812" endtime="20230116 10:16:52.833"/>
 </kw>
-<status status="PASS" starttime="20221201 10:06:11.270" endtime="20221201 10:06:11.393"/>
+<status status="PASS" starttime="20230116 10:16:52.812" endtime="20230116 10:16:52.833"/>
 </iter>
 <iter>
 <var name="${i}">1</var>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[${i+1}]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221201 10:06:11.478" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[2]' is displayed.</msg>
-<status status="PASS" starttime="20221201 10:06:11.393" endtime="20221201 10:06:11.478"/>
+<msg timestamp="20230116 10:16:52.850" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[2]' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:16:52.833" endtime="20230116 10:16:52.850"/>
 </kw>
-<status status="PASS" starttime="20221201 10:06:11.393" endtime="20221201 10:06:11.478"/>
+<status status="PASS" starttime="20230116 10:16:52.833" endtime="20230116 10:16:52.850"/>
 </iter>
 <iter>
 <var name="${i}">2</var>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[${i+1}]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221201 10:06:11.503" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[3]' is displayed.</msg>
-<status status="PASS" starttime="20221201 10:06:11.479" endtime="20221201 10:06:11.503"/>
+<msg timestamp="20230116 10:16:52.869" level="INFO">Element 'xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[3]' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:16:52.850" endtime="20230116 10:16:52.869"/>
 </kw>
-<status status="PASS" starttime="20221201 10:06:11.478" endtime="20221201 10:06:11.503"/>
+<status status="PASS" starttime="20230116 10:16:52.850" endtime="20230116 10:16:52.869"/>
 </iter>
-<status status="PASS" starttime="20221201 10:06:11.270" endtime="20221201 10:06:11.503"/>
+<status status="PASS" starttime="20230116 10:16:52.812" endtime="20230116 10:16:52.869"/>
 </for>
-<status status="PASS" starttime="20221201 10:06:11.269" endtime="20221201 10:06:11.503"/>
+<status status="PASS" starttime="20230116 10:16:52.811" endtime="20230116 10:16:52.869"/>
 </kw>
-<status status="PASS" starttime="20221201 10:06:11.262" endtime="20221201 10:06:11.503"/>
+<status status="PASS" starttime="20230116 10:16:52.805" endtime="20230116 10:16:52.870"/>
 </kw>
 <kw name="AddOneActivityInGroupeActivite" library="Selection">
 <kw name="Click Element" library="Selenium2Library">
 <arg>${ADD_ACTIVITY_GA}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221201 10:06:11.540" level="INFO">Clicking element '//button[@type = 'button' and (text() = 'Activité' or . = 'Activité')]'.</msg>
-<status status="PASS" starttime="20221201 10:06:11.538" endtime="20221201 10:06:11.985"/>
+<msg timestamp="20230116 10:16:52.872" level="INFO">Clicking element '//button[@type = 'button' and (text() = 'Activité' or . = 'Activité')]'.</msg>
+<status status="PASS" starttime="20230116 10:16:52.872" endtime="20230116 10:16:52.974"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:06:13.997" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:06:11.986" endtime="20221201 10:06:13.997"/>
+<msg timestamp="20230116 10:16:54.975" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:16:52.974" endtime="20230116 10:16:54.975"/>
 </kw>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>${ADD_ACTIVITY_GA_WINDOW}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221201 10:06:14.024" level="INFO">Element 'xpath:(.//*[normalize-space(text()) and normalize-space(.)='Sélectionner le groupe d‘activités'])[1]/following::div[2]' is displayed.</msg>
-<status status="PASS" starttime="20221201 10:06:13.997" endtime="20221201 10:06:14.024"/>
+<msg timestamp="20230116 10:16:55.001" level="INFO">Element 'xpath:(.//*[normalize-space(text()) and normalize-space(.)='Sélectionner le groupe d‘activités'])[1]/following::div[2]' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:16:54.975" endtime="20230116 10:16:55.001"/>
 </kw>
 <kw name="GetChild" library="resources">
 <var>${elements}</var>
@@ -830,8 +1294,8 @@
 <var>${element}</var>
 <arg>${locator}</arg>
 <doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20221201 10:06:14.035" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="f27896e00f639431b74816d653f1022d", element="78dc4f03-6506-4a22-ad60-e265c1809122")&gt;</msg>
-<status status="PASS" starttime="20221201 10:06:14.025" endtime="20221201 10:06:14.035"/>
+<msg timestamp="20230116 10:16:55.011" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="084db3c9a4bfa9ed477fca97487b8a12", element="c8458444-1693-4c7e-a554-f4e2048d12fa")&gt;</msg>
+<status status="PASS" starttime="20230116 10:16:55.002" endtime="20230116 10:16:55.011"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <var>${children}</var>
@@ -840,99 +1304,99 @@
 <arg>by=xpath</arg>
 <arg>value=child::*</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<msg timestamp="20221201 10:06:14.048" level="INFO">${children} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="f27896e00f639431b74816d653f1022d", element="20a7ba03-172c-46d5-b7e9-7d26594c3ecb")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
-<status status="PASS" starttime="20221201 10:06:14.035" endtime="20221201 10:06:14.048"/>
+<msg timestamp="20230116 10:16:55.024" level="INFO">${children} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="084db3c9a4bfa9ed477fca97487b8a12", element="4448f4fb-0d01-4968-8ba3-16383c9e9d98")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20230116 10:16:55.012" endtime="20230116 10:16:55.024"/>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <var>${return}</var>
 <arg>${children}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20221201 10:06:14.049" level="INFO">Length is 3</msg>
-<msg timestamp="20221201 10:06:14.049" level="INFO">${return} = 3</msg>
-<status status="PASS" starttime="20221201 10:06:14.048" endtime="20221201 10:06:14.049"/>
+<msg timestamp="20230116 10:16:55.025" level="INFO">Length is 4</msg>
+<msg timestamp="20230116 10:16:55.025" level="INFO">${return} = 4</msg>
+<status status="PASS" starttime="20230116 10:16:55.024" endtime="20230116 10:16:55.025"/>
 </kw>
-<msg timestamp="20221201 10:06:14.049" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="f27896e00f639431b74816d653f1022d", element="20a7ba03-172c-46d5-b7e9-7d26594c3ecb")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
-<status status="PASS" starttime="20221201 10:06:14.024" endtime="20221201 10:06:14.049"/>
+<msg timestamp="20230116 10:16:55.025" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="084db3c9a4bfa9ed477fca97487b8a12", element="4448f4fb-0d01-4968-8ba3-16383c9e9d98")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20230116 10:16:55.002" endtime="20230116 10:16:55.025"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${elements[0]}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221201 10:06:14.051" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="f27896e00f639431b74816d653f1022d", element="20a7ba03-172c-46d5-b7e9-7d26594c3ecb")&gt;'.</msg>
-<status status="PASS" starttime="20221201 10:06:14.049" endtime="20221201 10:06:14.101"/>
+<msg timestamp="20230116 10:16:55.026" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="084db3c9a4bfa9ed477fca97487b8a12", element="4448f4fb-0d01-4968-8ba3-16383c9e9d98")&gt;'.</msg>
+<status status="PASS" starttime="20230116 10:16:55.025" endtime="20230116 10:16:55.075"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:06:16.109" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:06:14.101" endtime="20221201 10:06:16.109"/>
+<msg timestamp="20230116 10:16:57.076" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:16:55.075" endtime="20230116 10:16:57.076"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${VALIDE_BUTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221201 10:06:16.110" level="INFO">Clicking element '//span[(text() = 'Valider' or . = 'Valider')]'.</msg>
-<status status="PASS" starttime="20221201 10:06:16.109" endtime="20221201 10:06:16.176"/>
+<msg timestamp="20230116 10:16:57.076" level="INFO">Clicking element '//span[(text() = 'Valider' or . = 'Valider')]'.</msg>
+<status status="PASS" starttime="20230116 10:16:57.076" endtime="20230116 10:16:57.140"/>
 </kw>
 <kw name="Element Should Be Disabled" library="Selenium2Library">
 <arg>${SUIVANT}</arg>
 <doc>Verifies that element identified by ``locator`` is disabled.</doc>
-<status status="PASS" starttime="20221201 10:06:16.176" endtime="20221201 10:06:16.196"/>
+<status status="PASS" starttime="20230116 10:16:57.140" endtime="20230116 10:16:57.170"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${ADD_ACTIVITY_GA}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221201 10:06:16.197" level="INFO">Clicking element '//button[@type = 'button' and (text() = 'Activité' or . = 'Activité')]'.</msg>
-<status status="PASS" starttime="20221201 10:06:16.196" endtime="20221201 10:06:16.457"/>
+<msg timestamp="20230116 10:16:57.170" level="INFO">Clicking element '//button[@type = 'button' and (text() = 'Activité' or . = 'Activité')]'.</msg>
+<status status="PASS" starttime="20230116 10:16:57.170" endtime="20230116 10:16:57.387"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:06:18.460" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:06:16.457" endtime="20221201 10:06:18.460"/>
+<msg timestamp="20230116 10:16:59.388" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:16:57.387" endtime="20230116 10:16:59.388"/>
 </kw>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>${ADD_ACTIVITY_GA_WINDOW}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221201 10:06:18.527" level="INFO">Element 'xpath:(.//*[normalize-space(text()) and normalize-space(.)='Sélectionner le groupe d‘activités'])[1]/following::div[2]' is displayed.</msg>
-<status status="PASS" starttime="20221201 10:06:18.460" endtime="20221201 10:06:18.528"/>
+<msg timestamp="20230116 10:16:59.409" level="INFO">Element 'xpath:(.//*[normalize-space(text()) and normalize-space(.)='Sélectionner le groupe d‘activités'])[1]/following::div[2]' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:16:59.388" endtime="20230116 10:16:59.409"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${elements[0]}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221201 10:06:18.530" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="f27896e00f639431b74816d653f1022d", element="20a7ba03-172c-46d5-b7e9-7d26594c3ecb")&gt;'.</msg>
-<status status="PASS" starttime="20221201 10:06:18.528" endtime="20221201 10:06:18.562"/>
+<msg timestamp="20230116 10:16:59.412" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="084db3c9a4bfa9ed477fca97487b8a12", element="4448f4fb-0d01-4968-8ba3-16383c9e9d98")&gt;'.</msg>
+<status status="PASS" starttime="20230116 10:16:59.409" endtime="20230116 10:16:59.448"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:06:20.566" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:06:18.562" endtime="20221201 10:06:20.566"/>
+<msg timestamp="20230116 10:17:01.450" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:16:59.448" endtime="20230116 10:17:01.450"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${VALIDE_BUTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221201 10:06:20.567" level="INFO">Clicking element '//span[(text() = 'Valider' or . = 'Valider')]'.</msg>
-<status status="PASS" starttime="20221201 10:06:20.566" endtime="20221201 10:06:20.631"/>
+<msg timestamp="20230116 10:17:01.451" level="INFO">Clicking element '//span[(text() = 'Valider' or . = 'Valider')]'.</msg>
+<status status="PASS" starttime="20230116 10:17:01.450" endtime="20230116 10:17:01.509"/>
 </kw>
-<status status="PASS" starttime="20221201 10:06:11.538" endtime="20221201 10:06:20.632"/>
+<status status="PASS" starttime="20230116 10:16:52.871" endtime="20230116 10:17:01.509"/>
 </kw>
 <kw name="AddAllActivityInGroupeActivite" library="Selection">
 <kw name="Click Element" library="Selenium2Library">
 <arg>${ADD_ACTIVITY_GA}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221201 10:06:20.635" level="INFO">Clicking element '//button[@type = 'button' and (text() = 'Activité' or . = 'Activité')]'.</msg>
-<status status="PASS" starttime="20221201 10:06:20.634" endtime="20221201 10:06:20.900"/>
+<msg timestamp="20230116 10:17:01.511" level="INFO">Clicking element '//button[@type = 'button' and (text() = 'Activité' or . = 'Activité')]'.</msg>
+<status status="PASS" starttime="20230116 10:17:01.510" endtime="20230116 10:17:01.819"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:06:22.905" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:06:20.901" endtime="20221201 10:06:22.905"/>
+<msg timestamp="20230116 10:17:03.819" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:17:01.819" endtime="20230116 10:17:03.819"/>
 </kw>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>${ADD_ACTIVITY_GA_WINDOW}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221201 10:06:22.926" level="INFO">Element 'xpath:(.//*[normalize-space(text()) and normalize-space(.)='Sélectionner le groupe d‘activités'])[1]/following::div[2]' is displayed.</msg>
-<status status="PASS" starttime="20221201 10:06:22.905" endtime="20221201 10:06:22.926"/>
+<msg timestamp="20230116 10:17:03.840" level="INFO">Element 'xpath:(.//*[normalize-space(text()) and normalize-space(.)='Sélectionner le groupe d‘activités'])[1]/following::div[2]' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:17:03.819" endtime="20230116 10:17:03.840"/>
 </kw>
 <kw name="GetChild" library="resources">
 <var>${elements}</var>
@@ -941,8 +1405,8 @@
 <var>${element}</var>
 <arg>${locator}</arg>
 <doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20221201 10:06:22.936" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="f27896e00f639431b74816d653f1022d", element="78dc4f03-6506-4a22-ad60-e265c1809122")&gt;</msg>
-<status status="PASS" starttime="20221201 10:06:22.926" endtime="20221201 10:06:22.936"/>
+<msg timestamp="20230116 10:17:03.850" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="084db3c9a4bfa9ed477fca97487b8a12", element="c8458444-1693-4c7e-a554-f4e2048d12fa")&gt;</msg>
+<status status="PASS" starttime="20230116 10:17:03.841" endtime="20230116 10:17:03.850"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <var>${children}</var>
@@ -951,27 +1415,27 @@
 <arg>by=xpath</arg>
 <arg>value=child::*</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<msg timestamp="20221201 10:06:22.945" level="INFO">${children} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="f27896e00f639431b74816d653f1022d", element="20a7ba03-172c-46d5-b7e9-7d26594c3ecb")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
-<status status="PASS" starttime="20221201 10:06:22.937" endtime="20221201 10:06:22.945"/>
+<msg timestamp="20230116 10:17:03.859" level="INFO">${children} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="084db3c9a4bfa9ed477fca97487b8a12", element="4448f4fb-0d01-4968-8ba3-16383c9e9d98")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20230116 10:17:03.850" endtime="20230116 10:17:03.859"/>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <var>${return}</var>
 <arg>${children}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20221201 10:06:22.946" level="INFO">Length is 3</msg>
-<msg timestamp="20221201 10:06:22.946" level="INFO">${return} = 3</msg>
-<status status="PASS" starttime="20221201 10:06:22.946" endtime="20221201 10:06:22.946"/>
+<msg timestamp="20230116 10:17:03.859" level="INFO">Length is 4</msg>
+<msg timestamp="20230116 10:17:03.859" level="INFO">${return} = 4</msg>
+<status status="PASS" starttime="20230116 10:17:03.859" endtime="20230116 10:17:03.859"/>
 </kw>
-<msg timestamp="20221201 10:06:22.946" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="f27896e00f639431b74816d653f1022d", element="20a7ba03-172c-46d5-b7e9-7d26594c3ecb")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
-<status status="PASS" starttime="20221201 10:06:22.926" endtime="20221201 10:06:22.946"/>
+<msg timestamp="20230116 10:17:03.859" level="INFO">${elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="084db3c9a4bfa9ed477fca97487b8a12", element="4448f4fb-0d01-4968-8ba3-16383c9e9d98")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20230116 10:17:03.840" endtime="20230116 10:17:03.859"/>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <var>${Size}</var>
 <arg>${elements}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20221201 10:06:22.947" level="INFO">Length is 3</msg>
-<msg timestamp="20221201 10:06:22.947" level="INFO">${Size} = 3</msg>
-<status status="PASS" starttime="20221201 10:06:22.946" endtime="20221201 10:06:22.947"/>
+<msg timestamp="20230116 10:17:03.860" level="INFO">Length is 4</msg>
+<msg timestamp="20230116 10:17:03.860" level="INFO">${Size} = 4</msg>
+<status status="PASS" starttime="20230116 10:17:03.859" endtime="20230116 10:17:03.860"/>
 </kw>
 <for flavor="IN RANGE">
 <var>${i}</var>
@@ -981,69 +1445,85 @@
 <kw name="Click Element" library="Selenium2Library">
 <arg>${elements[${i}]}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221201 10:06:22.949" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="f27896e00f639431b74816d653f1022d", element="20a7ba03-172c-46d5-b7e9-7d26594c3ecb")&gt;'.</msg>
-<status status="PASS" starttime="20221201 10:06:22.947" endtime="20221201 10:06:22.987"/>
+<msg timestamp="20230116 10:17:03.861" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="084db3c9a4bfa9ed477fca97487b8a12", element="4448f4fb-0d01-4968-8ba3-16383c9e9d98")&gt;'.</msg>
+<status status="PASS" starttime="20230116 10:17:03.860" endtime="20230116 10:17:03.897"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:06:25.008" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:06:22.987" endtime="20221201 10:06:25.008"/>
+<msg timestamp="20230116 10:17:05.897" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:17:03.897" endtime="20230116 10:17:05.897"/>
 </kw>
-<status status="PASS" starttime="20221201 10:06:22.947" endtime="20221201 10:06:25.008"/>
+<status status="PASS" starttime="20230116 10:17:03.860" endtime="20230116 10:17:05.897"/>
 </iter>
 <iter>
 <var name="${i}">1</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${elements[${i}]}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221201 10:06:25.011" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="f27896e00f639431b74816d653f1022d", element="a41e4f6e-464d-4122-ba99-dd7e3dddf803")&gt;'.</msg>
-<status status="PASS" starttime="20221201 10:06:25.009" endtime="20221201 10:06:25.164"/>
+<msg timestamp="20230116 10:17:05.898" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="084db3c9a4bfa9ed477fca97487b8a12", element="3c35f16d-5281-4171-8757-984d74fdbfe3")&gt;'.</msg>
+<status status="PASS" starttime="20230116 10:17:05.897" endtime="20230116 10:17:05.940"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:06:27.171" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:06:25.165" endtime="20221201 10:06:27.171"/>
+<msg timestamp="20230116 10:17:07.940" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:17:05.940" endtime="20230116 10:17:07.940"/>
 </kw>
-<status status="PASS" starttime="20221201 10:06:25.009" endtime="20221201 10:06:27.171"/>
+<status status="PASS" starttime="20230116 10:17:05.897" endtime="20230116 10:17:07.940"/>
 </iter>
 <iter>
 <var name="${i}">2</var>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${elements[${i}]}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221201 10:06:27.173" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="f27896e00f639431b74816d653f1022d", element="ebcc03de-18d8-4137-83b2-7a848149c3cb")&gt;'.</msg>
-<status status="PASS" starttime="20221201 10:06:27.171" endtime="20221201 10:06:27.219"/>
+<msg timestamp="20230116 10:17:07.942" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="084db3c9a4bfa9ed477fca97487b8a12", element="1b91f1c3-841e-4e09-bc9f-a4f009075c7f")&gt;'.</msg>
+<status status="PASS" starttime="20230116 10:17:07.941" endtime="20230116 10:17:07.996"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:06:29.231" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:06:27.219" endtime="20221201 10:06:29.231"/>
+<msg timestamp="20230116 10:17:09.997" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:17:07.996" endtime="20230116 10:17:09.997"/>
 </kw>
-<status status="PASS" starttime="20221201 10:06:27.171" endtime="20221201 10:06:29.231"/>
+<status status="PASS" starttime="20230116 10:17:07.940" endtime="20230116 10:17:09.997"/>
 </iter>
-<status status="PASS" starttime="20221201 10:06:22.947" endtime="20221201 10:06:29.231"/>
+<iter>
+<var name="${i}">3</var>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${elements[${i}]}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230116 10:17:09.998" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="084db3c9a4bfa9ed477fca97487b8a12", element="5bc5871b-58bb-40c2-91ea-36bb8b55d6d6")&gt;'.</msg>
+<status status="PASS" starttime="20230116 10:17:09.997" endtime="20230116 10:17:10.045"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230116 10:17:12.047" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:17:10.046" endtime="20230116 10:17:12.047"/>
+</kw>
+<status status="PASS" starttime="20230116 10:17:09.997" endtime="20230116 10:17:12.047"/>
+</iter>
+<status status="PASS" starttime="20230116 10:17:03.860" endtime="20230116 10:17:12.047"/>
 </for>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${VALIDE_BUTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221201 10:06:29.232" level="INFO">Clicking element '//span[(text() = 'Valider' or . = 'Valider')]'.</msg>
-<status status="PASS" starttime="20221201 10:06:29.231" endtime="20221201 10:06:29.318"/>
+<msg timestamp="20230116 10:17:12.048" level="INFO">Clicking element '//span[(text() = 'Valider' or . = 'Valider')]'.</msg>
+<status status="PASS" starttime="20230116 10:17:12.047" endtime="20230116 10:17:12.192"/>
 </kw>
 <kw name="Element Should Be Enabled" library="Selenium2Library">
 <arg>${SUIVANT}</arg>
 <doc>Verifies that element identified by ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20221201 10:06:29.318" endtime="20221201 10:06:29.387"/>
+<status status="PASS" starttime="20230116 10:17:12.192" endtime="20230116 10:17:12.275"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:06:31.396" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:06:29.387" endtime="20221201 10:06:31.396"/>
+<msg timestamp="20230116 10:17:14.275" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:17:12.275" endtime="20230116 10:17:14.275"/>
 </kw>
-<status status="PASS" starttime="20221201 10:06:20.633" endtime="20221201 10:06:31.396"/>
+<status status="PASS" starttime="20230116 10:17:01.510" endtime="20230116 10:17:14.276"/>
 </kw>
 <kw name="PasserEtapeTest" library="Selection">
 <kw name="PasserEtapeSuivante" library="resources">
@@ -1051,141 +1531,42 @@
 <kw name="Click Element" library="Selenium2Library">
 <arg>${SUIVANT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221201 10:06:31.398" level="INFO">Clicking element '//button[@type = 'button' and (text() = 'Suivant' or . = 'Suivant')]'.</msg>
-<status status="PASS" starttime="20221201 10:06:31.398" endtime="20221201 10:06:31.452"/>
+<msg timestamp="20230116 10:17:14.289" level="INFO">Clicking element '//button[@type = 'button' and (text() = 'Suivant' or . = 'Suivant')]'.</msg>
+<status status="PASS" starttime="20230116 10:17:14.281" endtime="20230116 10:17:16.280"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:06:33.459" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:06:31.453" endtime="20221201 10:06:33.459"/>
+<msg timestamp="20230116 10:17:18.280" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:17:16.280" endtime="20230116 10:17:18.280"/>
 </kw>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>${elements}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221201 10:06:33.621" level="INFO">Element '//span[(text() = 'Placer l‘image dans le cadre' or . = 'Placer l‘image dans le cadre')]' is displayed.</msg>
-<status status="PASS" starttime="20221201 10:06:33.459" endtime="20221201 10:06:33.621"/>
+<msg timestamp="20230116 10:17:18.517" level="INFO">Element '//span[(text() = 'Placer l‘image dans le cadre' or . = 'Placer l‘image dans le cadre')]' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:17:18.280" endtime="20230116 10:17:18.517"/>
 </kw>
-<status status="PASS" starttime="20221201 10:06:31.397" endtime="20221201 10:06:33.621"/>
+<status status="PASS" starttime="20230116 10:17:14.280" endtime="20230116 10:17:18.517"/>
 </kw>
-<status status="PASS" starttime="20221201 10:06:31.397" endtime="20221201 10:06:33.621"/>
-</kw>
-<kw name="Initialise" library="Essais">
-<kw name="Element Should Be Disabled" library="Selenium2Library">
-<arg>${BUTON_PREVIUS}</arg>
-<doc>Verifies that element identified by ``locator`` is disabled.</doc>
-<status status="PASS" starttime="20221201 10:06:33.622" endtime="20221201 10:06:33.651"/>
-</kw>
-<kw name="Element Should Be Enabled" library="Selenium2Library">
-<arg>${BUTON_NEXT}</arg>
-<doc>Verifies that element identified by ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20221201 10:06:33.652" endtime="20221201 10:06:33.699"/>
-</kw>
-<kw name="GetNumberOfActivies" library="Essais">
-<var>${nb}</var>
-<kw name="ViewAllActivities" library="Essais">
-<kw name="Click Element" library="Selenium2Library">
-<arg>${VIEW_ALL_ACTIVITY}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221201 10:06:33.701" level="INFO">Clicking element '//div[@id="three-canvas"]/div[6]/div/div/div[3]/button'.</msg>
-<status status="PASS" starttime="20221201 10:06:33.700" endtime="20221201 10:06:33.771"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:06:35.779" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:06:33.772" endtime="20221201 10:06:35.779"/>
-</kw>
-<kw name="Element Should Be Visible" library="Selenium2Library">
-<arg>${VIEW_ALL_ACTIVITY_WINDOW}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221201 10:06:35.805" level="INFO">Element '//div/div[3]/div/div/div/div/div' is displayed.</msg>
-<status status="PASS" starttime="20221201 10:06:35.779" endtime="20221201 10:06:35.805"/>
-</kw>
-<status status="PASS" starttime="20221201 10:06:33.700" endtime="20221201 10:06:35.805"/>
-</kw>
-<kw name="GetChild" library="resources">
-<var>${Activities_List}</var>
-<arg>${ACTIVITIES_IN_GA}</arg>
-<kw name="Get WebElement" library="Selenium2Library">
-<var>${element}</var>
-<arg>${locator}</arg>
-<doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20221201 10:06:35.819" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="f27896e00f639431b74816d653f1022d", element="99589236-1f69-4a6e-9f94-829b8742dcda")&gt;</msg>
-<status status="PASS" starttime="20221201 10:06:35.806" endtime="20221201 10:06:35.819"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<var>${children}</var>
-<arg>${element}</arg>
-<arg>find_elements</arg>
-<arg>by=xpath</arg>
-<arg>value=child::*</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<msg timestamp="20221201 10:06:35.833" level="INFO">${children} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="f27896e00f639431b74816d653f1022d", element="7a343615-78d4-4c64-a40d-f987e46d0cd4")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
-<status status="PASS" starttime="20221201 10:06:35.820" endtime="20221201 10:06:35.833"/>
-</kw>
-<kw name="Get Length" library="BuiltIn">
-<var>${return}</var>
-<arg>${children}</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20221201 10:06:35.834" level="INFO">Length is 3</msg>
-<msg timestamp="20221201 10:06:35.834" level="INFO">${return} = 3</msg>
-<status status="PASS" starttime="20221201 10:06:35.833" endtime="20221201 10:06:35.834"/>
-</kw>
-<msg timestamp="20221201 10:06:35.834" level="INFO">${Activities_List} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="f27896e00f639431b74816d653f1022d", element="7a343615-78d4-4c64-a40d-f987e46d0cd4")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
-<status status="PASS" starttime="20221201 10:06:35.806" endtime="20221201 10:06:35.834"/>
-</kw>
-<kw name="Get Length" library="BuiltIn">
-<var>${nb}</var>
-<arg>${Activities_List}</arg>
-<doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20221201 10:06:35.835" level="INFO">Length is 3</msg>
-<msg timestamp="20221201 10:06:35.835" level="INFO">${nb} = 3</msg>
-<status status="PASS" starttime="20221201 10:06:35.834" endtime="20221201 10:06:35.835"/>
-</kw>
-<kw name="CloseViewAllActivitiesWindow" library="Essais">
-<kw name="Click Element" library="Selenium2Library">
-<arg>${CLOSE_VIEW_ACTIVITIES_BUTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221201 10:06:35.836" level="INFO">Clicking element '//div[3]/div/div/div[1]/div/button/span'.</msg>
-<status status="PASS" starttime="20221201 10:06:35.835" endtime="20221201 10:06:35.889"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:06:37.896" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:06:35.889" endtime="20221201 10:06:37.896"/>
-</kw>
-<kw name="Element Should Be Visible" library="Selenium2Library">
-<arg>${TEST_WINDOW}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221201 10:06:37.918" level="INFO">Element '//span[(text() = 'Placer l‘image dans le cadre' or . = 'Placer l‘image dans le cadre')]' is displayed.</msg>
-<status status="PASS" starttime="20221201 10:06:37.896" endtime="20221201 10:06:37.919"/>
-</kw>
-<status status="PASS" starttime="20221201 10:06:35.835" endtime="20221201 10:06:37.919"/>
-</kw>
-<msg timestamp="20221201 10:06:37.919" level="INFO">${nb} = 3</msg>
-<status status="PASS" starttime="20221201 10:06:33.699" endtime="20221201 10:06:37.919"/>
-</kw>
-<status status="PASS" starttime="20221201 10:06:33.622" endtime="20221201 10:06:37.919"/>
+<status status="PASS" starttime="20230116 10:17:14.279" endtime="20230116 10:17:18.518"/>
 </kw>
 <kw name="NextActivity" library="Essais">
 <kw name="Click Element" library="Selenium2Library">
 <arg>${BUTON_NEXT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221201 10:06:37.923" level="INFO">Clicking element '//div[@id='three-canvas']/div[6]/div/div/div[2]/button'.</msg>
-<status status="PASS" starttime="20221201 10:06:37.922" endtime="20221201 10:06:37.978"/>
+<msg timestamp="20230116 10:17:18.530" level="INFO">Clicking element '//div[@id='three-canvas']/div[6]/div/div/div[2]/button'.</msg>
+<status status="PASS" starttime="20230116 10:17:18.529" endtime="20230116 10:17:19.038"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:06:39.988" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:06:37.978" endtime="20221201 10:06:39.988"/>
+<msg timestamp="20230116 10:17:21.039" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:17:19.039" endtime="20230116 10:17:21.039"/>
 </kw>
 <kw name="Element Should Be Enabled" library="Selenium2Library">
 <arg>${BUTON_PREVIUS}</arg>
 <doc>Verifies that element identified by ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20221201 10:06:39.988" endtime="20221201 10:06:40.023"/>
+<status status="PASS" starttime="20230116 10:17:21.039" endtime="20230116 10:17:21.279"/>
 </kw>
 <kw name="GetNumberOfActivies" library="Essais">
 <var>${nb}</var>
@@ -1193,22 +1574,22 @@
 <kw name="Click Element" library="Selenium2Library">
 <arg>${VIEW_ALL_ACTIVITY}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221201 10:06:40.026" level="INFO">Clicking element '//div[@id="three-canvas"]/div[6]/div/div/div[3]/button'.</msg>
-<status status="PASS" starttime="20221201 10:06:40.025" endtime="20221201 10:06:40.081"/>
+<msg timestamp="20230116 10:17:21.281" level="INFO">Clicking element '//div[@id="three-canvas"]/div[6]/div/div/div[3]/button'.</msg>
+<status status="PASS" starttime="20230116 10:17:21.280" endtime="20230116 10:17:22.948"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
+<arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:06:42.085" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:06:40.082" endtime="20221201 10:06:42.085"/>
+<msg timestamp="20230116 10:17:27.949" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230116 10:17:22.948" endtime="20230116 10:17:27.949"/>
 </kw>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>${VIEW_ALL_ACTIVITY_WINDOW}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221201 10:06:42.132" level="INFO">Element '//div/div[3]/div/div/div/div/div' is displayed.</msg>
-<status status="PASS" starttime="20221201 10:06:42.085" endtime="20221201 10:06:42.132"/>
+<msg timestamp="20230116 10:17:28.005" level="INFO">Element '//div/div[3]/div/div/div/div/div' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:17:27.949" endtime="20230116 10:17:28.005"/>
 </kw>
-<status status="PASS" starttime="20221201 10:06:40.024" endtime="20221201 10:06:42.132"/>
+<status status="PASS" starttime="20230116 10:17:21.280" endtime="20230116 10:17:28.005"/>
 </kw>
 <kw name="GetChild" library="resources">
 <var>${Activities_List}</var>
@@ -1217,8 +1598,8 @@
 <var>${element}</var>
 <arg>${locator}</arg>
 <doc>Returns the first WebElement matching the given ``locator``.</doc>
-<msg timestamp="20221201 10:06:42.146" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="f27896e00f639431b74816d653f1022d", element="99589236-1f69-4a6e-9f94-829b8742dcda")&gt;</msg>
-<status status="PASS" starttime="20221201 10:06:42.133" endtime="20221201 10:06:42.146"/>
+<msg timestamp="20230116 10:17:28.042" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="084db3c9a4bfa9ed477fca97487b8a12", element="7ae9b030-b64a-4aac-abcf-0c36ea63a102")&gt;</msg>
+<status status="PASS" starttime="20230116 10:17:28.006" endtime="20230116 10:17:28.043"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <var>${children}</var>
@@ -1227,108 +1608,114 @@
 <arg>by=xpath</arg>
 <arg>value=child::*</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<msg timestamp="20221201 10:06:42.160" level="INFO">${children} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="f27896e00f639431b74816d653f1022d", element="7a343615-78d4-4c64-a40d-f987e46d0cd4")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
-<status status="PASS" starttime="20221201 10:06:42.146" endtime="20221201 10:06:42.160"/>
+<msg timestamp="20230116 10:17:28.089" level="INFO">${children} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="084db3c9a4bfa9ed477fca97487b8a12", element="38860f0a-2ca3-4520-a12b-bf655fe33d0c")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20230116 10:17:28.043" endtime="20230116 10:17:28.089"/>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <var>${return}</var>
 <arg>${children}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20221201 10:06:42.161" level="INFO">Length is 3</msg>
-<msg timestamp="20221201 10:06:42.161" level="INFO">${return} = 3</msg>
-<status status="PASS" starttime="20221201 10:06:42.160" endtime="20221201 10:06:42.161"/>
+<msg timestamp="20230116 10:17:28.090" level="INFO">Length is 4</msg>
+<msg timestamp="20230116 10:17:28.090" level="INFO">${return} = 4</msg>
+<status status="PASS" starttime="20230116 10:17:28.089" endtime="20230116 10:17:28.090"/>
 </kw>
-<msg timestamp="20221201 10:06:42.162" level="INFO">${Activities_List} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="f27896e00f639431b74816d653f1022d", element="7a343615-78d4-4c64-a40d-f987e46d0cd4")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
-<status status="PASS" starttime="20221201 10:06:42.133" endtime="20221201 10:06:42.162"/>
+<msg timestamp="20230116 10:17:28.090" level="INFO">${Activities_List} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="084db3c9a4bfa9ed477fca97487b8a12", element="38860f0a-2ca3-4520-a12b-bf655fe33d0c")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (sessi...</msg>
+<status status="PASS" starttime="20230116 10:17:28.006" endtime="20230116 10:17:28.090"/>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <var>${nb}</var>
 <arg>${Activities_List}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20221201 10:06:42.163" level="INFO">Length is 3</msg>
-<msg timestamp="20221201 10:06:42.163" level="INFO">${nb} = 3</msg>
-<status status="PASS" starttime="20221201 10:06:42.162" endtime="20221201 10:06:42.163"/>
+<msg timestamp="20230116 10:17:28.091" level="INFO">Length is 4</msg>
+<msg timestamp="20230116 10:17:28.091" level="INFO">${nb} = 4</msg>
+<status status="PASS" starttime="20230116 10:17:28.090" endtime="20230116 10:17:28.091"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230116 10:17:30.092" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:17:28.091" endtime="20230116 10:17:30.092"/>
 </kw>
 <kw name="CloseViewAllActivitiesWindow" library="Essais">
 <kw name="Click Element" library="Selenium2Library">
 <arg>${CLOSE_VIEW_ACTIVITIES_BUTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221201 10:06:42.164" level="INFO">Clicking element '//div[3]/div/div/div[1]/div/button/span'.</msg>
-<status status="PASS" starttime="20221201 10:06:42.163" endtime="20221201 10:06:42.353"/>
+<msg timestamp="20230116 10:17:30.093" level="INFO">Clicking element '//div[3]/div/div/div[1]/div/button'.</msg>
+<status status="PASS" starttime="20230116 10:17:30.092" endtime="20230116 10:17:30.225"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:06:44.366" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:06:42.353" endtime="20221201 10:06:44.366"/>
+<msg timestamp="20230116 10:17:32.227" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:17:30.225" endtime="20230116 10:17:32.227"/>
 </kw>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>${TEST_WINDOW}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221201 10:06:44.389" level="INFO">Element '//span[(text() = 'Placer l‘image dans le cadre' or . = 'Placer l‘image dans le cadre')]' is displayed.</msg>
-<status status="PASS" starttime="20221201 10:06:44.366" endtime="20221201 10:06:44.389"/>
+<msg timestamp="20230116 10:17:32.251" level="INFO">Element '//span[(text() = 'Placer l‘image dans le cadre' or . = 'Placer l‘image dans le cadre')]' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:17:32.227" endtime="20230116 10:17:32.252"/>
 </kw>
-<status status="PASS" starttime="20221201 10:06:42.163" endtime="20221201 10:06:44.389"/>
+<status status="PASS" starttime="20230116 10:17:30.092" endtime="20230116 10:17:32.252"/>
 </kw>
-<msg timestamp="20221201 10:06:44.389" level="INFO">${nb} = 3</msg>
-<status status="PASS" starttime="20221201 10:06:40.023" endtime="20221201 10:06:44.389"/>
+<msg timestamp="20230116 10:17:32.253" level="INFO">${nb} = 4</msg>
+<status status="PASS" starttime="20230116 10:17:21.279" endtime="20230116 10:17:32.253"/>
 </kw>
 <if>
 <branch type="IF" condition="${nb} == 2">
 <kw name="Element Should Be Disabled" library="Selenium2Library">
 <arg>${BUTON_NEXT}</arg>
 <doc>Verifies that element identified by ``locator`` is disabled.</doc>
-<status status="NOT RUN" starttime="20221201 10:06:44.390" endtime="20221201 10:06:44.390"/>
+<status status="NOT RUN" starttime="20230116 10:17:32.254" endtime="20230116 10:17:32.254"/>
 </kw>
-<status status="NOT RUN" starttime="20221201 10:06:44.389" endtime="20221201 10:06:44.390"/>
+<status status="NOT RUN" starttime="20230116 10:17:32.253" endtime="20230116 10:17:32.254"/>
 </branch>
-<status status="PASS" starttime="20221201 10:06:44.389" endtime="20221201 10:06:44.390"/>
+<status status="PASS" starttime="20230116 10:17:32.253" endtime="20230116 10:17:32.254"/>
 </if>
-<status status="PASS" starttime="20221201 10:06:37.921" endtime="20221201 10:06:44.390"/>
+<status status="PASS" starttime="20230116 10:17:18.527" endtime="20230116 10:17:32.254"/>
 </kw>
 <kw name="PrevousActivity" library="Essais">
 <kw name="Click Element" library="Selenium2Library">
 <arg>${BUTON_PREVIUS}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221201 10:06:44.392" level="INFO">Clicking element '//div[@id="three-canvas"]/div[6]/div/div/div[1]/button'.</msg>
-<status status="PASS" starttime="20221201 10:06:44.391" endtime="20221201 10:06:44.447"/>
+<msg timestamp="20230116 10:17:32.257" level="INFO">Clicking element '//div[@id="three-canvas"]/div[6]/div/div/div[1]/button'.</msg>
+<status status="PASS" starttime="20230116 10:17:32.256" endtime="20230116 10:17:32.350"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:06:46.460" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:06:44.447" endtime="20221201 10:06:46.460"/>
+<msg timestamp="20230116 10:17:34.351" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230116 10:17:32.350" endtime="20230116 10:17:34.351"/>
 </kw>
-<status status="PASS" starttime="20221201 10:06:44.391" endtime="20221201 10:06:46.460"/>
+<status status="PASS" starttime="20230116 10:17:32.256" endtime="20230116 10:17:34.351"/>
 </kw>
 <kw name="ViewAllActivities" library="Essais">
 <kw name="Click Element" library="Selenium2Library">
 <arg>${VIEW_ALL_ACTIVITY}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221201 10:06:46.462" level="INFO">Clicking element '//div[@id="three-canvas"]/div[6]/div/div/div[3]/button'.</msg>
-<status status="PASS" starttime="20221201 10:06:46.461" endtime="20221201 10:06:46.517"/>
+<msg timestamp="20230116 10:17:34.353" level="INFO">Clicking element '//div[@id="three-canvas"]/div[6]/div/div/div[3]/button'.</msg>
+<status status="PASS" starttime="20230116 10:17:34.352" endtime="20230116 10:17:34.504"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
+<arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20221201 10:06:48.533" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20221201 10:06:46.517" endtime="20221201 10:06:48.533"/>
+<msg timestamp="20230116 10:17:39.506" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230116 10:17:34.504" endtime="20230116 10:17:39.506"/>
 </kw>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>${VIEW_ALL_ACTIVITY_WINDOW}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221201 10:06:48.555" level="INFO">Element '//div/div[3]/div/div/div/div/div' is displayed.</msg>
-<status status="PASS" starttime="20221201 10:06:48.533" endtime="20221201 10:06:48.555"/>
+<msg timestamp="20230116 10:17:39.528" level="INFO">Element '//div/div[3]/div/div/div/div/div' is displayed.</msg>
+<status status="PASS" starttime="20230116 10:17:39.506" endtime="20230116 10:17:39.528"/>
 </kw>
-<status status="PASS" starttime="20221201 10:06:46.461" endtime="20221201 10:06:48.555"/>
+<status status="PASS" starttime="20230116 10:17:34.352" endtime="20230116 10:17:39.528"/>
 </kw>
 <kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221201 10:06:48.557" endtime="20221201 10:06:51.992"/>
+<status status="PASS" starttime="20230116 10:17:39.529" endtime="20230116 10:18:02.948"/>
 </kw>
-<status status="PASS" starttime="20221201 10:05:23.935" endtime="20221201 10:06:51.993"/>
+<status status="PASS" starttime="20230116 10:14:55.779" endtime="20230116 10:18:02.948"/>
 </test>
-<status status="PASS" starttime="20221201 10:05:23.492" endtime="20221201 10:06:51.994"/>
+<status status="PASS" starttime="20230116 10:14:55.372" endtime="20230116 10:18:02.951"/>
 </suite>
 <statistics>
 <total>

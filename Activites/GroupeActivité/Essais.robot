@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       La liste des Différents pas de test
 
-Resource            ../../Import.robot
+Resource            ../../resource/Import.robot
 
 *** Keywords ***
 NextActivity
@@ -19,7 +19,7 @@ PrevousActivity
 
 ViewAllActivities
     Click Element               ${VIEW_ALL_ACTIVITY}
-    Sleep                       2
+    Sleep                       5
     Element Should Be Visible   ${VIEW_ALL_ACTIVITY_WINDOW}
 
 CloseViewAllActivitiesWindow
@@ -36,5 +36,6 @@ GetNumberOfActivies
     ViewAllActivities
     ${Activities_List}=         GetChild    ${ACTIVITIES_IN_GA}
     ${nb}=                      Get Length  ${Activities_List}
+    Sleep                       2
     CloseViewAllActivitiesWindow
     [Return]                    ${nb}
