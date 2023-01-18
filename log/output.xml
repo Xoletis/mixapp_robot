@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.0 on win32)" generated="20230118 09:24:56.086" rpa="false" schemaversion="3">
+<suite id="s1" name="01" source="C:\Users\Admin\Desktop\Scrum\mixapp_robot\01\01.robot">
+<test id="s1-t1" name="01.06" line="59">
+<kw name="Log" library="BuiltIn">
+<arg>Importer des données avec un code non valide</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230118 09:24:57.182" level="INFO">Importer des données avec un code non valide</msg>
+<status status="PASS" starttime="20230118 09:24:57.181" endtime="20230118 09:24:57.184"/>
+</kw>
+<kw name="OpenWithChrome" library="resources">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>modules=sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230118 09:24:57.185" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000020C6A56ED10&gt;</msg>
+<status status="PASS" starttime="20230118 09:24:57.185" endtime="20230118 09:24:57.186"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--use-fake-ui-for-media-stream</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20230118 09:24:57.186" endtime="20230118 09:24:57.186"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--auto-select-desktop-capture-source</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20230118 09:24:57.187" endtime="20230118 09:24:57.188"/>
+</kw>
+<kw name="OpenMixap" library="resources">
+<arg>Chrome</arg>
+<arg>${options}</arg>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${WELCOMEPAGE_URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230118 09:24:57.192" level="INFO">Opening browser 'Chrome' to base url 'https://mixap-dev.surge.sh/'.</msg>
+<status status="PASS" starttime="20230118 09:24:57.190" endtime="20230118 09:25:26.091"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230118 09:25:26.092" endtime="20230118 09:25:26.213"/>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230118 09:25:26.213" endtime="20230118 09:25:26.213"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${LOGO_XPATH}</arg>
+<arg>100000</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230118 09:25:26.214" endtime="20230118 09:25:27.412"/>
+</kw>
+<kw name="WelcomePageShouldBeOpen" library="resources">
+<kw name="Title Should Be" library="Selenium2Library">
+<arg>${TITLE}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230118 09:25:27.418" level="INFO">Page title is 'MIXAP'.</msg>
+<status status="PASS" starttime="20230118 09:25:27.412" endtime="20230118 09:25:27.418"/>
+</kw>
+<status status="PASS" starttime="20230118 09:25:27.412" endtime="20230118 09:25:27.418"/>
+</kw>
+<status status="PASS" starttime="20230118 09:24:57.188" endtime="20230118 09:25:27.418"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230118 09:25:29.419" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230118 09:25:27.418" endtime="20230118 09:25:29.419"/>
+</kw>
+<status status="PASS" starttime="20230118 09:24:57.184" endtime="20230118 09:25:29.419"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${SYNC_DATA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230118 09:25:29.420" level="INFO">Clicking element 'xpath:(//button[@type='button'])[2]'.</msg>
+<status status="PASS" starttime="20230118 09:25:29.419" endtime="20230118 09:25:29.563"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230118 09:25:31.564" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230118 09:25:29.563" endtime="20230118 09:25:31.564"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${SYNC_INFORMATION}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230118 09:25:31.591" level="INFO">Element 'xpath://*/text()[normalize-space(.)='Rien à synchroniser !']/parent::*' is displayed.</msg>
+<status status="PASS" starttime="20230118 09:25:31.564" endtime="20230118 09:25:31.592"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230118 09:25:31.592" endtime="20230118 09:25:56.006"/>
+</kw>
+<status status="PASS" starttime="20230118 09:24:57.180" endtime="20230118 09:25:56.006"/>
+</test>
+<doc>Menu Principal</doc>
+<status status="PASS" starttime="20230118 09:24:56.112" endtime="20230118 09:25:56.007"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="01">01</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

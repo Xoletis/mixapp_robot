@@ -4,6 +4,24 @@ Resource            resource/Import.robot
 Test Teardown    Close Browser
 *** Test Cases ***
 
-ConnexionChrome
-    OpenWebSiteChrome
-    ShowMainMenu
+TestOneActivities
+    CreateAugmenterUneImageActivity
+    GoBackToMainPageWithBrowserBack
+
+# CreateAllActivie
+#     OpenWebSiteChrome
+#     ShowMainMenu
+#     CreateAllActivies
+#     CreateGroupeActivite
+#     AfficherCreationStageGA
+#     ModifyTitle
+#     ModifyDesc
+#     PasserEtapeSelection
+#     AfficherCreationStageGA
+#     AddOneActivityInGroupeActivite
+#     AddAllActivityInGroupeActivite
+#     PasserEtapeTest
+#     NextActivity
+#     PrevousActivity
+#     ViewAllActivities
+

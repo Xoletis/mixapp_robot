@@ -19,6 +19,7 @@ ${TITLE}                        MIXAP
 ${IMPORT_DATA}                  xpath://*[@id="root"]/div/div[1]/div/div[1]/span/div/div[1]/button
 ${IMPORT_DATA_INPUT_TEXT}       xpath:/html/body/div[2]/div/div/div/div[2]/div[2]/div/div[1]/input
 ${IMPORT_DATA_BUTTON}           xpath:/html/body/div[2]/div/div/div/div[2]/div[2]/div/div[2]/button
+${SYNC_DATA}                    xpath:(//button[@type='button'])[2]
 ${ADD_ACTIVITY}                 xpath://*[@id="root"]/div/div[2]/div/div[1]/div/div/button
 ${ADD_ACTIVITY_2}               xpath://*[@id="rc-tabs-3-panel-1"]/div/div[1]/div/div/button
 ${AUGMENTER_UNE_IMAGE}          xpath:/html/body/div[2]/div/div[2]/div/div[2]/div[2]/div/div[1]/div[1]
@@ -46,6 +47,7 @@ ${CLOSE_VIEW_ACTIVITIES_BUTON}  //div[3]/div/div/div[1]/div/button
 
 #Element Html
 ${LOGO_XPATH}                   xpath://*[@id="root"]/div/div[1]/div/div[1]/div/span/span/img
+${CODE_IMPORT_WINDOW}           xpath:(.//*[normalize-space(text()) and normalize-space(.)='Activité'])[1]/following::div[9]
 ${SUIVI_APPRENANTS}             xpath://*[@id="rc-tabs-0-panel-2"]
 ${MON_CONTENU}                  xpath://*[@id="rc-tabs-0-panel-1"]
 ${CARDS}                        xpath://*[@id="root"]/div/div[2]/div
@@ -64,12 +66,21 @@ ${ADD_ACTIVITY_GA_WINDOW}       xpath:(.//*[normalize-space(text()) and normaliz
 ${TEST_WINDOW}                  //span[(text() = 'Placer l‘image dans le cadre' or . = 'Placer l‘image dans le cadre')]
 ${VIEW_ALL_ACTIVITY_WINDOW}     //div/div[3]/div/div/div/div/div
 ${ACTIVITIES_IN_GA}             //div[3]/div/div/div[2]/div/div/div
+${IMPORT_INFORMATION}           xpath:(.//*[normalize-space(text()) and normalize-space(.)='Valider'])[1]/following::div[4]
+${SYNC_INFORMATION}             xpath://*/text()[normalize-space(.)='Rien à synchroniser !']/parent::*
 
 #Autre
 ${CODE_IMPORT}                  5eda26
 ${TITRE}                        TitreTest
 ${DESCRIPTION}                  Ceci est une description
 *** Keywords ***
+
+OpenWithChrome
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()   modules=sys      # EdgeOptions() à changer en fonction du navigateur
+    Call Method    ${options}    add_argument    --use-fake-ui-for-media-stream           # Évite d'avoir à accorder des autorisations pour les caméras et les microphones.
+    Call Method    ${options}    add_argument    --auto-select-desktop-capture-source     # Sélectionne automatiquement une source de média (en général la webcam)
+    OpenMixap      Chrome          ${options}
+    Sleep          2
 
 OpenMixap
     [Arguments]                     ${BROWSER}              ${options}
@@ -108,7 +119,7 @@ ChekIfDisplayNone
 
 CreateActivity
     [Arguments]         ${Activity}
-    OpenAddActivityWindow
+    #OpenAddActivityWindow
     ClickElement    ${Activity}
     Sleep           2
 
@@ -140,3 +151,8 @@ PasserEtapeSuivante
     Click Element               ${SUIVANT}
     Sleep                       2
     Element Should Be Visible   ${elements}
+
+OpenImportWindow
+    ClickWindow                     ${IMPORT_DATA}
+    Sleep                           2
+    Element Should Be Visible       ${CODE_IMPORT_WINDOW}

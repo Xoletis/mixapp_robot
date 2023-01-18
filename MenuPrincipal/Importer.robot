@@ -5,16 +5,13 @@ Resource            ../resource/Import.robot
 
 
 *** Keywords ***
-OpenImportWindow
-    ClickWindow                    ${IMPORT_DATA}
-    Sleep                           2
 
 Click
     ClickElement                   ${LOGO_XPATH}
     Sleep                           2
 
 CloseImportWindowWithText
-    ${txt} =                        String.generate random string   3
+    ${txt} =                        String.generate random string   4
     EnterText                       ${IMPORT_DATA_INPUT_TEXT}       ${txt}
     Click
     OpenImportWindow
