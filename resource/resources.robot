@@ -70,6 +70,10 @@ ${ACTIVITIES_IN_GA}             //div[3]/div/div/div[2]/div/div/div
 ${IMPORT_INFORMATION}           xpath:(.//*[normalize-space(text()) and normalize-space(.)='Valider'])[1]/following::div[4]
 ${SYNC_INFORMATION}             xpath://*/text()[normalize-space(.)='Rien à synchroniser !']/parent::*
 ${DASHBORD_WINDOW}              xpath://*[@id="root"]/div/div[2]/div/div[1]/div[1]
+#Ajout
+${ETAPE_NOMMAGE}                  xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[1]
+${BOUTON_CONSIGNE_MODIFIER}       //*[@id="board-content"]/div/div/div/div[2]/div/div[2]/span/div/span/svg
+${CONSIGNE}                       Ceci est une consigne
 
 #Autre
 ${CODE_IMPORT}                  5eda26
