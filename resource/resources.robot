@@ -14,6 +14,7 @@ Resource        Import.robot
 ${WELCOMEPAGE_URL}              https://mixap-dev.surge.sh/
 ${DELAY}                        0
 ${TITLE}                        MIXAP
+${PAUSE}                        2
 
 #Boutton
 ${IMPORT_DATA}                  xpath://*[@id="root"]/div/div[1]/div/div[1]/span/div/div[1]/button
@@ -68,6 +69,7 @@ ${VIEW_ALL_ACTIVITY_WINDOW}     //div/div[3]/div/div/div/div/div
 ${ACTIVITIES_IN_GA}             //div[3]/div/div/div[2]/div/div/div
 ${IMPORT_INFORMATION}           xpath:(.//*[normalize-space(text()) and normalize-space(.)='Valider'])[1]/following::div[4]
 ${SYNC_INFORMATION}             xpath://*/text()[normalize-space(.)='Rien à synchroniser !']/parent::*
+${DASHBORD_WINDOW}              xpath://*[@id="root"]/div/div[2]/div/div[1]/div[1]
 
 #Autre
 ${CODE_IMPORT}                  5eda26

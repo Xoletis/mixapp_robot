@@ -57,8 +57,51 @@ Test Teardown    Close Browser
 
 
 01.06
-    Log                             Importer des données avec un code non valide
+    Log                             Synchroniser ses données /!\ A Modifier /!\
+    OpenWithChrome
+    Click Element                   ${ADD_ACTIVITY}
+    CreateActivity                  ${AUGMENTER_UNE_IMAGE}
+    ReturnMainPage
+    Sleep                           2
+    Click Element                   ${SYNC_DATA}
+    Sleep                           2
+    Element Should Be Visible       ${SYNC_INFORMATION}
+
+01.07
+    Log                             Synchroniser ses données (vides)
     OpenWithChrome
     Click Element                   ${SYNC_DATA}
     Sleep                           2
     Element Should Be Visible       ${SYNC_INFORMATION}
+
+01.08
+    Log                             Ouverture du menu "Tableau de Bord"
+    OpenWithChrome
+    Click Element                   ${DASHBORD_BUTTON}
+    Sleep                           ${PAUSE}
+    Element Should Be Visible       ${DASHBORD_WINDOW}
+
+01.09
+    Log                              Ouverture du menu "Suivi d'Apprenants"
+    OpenWithChrome
+    Click Element                    ${DASHBORD_BUTTON}
+    Sleep                            ${PAUSE}
+    Click Element                    ${SUIVI_APPRENANTS_BUTTON}
+    Sleep                            ${PAUSE}
+    Element Should Be Visible        ${SUIVI_APPRENANTS}
+
+01.10
+    Log                              Ouverture du menu "Mon Contenu"
+    OpenWithChrome
+    Click Element                    ${DASHBORD_BUTTON}
+    Sleep                            ${PAUSE}
+    Click Element                    ${MON_CONTENU_BUTTON}
+    Sleep                            ${PAUSE}
+    Element Should Be Visible        ${MON_CONTENU}
+
+01.11
+    Log                              Ouvrir le menu "Ajouter Activité"
+    OpenWithChrome
+    Click Element                    ${ADD_ACTIVITY}
+    Sleep                            ${PAUSE}
+    Element Should Be Visible        ${ADD_ACTIVITY_TXT}
