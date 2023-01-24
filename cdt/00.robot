@@ -8,3 +8,8 @@ Test Teardown    Close Browser
 00.01.01
     Log            "Connexion au site web sur Chrome"
     OpenWithChrome
+
+00.03
+    Log                "Afficher menu principal"
+    OpenWithChrome
+    Element Should Be Visible       ${LOGO_XPATH}

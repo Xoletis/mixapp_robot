@@ -25,7 +25,10 @@ ${ADD_ACTIVITY}                 xpath://*[@id="root"]/div/div[2]/div/div[1]/div/
 ${ADD_ACTIVITY_2}               xpath://*[@id="rc-tabs-3-panel-1"]/div/div[1]/div/div/button
 ${AUGMENTER_UNE_IMAGE}          xpath:/html/body/div[2]/div/div[2]/div/div[2]/div[2]/div/div[1]/div[1]
 ${VALIDER_UNE_IMAGE}            xpath:(//img[@alt='example'])[2]
+${ASSOSIER_DEUX_IMAGES}         xpath:(//img[@alt='example'])[3]
+${SUPERPOSER_DEUX_CALQUES}         xpath:(//img[@alt='example'])[4]
 ${GROUPE_ACTIVITE}              xpath:(//img[@alt='example'])[5]
+${PARCOUR_ACTIVITE}              xpath:(//img[@alt='example'])[6]
 ${DASHBORD_BUTTON}              xpath://*[@id="root"]/div/div[1]/div/div/span/div/div[3]/button
 ${SUIVI_APPRENANTS_BUTTON}      xpath://*[@id="rc-tabs-0-tab-2"]/h4
 ${MON_CONTENU_BUTTON}           xpath://*[@id="rc-tabs-0-tab-1"]/h4
@@ -70,6 +73,11 @@ ${ACTIVITIES_IN_GA}             //div[3]/div/div/div[2]/div/div/div
 ${IMPORT_INFORMATION}           xpath:(.//*[normalize-space(text()) and normalize-space(.)='Valider'])[1]/following::div[4]
 ${SYNC_INFORMATION}             xpath://*/text()[normalize-space(.)='Rien à synchroniser !']/parent::*
 ${DASHBORD_WINDOW}              xpath://*[@id="root"]/div/div[2]/div/div[1]/div[1]
+${PREMIER_ACTIVITE}             xpath://div[@id='root']/div/div[2]/div/div[2]/div[2]/div/div/div/div
+${CREATE_ACTIVITY_BORDER}       xpath:/html/body/div[2]/div/div[2]
+${ACTIVITE_PARENT}              xpath://*[@id="root"]/div/div[2]/div
+${MORE_OPTION_WINDOW}           xpath:/html/body/div[2]/div/div
+
 #Ajout
 ${ETAPE_NOMMAGE}                  xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[1]
 ${BOUTON_CONSIGNE_MODIFIER}       //*[@id="board-content"]/div/div/div/div[2]/div/div[2]/span/div/span/svg
@@ -130,10 +138,10 @@ CreateActivity
     Sleep           2
 
 ReturnMainPage
-    Go To       ${WELCOMEPAGE_URL}
-    Sleep       2
+    Go To                           ${WELCOMEPAGE_URL}
+    Wait Until Element Is Visible   ${LOGO_XPATH}        100000
 
-GetChild
+GetChildNb
     [Arguments]    ${locator}
 
     ${element}    Get WebElement    ${locator}
@@ -143,7 +151,7 @@ GetChild
     ...                  by=xpath    value=child::*
 
     ${return}=        Get Length    ${children}
-    [Return]          ${children}
+    [Return]          ${return}
 
 
 AfficherCreationStage
@@ -162,3 +170,13 @@ OpenImportWindow
     ClickWindow                     ${IMPORT_DATA}
     Sleep                           2
     Element Should Be Visible       ${CODE_IMPORT_WINDOW}
+
+CreateAllActivies
+    FOR    ${i}    IN RANGE   4
+        Click Element                    ${ADD_ACTIVITY}
+        Sleep                            1
+        CreateActivity                   xpath:(//img[@alt='example'])[${i+1}]
+        ReturnMainPage
+    END
+
+#Hello World        custom_keyword
