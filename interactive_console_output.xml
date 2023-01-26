@@ -1,55 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20230119 10:47:02.605" rpa="false" schemaversion="3">
-<suite id="s1" name="Robot Interactive Console" source="c:\Users\Admin\.vscode\extensions\robocorp.robotframework-lsp-1.7.3\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20230125 16:29:55.477" rpa="false" schemaversion="3">
+<suite id="s1" name="Robot Interactive Console" source="c:\Users\Admin\.vscode\extensions\robocorp.robotframework-lsp-1.8.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
 <test id="s1-t1" name="Default Task/Test" line="5">
 <kw name="Interpreter Main Loop" library="MainLoop">
 <kw name="Log" library="BuiltIn">
-<arg>Consulter l'activité</arg>
+<arg>Retourner au menu principal via le bouton retour arrière du navigateur</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" starttime="20230119 10:47:09.458" endtime="20230119 10:47:09.459"/>
+<status status="PASS" starttime="20230125 16:29:59.669" endtime="20230125 16:29:59.670"/>
 </kw>
 <kw name="OpenWithChrome">
-<msg timestamp="20230119 10:47:09.471" level="FAIL">No keyword with name 'OpenWithChrome' found.</msg>
-<status status="FAIL" starttime="20230119 10:47:09.470" endtime="20230119 10:47:09.471"/>
+<msg timestamp="20230125 16:29:59.677" level="FAIL">No keyword with name 'OpenWithChrome' found.</msg>
+<status status="FAIL" starttime="20230125 16:29:59.677" endtime="20230125 16:29:59.677"/>
 </kw>
-<kw name="CreateAllActivies">
-<status status="NOT RUN" starttime="20230119 10:47:09.486" endtime="20230119 10:47:09.487"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20230119 10:47:09.487" endtime="20230119 10:47:09.487"/>
-</kw>
-<kw name="GetChildNb">
-<var>${nbCard}</var>
-<arg>${CARDS}</arg>
-<status status="NOT RUN" starttime="20230119 10:47:09.549" endtime="20230119 10:47:09.551"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${number}</var>
-<arg>random.sample(range(2, ${nbCard+1}), 1)</arg>
-<arg>random</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" starttime="20230119 10:47:09.552" endtime="20230119 10:47:09.594"/>
-</kw>
-<kw name="ClickElement">
-<arg>xpath://div[@id='root']/div/div[2]/div/div[${number[0]}]/ul/li/span/a/button</arg>
-<status status="NOT RUN" starttime="20230119 10:47:09.638" endtime="20230119 10:47:09.639"/>
+<kw name="Click Element">
+<arg>${ADD_ACTIVITY}</arg>
+<status status="NOT RUN" starttime="20230125 16:29:59.685" endtime="20230125 16:29:59.685"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>${PAUSE}</arg>
+<arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20230119 10:47:09.639" endtime="20230119 10:47:09.641"/>
+<status status="NOT RUN" starttime="20230125 16:29:59.685" endtime="20230125 16:29:59.686"/>
+</kw>
+<kw name="Click Element">
+<arg>${AUGMENTER_UNE_IMAGE}</arg>
+<status status="NOT RUN" starttime="20230125 16:29:59.690" endtime="20230125 16:29:59.690"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230125 16:29:59.691" endtime="20230125 16:29:59.691"/>
+</kw>
+<kw name="Click Element">
+<arg>xpath:/html/body/div[1]/section/section/main/section/main/footer/div/div/button</arg>
+<status status="NOT RUN" starttime="20230125 16:29:59.695" endtime="20230125 16:29:59.695"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230125 16:29:59.696" endtime="20230125 16:29:59.696"/>
+</kw>
+<kw name="Go Back">
+<status status="NOT RUN" starttime="20230125 16:29:59.702" endtime="20230125 16:29:59.702"/>
 </kw>
 <kw name="Element Should Be Visible">
-<arg>xpath:/html/body</arg>
-<status status="NOT RUN" starttime="20230119 10:47:09.667" endtime="20230119 10:47:09.668"/>
+<arg>${LOGO_XPATH}</arg>
+<status status="NOT RUN" starttime="20230125 16:29:59.717" endtime="20230125 16:29:59.717"/>
 </kw>
-<status status="PASS" starttime="20230119 10:47:02.757" endtime="20230119 10:47:15.294"/>
+<status status="PASS" starttime="20230125 16:29:55.680" endtime="20230125 16:30:03.354"/>
 </kw>
-<status status="PASS" starttime="20230119 10:47:02.748" endtime="20230119 10:47:15.294"/>
+<status status="PASS" starttime="20230125 16:29:55.677" endtime="20230125 16:30:03.355"/>
 </test>
-<status status="PASS" starttime="20230119 10:47:02.608" endtime="20230119 10:47:15.295"/>
+<status status="PASS" starttime="20230125 16:29:55.483" endtime="20230125 16:30:03.357"/>
 </suite>
 <statistics>
 <total>

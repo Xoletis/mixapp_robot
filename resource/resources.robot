@@ -1,3 +1,5 @@
+#autor : Ivan Rocque
+
 *** Settings ***
 Documentation     A resource file with reusable keywords and variables.
 ...
@@ -113,7 +115,7 @@ ClickWindow
 
 EnterText
     [Arguments]  ${Input}   ${Text}
-    Input Text  ${Input}    ${Text}
+    SeleniumLibrary.Input Text  ${Input}    ${Text}
 
 GetInputValue
     [Arguments]         ${Input}
@@ -179,4 +181,7 @@ CreateAllActivies
         ReturnMainPage
     END
 
-#Hello World        custom_keyword
+GetImage
+    [Arguments]            ${img}
+    ${src}=                Get Element Attribute             ${img}            src
+    [Return]               ${src}

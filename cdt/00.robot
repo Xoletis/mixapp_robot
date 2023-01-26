@@ -1,3 +1,5 @@
+#autor : Ivan Rocque
+
 *** Settings ***
 Resource            ../resource/Import.robot
 

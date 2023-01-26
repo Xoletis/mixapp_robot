@@ -15,5 +15,6 @@ dependencies:
       - rpaframework==19.4.1    # https://rpaframework.org/releasenotes.html
       - robotframework-seleniumlibrary
       - robotframework-selenium2library
+      - robotframework-SikuliLibrary
 
 

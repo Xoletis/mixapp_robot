@@ -1,3 +1,5 @@
+#autor : Ivan Rocque
+
 *** Settings ***
 Resource            ../resource/Import.robot
 Documentation       Menu Principal
@@ -285,7 +287,7 @@ Test Teardown    Close Browser
     Sleep                          ${PAUSE}
     Click Element                  xpath:(.//*[normalize-space(text()) and normalize-space(.)='Copier code utilisateur'])[1]/following::*[name()='svg'][1]
     ${clipboard}=                  Get clipboard value
-    ${txt}                         Get Text            xpath:/html/body/div[2]/div/div/ul/li[2]/span/span[2]/strong
+    ${txt}                         SeleniumLibrary.Get Text            xpath:/html/body/div[2]/div/div/ul/li[2]/span/span[2]/strong
     Should Be Equal As Strings     ${clipboard}        ${txt}
 
 01.20
