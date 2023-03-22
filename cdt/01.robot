@@ -66,14 +66,14 @@ Test Teardown    Close Browser
     Sleep                           2
     Click Element                   ${SYNC_DATA}
     Sleep                           2
-    Element Should Be Visible       ${SYNC_INFORMATION}
+    Element Should Be Visible       ${SYNC_INFORMATION_POP_UP}
 
 01.07
     Log                             Synchroniser ses données (vides)
     OpenWithChrome
     Click Element                   ${SYNC_DATA}
     Sleep                           2
-    Element Should Be Visible       ${SYNC_INFORMATION}
+    Element Should Be Visible       ${SYNC_INFORMATION_POP_UP}
 
 01.08
     Log                             Ouverture du menu "Tableau de Bord"
@@ -105,7 +105,7 @@ Test Teardown    Close Browser
     OpenWithChrome
     Click Element                    ${ADD_ACTIVITY}
     Sleep                            ${PAUSE}
-    Element Should Be Visible        ${ADD_ACTIVITY_TXT}
+    Element Should Be Visible        ${ADD_ACTIVITY_BUTTON_TXT}
 
 01.12.01
     Log                              Ajouter une activité de type "Augmenter une image"
@@ -172,9 +172,9 @@ Test Teardown    Close Browser
     OpenWithChrome
     Click Element                    ${ADD_ACTIVITY}
     Sleep                            ${PAUSE}
-    Click Element                    ${CREATE_ACTIVITY_BORDER}
+    Click Element                    ${CREATE_ACTIVITY_WINDOW_BORDER}
     Sleep                            ${PAUSE}
-    Element Should Not Be Visible    ${ADD_ACTIVITY_TXT}
+    Element Should Not Be Visible    ${ADD_ACTIVITY_BUTTON_TXT}
 
 01.14
     Log                              Annuler la création d'activité en cliquant sur la croix
@@ -183,16 +183,17 @@ Test Teardown    Close Browser
     Sleep                            ${PAUSE}
     Click Element                    ${CLOSE_ADD_ACTIVITY_WINDOW}
     Sleep                            ${PAUSE}
-    Element Should Not Be Visible    ${ADD_ACTIVITY_TXT}
+    Element Should Not Be Visible    ${ADD_ACTIVITY_BUTTON_TXT}
 
 01.15
     Log                              Afficher la listes des activités créées
     OpenWithChrome
     CreateAllActivies
     Sleep                            2
-    ${nb}=                           GetChildNb         ${ACTIVITE_PARENT}
+    ${nb}=                           GetChildNb         ${ACTIVITE_GROUPE_PARENT}
     Log                              ${nb}
     FOR    ${i}    IN RANGE    ${nb}
+         #L'activité séléctioner ${i+1} doit être visible
          Element Should Be Visible        //*[@id="root"]/div/div[2]/div/div[${i+1}]
     END
 
@@ -221,6 +222,7 @@ Test Teardown    Close Browser
     Sleep                           1
     ${nbCard}=                      GetChildNb    ${CARDS}
     ${number}=                      Evaluate      random.sample(range(2, ${nbCard+1}), 1)    random
+    #Image de l'activité choisie
     ClickElement                    xpath://div[@id='root']/div/div[2]/div/div[${number[0]}]/ul/li/span/a/button
     Sleep                           ${PAUSE}
     Element Should Be Visible       xpath:/html/body
@@ -278,14 +280,14 @@ Test Teardown    Close Browser
     OpenWithChrome
     Click Element                  ${MORE_OPTION_BUTTON}
     Sleep                          ${PAUSE}
-    Element Should Be Visible      xpath:(.//*[normalize-space(text()) and normalize-space(.)='Copier code utilisateur'])[1]/following::strong[1]
+    Element Should Be Visible      ${CODE_UTILISATEUR_TXT}
 
 01.19
     Log                            Copier le code utilisateur
     OpenWithChrome
     Click Element                  ${MORE_OPTION_BUTTON}
     Sleep                          ${PAUSE}
-    Click Element                  xpath:(.//*[normalize-space(text()) and normalize-space(.)='Copier code utilisateur'])[1]/following::*[name()='svg'][1]
+    Click Element                  ${COPY_CODE_UTILISATEUR}
     ${clipboard}=                  Get clipboard value
     ${txt}                         SeleniumLibrary.Get Text            xpath:/html/body/div[2]/div/div/ul/li[2]/span/span[2]/strong
     Should Be Equal As Strings     ${clipboard}        ${txt}
@@ -295,7 +297,7 @@ Test Teardown    Close Browser
     OpenWithChrome
     Click Element                  ${MORE_OPTION_BUTTON}
     Sleep                          ${PAUSE}
-    Click Element                  xpath:(.//*[normalize-space(text()) and normalize-space(.)='Activité'])[1]/following::span[1]
+    Click Element                  ${ACTIVE_MICRO_CAMERA}
     Sleep                          1
     Element Should Be Visible      xpath:(.//*[normalize-space(text()) and normalize-space(.)='Version MIXAP v1.1.3'])[1]/following::span[2]
 

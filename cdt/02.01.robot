@@ -7,6 +7,8 @@ Test Teardown    Close Browser
 
 *** Test Cases ***
 
+#Passer à l'étape Augmentation
+#Auteur : Ibrahim
 02.01.01.01
     Log                              Passer à l'étape "Augmentation"
     OpenWithChrome
@@ -14,10 +16,12 @@ Test Teardown    Close Browser
     Sleep                            2
     Click Element                    ${AUGMENTER_UNE_IMAGE}
     Sleep                            2
-    Click Element                    xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[3]/div/div[2]
+    Click Element                    ${NEXT_WINDOW_FOR_SET_UP_ACTIVITY_BUTTON}
     Sleep                            2
-    Element Should Be Visible        xpath:/html/body/div[1]/section/section/main/section/main/div/div[2]/div/div/button[1]/span[2]
+    Element Should Be Visible        ${HEADER_IN_ACTIVITY_SET_UP}
 
+#Afficher les étapes de création
+#Auteur : Ibrahim
 02.01.01.02
     Log                              Afficher les étapes de créations
     OpenWithChrome
@@ -25,8 +29,10 @@ Test Teardown    Close Browser
     Sleep                            2
     Click Element                    ${AUGMENTER_UNE_IMAGE}
     Sleep                            2
-    Element Should Be Visible        xpath:/html/body/div[1]/section/section/main/section/main/header
+    Element Should Be Visible        ${HEADER_IN_ACTIVITY_SET_UP}
 
+#Prendre une photo
+#Auteur : Ibrahim
 02.01.01.03.01
     Log                              Prendre une photo
     OpenWithChrome
@@ -34,25 +40,29 @@ Test Teardown    Close Browser
     Sleep                            2
     Click Element                    ${AUGMENTER_UNE_IMAGE}
     Sleep                            2
-    Click Element                    xpath:/html/body/div[1]/section/section/main/section/main/footer/div/div/button
+    Click Element                    ${NEXT_WINDOW_FOR_SET_UP_ACTIVITY_BUTTON}
     Sleep                            2
-    Click Element                    xpath://div[@id='three-canvas']/div[3]/div/div
+    Click Element                    ${TAKE_PHOTO_BUTTON}
     Sleep                            2
-    Element Should Be Visible        xpath://*[@id="rc-tabs-5-panel-0"]
+    Element Should Be Visible        ${TAKE_PHOTO_WINDOW}
 
+#Choisir une photo
+#Auteur : Ibrahim
 02.01.01.03.03
-    Log                              Prendre une photo
+    Log                              Importer une photo
     OpenWithChrome
     Click Element                    ${ADD_ACTIVITY}
     Sleep                            2
     Click Element                    ${AUGMENTER_UNE_IMAGE}
     Sleep                            2
-    Click Element                    xpath:/html/body/div[1]/section/section/main/section/main/footer/div/div/button
+    Click Element                    ${TAKE_PHOTO_BUTTON}
     Sleep                            2
-    Choose File                      xpath:/html/body/div[1]/section/section/main/section/main/div/div[3]/div/div/div[3]/span/div/span            ../resource/IMM.jpg
+    Choose File                      ${IMPORT_PHOTO_BUTTON}           ../resource/IMM.jpg
     Sleep                            5
-    Element Should Be Visible        xpath://*[@id="rc-tabs-5-panel-0"]
+    Element Should Be Visible        ${TAKE_PHOTO_WINDOW}
 
+#Retourner au menu principal via le bouton retour arrière du navigateur
+#Auteur : Ibrahim
 02.01.01.06
     Log                              Retourner au menu principal via le bouton retour arrière du navigateur
     OpenWithChrome
@@ -60,11 +70,13 @@ Test Teardown    Close Browser
     Sleep                            2
     Click Element                    ${AUGMENTER_UNE_IMAGE}
     Sleep                            2
-    Click Element                    xpath:/html/body/div[1]/section/section/main/section/main/footer/div/div/button
+    Click Element                    ${NEXT_WINDOW_FOR_SET_UP_ACTIVITY_BUTTON}
     Sleep                            2
     Go Back
     Element Should Be Visible        ${LOGO_XPATH}
 
+#Retourner au menu principal via la flèche
+#Auteur : Ivan et Ibrahim
 02.01.01.07
     Log                              Retourner au menu principal via la flèche
     OpenWithChrome
@@ -72,11 +84,13 @@ Test Teardown    Close Browser
     Sleep                            2
     Click Element                    ${AUGMENTER_UNE_IMAGE}
     Sleep                            2
-    Click Element                    xpath:/html/body/div[1]/section/section/main/section/main/footer/div/div/button
+    Click Element                    ${NEXT_WINDOW_FOR_SET_UP_ACTIVITY_BUTTON}
     Sleep                            2
-    Click Element                    xpath:(.//*[normalize-space(text()) and normalize-space(.)='Visualiser l’image'])[1]/preceding::*[name()='svg'][1]
+    Click Element                    ${GO_BACK_TO_MAIN_MENU_WITH_ARROW_BUTTON}
     Element Should Be Visible        ${LOGO_XPATH}
 
+#Retourner au menu principal via le bouton menu principal
+#Auteur : Ivan et Ibrahim
 02.01.01.08
     Log                              Retourner au menu principal via le bouton menu principal
     OpenWithChrome
@@ -84,8 +98,8 @@ Test Teardown    Close Browser
     Sleep                            2
     Click Element                    ${AUGMENTER_UNE_IMAGE}
     Sleep                            2
-    Click Element                    xpath:/html/body/div[1]/section/section/main/section/main/footer/div/div/button
+    Click Element                    ${NEXT_WINDOW_FOR_SET_UP_ACTIVITY_BUTTON}
     Sleep                            2
-    Click Element                    xpath:(.//*[normalize-space(text()) and normalize-space(.)='Visualiser l’image'])[1]/following::*[name()='svg'][1]
+    Click Element                    ${GO_BACK_TO_MAIN_MENU_WITH_HOME_BUTTON}
     Element Should Be Visible        ${LOGO_XPATH}
 

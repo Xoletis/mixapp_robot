@@ -13,3 +13,6 @@ ${WELCOMEPAGE_URL}              https://mixap-dev.surge.sh/
 ${DELAY}                        0
 ${TITLE}                        MIXAP
 ${PAUSE}                        2
+${CODE_IMPORT}                  5eda26
+${TITRE}                        TitreTest
+${DESCRIPTION}                  Ceci est une description

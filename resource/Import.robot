@@ -10,5 +10,7 @@ Library             RPA.Desktop
 
 Resource            resources.robot
 Resource            Properties.robot
+Resource            ElementsInMainPage.robot
+Resource            ElementsInActivitySetUp.robot
 
 
