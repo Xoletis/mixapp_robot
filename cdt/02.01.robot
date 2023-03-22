@@ -7,7 +7,6 @@ Test Teardown    Close Browser
 
 *** Test Cases ***
 
-#Passer à l'étape Augmentation
 #Auteur : Ibrahim
 02.01.01.01
     Log                              Passer à l'étape "Augmentation"
@@ -20,7 +19,6 @@ Test Teardown    Close Browser
     Sleep                            2
     Element Should Be Visible        ${HEADER_IN_ACTIVITY_SET_UP}
 
-#Afficher les étapes de création
 #Auteur : Ibrahim
 02.01.01.02
     Log                              Afficher les étapes de créations
@@ -31,7 +29,6 @@ Test Teardown    Close Browser
     Sleep                            2
     Element Should Be Visible        ${HEADER_IN_ACTIVITY_SET_UP}
 
-#Prendre une photo
 #Auteur : Ibrahim
 02.01.01.03.01
     Log                              Prendre une photo
@@ -46,7 +43,6 @@ Test Teardown    Close Browser
     Sleep                            2
     Element Should Be Visible        ${TAKE_PHOTO_WINDOW}
 
-#Choisir une photo
 #Auteur : Ibrahim
 02.01.01.03.03
     Log                              Importer une photo
@@ -61,7 +57,6 @@ Test Teardown    Close Browser
     Sleep                            5
     Element Should Be Visible        ${TAKE_PHOTO_WINDOW}
 
-#Retourner au menu principal via le bouton retour arrière du navigateur
 #Auteur : Ibrahim
 02.01.01.06
     Log                              Retourner au menu principal via le bouton retour arrière du navigateur
@@ -75,7 +70,6 @@ Test Teardown    Close Browser
     Go Back
     Element Should Be Visible        ${LOGO_XPATH}
 
-#Retourner au menu principal via la flèche
 #Auteur : Ivan et Ibrahim
 02.01.01.07
     Log                              Retourner au menu principal via la flèche
@@ -89,7 +83,6 @@ Test Teardown    Close Browser
     Click Element                    ${GO_BACK_TO_MAIN_MENU_WITH_ARROW_BUTTON}
     Element Should Be Visible        ${LOGO_XPATH}
 
-#Retourner au menu principal via le bouton menu principal
 #Auteur : Ivan et Ibrahim
 02.01.01.08
     Log                              Retourner au menu principal via le bouton menu principal

@@ -7,6 +7,7 @@ Documentation       La camera
 
 Test Teardown    Close Browser
 
+#Auteur : Ivan
 *** Test Cases ***
 Test camera
     OpenWithChrome                   

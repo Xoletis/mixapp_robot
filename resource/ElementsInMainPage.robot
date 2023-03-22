@@ -23,6 +23,10 @@ ${ACTIVE_MICRO_CAMERA}          xpath:(.//*[normalize-space(text()) and normaliz
 ${SUIVI_APPRENANTS}             xpath://*[@id="rc-tabs-0-panel-2"]
 ${MON_CONTENU}                  xpath://*[@id="rc-tabs-0-panel-1"]
 ${CODE_UTILISATEUR}             xpath:/html/body/div[7]/div/div/ul/li[2]/span/span[2]/strong
+${DASHBORD_BUTTON}              xpath://*[@id="root"]/div/div[1]/div/div/span/div/div[3]/button
+${SUIVI_APPRENANTS_BUTTON}      xpath://*[@id="rc-tabs-0-tab-2"]/h4
+${MON_CONTENU_BUTTON}           xpath://*[@id="rc-tabs-0-tab-1"]/h4
+${DASHBORD_WINDOW}              xpath:/html/body/div[1]/div/div[2]/div/div[2]/div/div[1]/div
 
 #############################################################################################################################
 ################################################## IMPORT DATA ##############################################################

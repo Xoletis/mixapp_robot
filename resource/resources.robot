@@ -7,9 +7,9 @@ Documentation     A resource file with reusable keywords and variables.
 
 Resource        Import.robot
 
-
 *** Keywords ***
 
+#Auteur : Ivan et Ibrahim
 OpenWithChrome
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()   modules=sys      # EdgeOptions() à changer en fonction du navigateur
     Call Method    ${options}    add_argument    --use-fake-ui-for-media-stream           # Évite d'avoir à accorder des autorisations pour les caméras et les microphones.
@@ -17,6 +17,7 @@ OpenWithChrome
     OpenMixap      Chrome          ${options}
     Sleep          2
 
+#Auteur : Ivan
 OpenMixap
     [Arguments]                     ${BROWSER}              ${options}
     Open Browser    ${WELCOMEPAGE_URL}   ${BROWSER}   options=${options}
@@ -25,39 +26,23 @@ OpenMixap
     Wait Until Element Is Visible   ${LOGO_XPATH}        100000
     WelcomePageShouldBeOpen
 
+#Auteur : Ivan
 WelcomePageShouldBeOpen
     Title Should Be   ${TITLE}
 
-EnterText
-    [Arguments]  ${Input}   ${Text}
-    SeleniumLibrary.Input Text  ${Input}    ${Text}
-
-GetInputValue
-    [Arguments]         ${Input}
-    ${INPUT_RETURN}     get element attribute   ${Input}    value
-    [return]            ${INPUT_RETURN}
-
-ChekIfDisplayNone
-    [Arguments]         ${Element}
-    ${style}=           Get Element Attribute          ${Element}             style
-    ${return}=          Set Variable                    "null"
-    IF                  "${style}" == "display: none;"
-        ${return}=  Set Variable                  "false"
-    ELSE
-        ${return}=  Set Variable                  "true"
-    END
-    [return]            ${return}
-
+#Auteur : Ivan
 CreateActivity
     [Arguments]         ${Activity}
     #OpenAddActivityWindow
     ClickElement    ${Activity}
     Sleep           2
 
+#Auteur : Ivan
 ReturnMainPage
     Go To                           ${WELCOMEPAGE_URL}
     Wait Until Element Is Visible   ${LOGO_XPATH}        100000
 
+#Auteur : Ivan
 GetChildNb
     [Arguments]    ${locator}
 
@@ -70,24 +55,13 @@ GetChildNb
     ${return}=        Get Length    ${children}
     [Return]          ${return}
 
-
-AfficherCreationStage
-    [Arguments]     ${nb}
-    FOR    ${i}    IN RANGE   ${nb}
-        Element Should Be Visible       xpath:/html/body/div[1]/section/section/main/section/main/header/div/div[${i+1}]
-    END
-
-PasserEtapeSuivante
-    [Arguments]                 ${elements}
-    Click Element               ${SUIVANT}
-    Sleep                       2
-    Element Should Be Visible   ${elements}
-
+#Auteur : Ivan
 OpenImportWindow
     Click Element                   ${IMPORT_DATA}
     Sleep                           2
     Element Should Be Visible       ${CODE_IMPORT_WINDOW}
 
+#Auteur : Ivan
 CreateAllActivies
     FOR    ${i}    IN RANGE   4
         Click Element                    ${ADD_ACTIVITY}
@@ -96,6 +70,7 @@ CreateAllActivies
         ReturnMainPage
     END
 
+#Auteur : Ivan
 GetImage
     [Arguments]            ${img}
     ${src}=                Get Element Attribute             ${img}            src
