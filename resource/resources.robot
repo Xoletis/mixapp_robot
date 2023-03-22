@@ -12,12 +12,6 @@ Resource        Import.robot
 
 *** Variables ***
 
-#Important
-${WELCOMEPAGE_URL}              https://mixap-dev.surge.sh/
-${DELAY}                        0
-${TITLE}                        MIXAP
-${PAUSE}                        2
-
 #Boutton
 ${IMPORT_DATA}                  xpath://*[@id="root"]/div/div[1]/div/div[1]/span/div/div[1]/button
 ${IMPORT_DATA_INPUT_TEXT}       xpath:/html/body/div[2]/div/div/div/div[2]/div[2]/div/div[1]/input
@@ -28,9 +22,9 @@ ${ADD_ACTIVITY_2}               xpath://*[@id="rc-tabs-3-panel-1"]/div/div[1]/di
 ${AUGMENTER_UNE_IMAGE}          xpath:/html/body/div[2]/div/div[2]/div/div[2]/div[2]/div/div[1]/div[1]
 ${VALIDER_UNE_IMAGE}            xpath:(//img[@alt='example'])[2]
 ${ASSOSIER_DEUX_IMAGES}         xpath:(//img[@alt='example'])[3]
-${SUPERPOSER_DEUX_CALQUES}         xpath:(//img[@alt='example'])[4]
+${SUPERPOSER_DEUX_CALQUES}      xpath:(//img[@alt='example'])[4]
 ${GROUPE_ACTIVITE}              xpath:(//img[@alt='example'])[5]
-${PARCOUR_ACTIVITE}              xpath:(//img[@alt='example'])[6]
+${PARCOUR_ACTIVITE}             xpath:(//img[@alt='example'])[6]
 ${DASHBORD_BUTTON}              xpath://*[@id="root"]/div/div[1]/div/div/span/div/div[3]/button
 ${SUIVI_APPRENANTS_BUTTON}      xpath://*[@id="rc-tabs-0-tab-2"]/h4
 ${MON_CONTENU_BUTTON}           xpath://*[@id="rc-tabs-0-tab-1"]/h4

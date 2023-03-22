@@ -9,5 +9,6 @@ Library             SikuliLibrary
 Library             RPA.Desktop
 
 Resource            resources.robot
+Resource            Properties.robot
 
 

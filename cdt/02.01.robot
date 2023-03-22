@@ -88,3 +88,4 @@ Test Teardown    Close Browser
     Sleep                            2
     Click Element                    xpath:(.//*[normalize-space(text()) and normalize-space(.)='Visualiser l’image'])[1]/following::*[name()='svg'][1]
     Element Should Be Visible        ${LOGO_XPATH}
+
