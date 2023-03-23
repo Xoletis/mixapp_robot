@@ -15,7 +15,7 @@ Test Teardown    Close Browser
     Sleep                            2
     Click Element                    ${AUGMENTER_UNE_IMAGE}
     Sleep                            2
-    Click Element                    ${NEXT_WINDOW_FOR_SET_UP_ACTIVITY_BUTTON}
+    Click Element                    ${GO_TO_AMELIORATION_WINDOW_IN_HEADER_MENU}
     Sleep                            2
     Element Should Be Visible        ${HEADER_IN_ACTIVITY_SET_UP}
 
@@ -27,6 +27,8 @@ Test Teardown    Close Browser
     Sleep                            2
     Click Element                    ${AUGMENTER_UNE_IMAGE}
     Sleep                            2
+    Click Element                    ${NEXT_WINDOW_FOR_SET_UP_ACTIVITY_BUTTON}
+    Sleep                            2
     Element Should Be Visible        ${HEADER_IN_ACTIVITY_SET_UP}
 
 #Auteur : Ibrahim
@@ -37,7 +39,7 @@ Test Teardown    Close Browser
     Sleep                            2
     Click Element                    ${AUGMENTER_UNE_IMAGE}
     Sleep                            2
-    Click Element                    ${NEXT_WINDOW_FOR_SET_UP_ACTIVITY_BUTTON}
+    Click Element                    ${GO_TO_AMELIORATION_WINDOW_IN_HEADER_MENU}
     Sleep                            2
     Click Element                    ${TAKE_PHOTO_BUTTON}
     Sleep                            2
@@ -65,7 +67,7 @@ Test Teardown    Close Browser
     Sleep                            2
     Click Element                    ${AUGMENTER_UNE_IMAGE}
     Sleep                            2
-    Click Element                    ${NEXT_WINDOW_FOR_SET_UP_ACTIVITY_BUTTON}
+    Click Element                    ${GO_TO_AMELIORATION_WINDOW_IN_HEADER_MENU}
     Sleep                            2
     Go Back
     Element Should Be Visible        ${LOGO_XPATH}
@@ -78,7 +80,7 @@ Test Teardown    Close Browser
     Sleep                            2
     Click Element                    ${AUGMENTER_UNE_IMAGE}
     Sleep                            2
-    Click Element                    ${NEXT_WINDOW_FOR_SET_UP_ACTIVITY_BUTTON}
+    Click Element                    ${GO_TO_AMELIORATION_WINDOW_IN_HEADER_MENU}
     Sleep                            2
     Click Element                    ${GO_BACK_TO_MAIN_MENU_WITH_ARROW_BUTTON}
     Element Should Be Visible        ${LOGO_XPATH}
@@ -91,8 +93,29 @@ Test Teardown    Close Browser
     Sleep                            2
     Click Element                    ${AUGMENTER_UNE_IMAGE}
     Sleep                            2
-    Click Element                    ${NEXT_WINDOW_FOR_SET_UP_ACTIVITY_BUTTON}
+    Click Element                    ${GO_TO_AMELIORATION_WINDOW_IN_HEADER_MENU}
     Sleep                            2
     Click Element                    ${GO_BACK_TO_MAIN_MENU_WITH_HOME_BUTTON}
     Element Should Be Visible        ${LOGO_XPATH}
 
+#Auteur : Ivan
+02.01.04.01
+    Log                              Passer à l'étape "Marqueur"
+    OpenWithChrome
+    Click Element                    ${ADD_ACTIVITY}
+    Sleep                            2
+    Click Element                    ${AUGMENTER_UNE_IMAGE}
+    Sleep                            2
+    Click Element                    ${NEXT_WINDOW_FOR_SET_UP_ACTIVITY_BUTTON}
+    Sleep                            2
+    Element Should Be Visible        ${HEADER_IN_ACTIVITY_SET_UP}
+
+#Auteur : Ivan et Ibrahim
+02.01.04.02
+    Log                              Afficher les étapes de créations
+    OpenWithChrome
+    Click Element                    ${ADD_ACTIVITY}
+    Sleep                            2
+    Click Element                    ${AUGMENTER_UNE_IMAGE}
+    Sleep                            2
+    Element Should Be Visible        ${HEADER_IN_ACTIVITY_SET_UP}
